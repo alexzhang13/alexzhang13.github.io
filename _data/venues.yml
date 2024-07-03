@@ -5,5 +5,14 @@
 "PhysRev":
   url: https://journals.aps.org/
 
-"Vision":
-  color: "#009f36"
+"NLP":
+  color: "#5f8ceecb"
+
+"CV":
+  color: "#419c4dcb"
+
+"RL":
+  color: "#e64545cb"
+
+"Dataset":
+  color: "#FFC61A"

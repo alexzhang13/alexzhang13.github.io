@@ -2,6 +2,7 @@
 layout: default
 permalink: /blog/
 title: blog
+description: high-quality and concise technical posts
 nav: true
 nav_order: 1
 pagination:
@@ -29,7 +30,7 @@ pagination:
   </div>
   {% endif %}
 
-{% if site.display_tags or site.display_categories %}
+<!-- {% if site.display_tags or site.display_categories %}
 
   <div class="tag-category-list">
     <ul class="p-0 m-0">
@@ -54,7 +55,7 @@ pagination:
       {% endfor %}
     </ul>
   </div>
-  {% endif %}
+  {% endif %} -->
 
 {% assign featured_posts = site.posts | where: "featured", "true" %}
 {% if featured_posts.size > 0 %}

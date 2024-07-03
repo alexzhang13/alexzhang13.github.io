@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Some research and other related projects I've been working on. Everything here is either a personal project or a research project unrelated to my lab.
 nav: true
 nav_order: 3
 display_categories: [work, fun]
@@ -10,56 +10,52 @@ horizontal: false
 ---
 
 <!-- pages/projects.md -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
+<h4>AI/ML</h4>
+<ul>
+<li> 
+        <a href="https://alexzhang13.github.io/assets/pdfs/Reward_Shaping_LLM.pdf">A Simple Framework for Intrinsic Reward-Shaping for Reinforcement Learning using LLM Feedback</a> <a href="https://github.com/alexzhang13/reward-shaping-rl"><i class="fa fa-github" style="font-size:18px"></i></a>
+</li>
+<li> 
+        <a href="https://alexzhang13.github.io/assets/pdfs/Pruning_KMatrix_AZ.pdf">Pruning Methods with Sparse Factorizations of Neural Networks</a> <a href="https://github.com/alexzhang13/COS598D-Pruning"><i class="fa fa-github" style="font-size:18px"></i></a>
+</li>
+<li> 
+        <a href="https://arxiv.org/abs/2311.11427">Appearance Codes using Joint Embedding Learning of Multiple Modalities</a> <a href="https://github.com/edogariu/alex-zhang"><i class="fa fa-github" style="font-size:18px"></i></a>
+</li>
+<li>
+        <a href="https://alexzhang13.github.io/assets/pdfs/Futures.pdf"> 
+        Predicting Visual Futures with Image Captioning and Pre-Trained Language Models </a>  <a href="https://github.com/alexzhang13/image-gail"><i class="fa fa-github" style="font-size:18px"></i></a>
+</li>
+<li>
+        <a href="https://ieeexplore.ieee.org/abstract/document/9660564"> 
+        Developing a Device-Independent Software for Adaptive Tremor Suppression Orthoses </a>  <a href="https://github.com/alexzhang13/TremorWear_Env"><i class="fa fa-github" style="font-size:18px"></i></a>
+        <p style="margin-left:25px">
+        - Intel International Science and Engineering Fair (ISEF) 2019 - 2nd Place
+        </p>
+</li>
 
-{% else %}
+</ul>
+<h4>Math Stuff</h4>
+<ul>
+<li> 
+        <a href="https://alexzhang13.github.io/assets/pdfs/Overparameterized.pdf">Robustness of Overparameterized Deep Learning </a> 
+</li>
+<li>
+<a href="https://arxiv.org/abs/2302.06769">Transaction Fee Mining and Mechanism Design</a>
+</li>
 
-<!-- Display projects without categories -->
-
-{% assign sorted_projects = site.projects | sort: "importance" %}
-
-  <!-- Generate cards for each project -->
-
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
+<li>
+        <a href="https://alexzhang13.github.io/assets/pdfs/No_Clone_Theorem.pdf">Quantum Information Theory and the No-Cloning Theorem</a>
+        </li>
+ </ul>
 </div>
+
+<h4>Other</h4>
+<ul>
+        <li>
+        <a href="https://alexzhang13.github.io/assets/pdfs/AlexBot.pdf"> 
+        SLAM for Maze Navigation on Raspberry Pi Robot </a>  <a href="https://github.com/alexzhang13/rcj-code"><i class="fa fa-github" style="font-size:18px"></i></a>
+</li>
+</ul>
