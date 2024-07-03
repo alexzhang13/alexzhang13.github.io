@@ -2,6 +2,7 @@
 layout: distill
 title: The Annotated Kolmogorov-Arnold Network (KAN)
 date: 2024-07-01
+og_image: https://alexzhang13.github.io/assets/img/preview/annotated-kan.png
 nav: true
 tags: annotated kolmogorov
 giscus_comments: false
