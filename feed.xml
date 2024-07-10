@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alexzhang13.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alexzhang13.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-07-10T07:33:31+00:00</updated><id>https://alexzhang13.github.io/feed.xml</id><title type="html">blank</title><subtitle>Alex Zhang&apos;s Website.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alexzhang13.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alexzhang13.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-07-10T23:33:19+00:00</updated><id>https://alexzhang13.github.io/feed.xml</id><title type="html">blank</title><subtitle>Alex Zhang&apos;s Website.
 </subtitle><entry><title type="html">The Annotated Kolmogorov-Arnold Network (KAN)</title><link href="https://alexzhang13.github.io/blog/2024/annotated-kan/" rel="alternate" type="text/html" title="The Annotated Kolmogorov-Arnold Network (KAN)" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2024/annotated-kan</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2024/annotated-kan/"><![CDATA[<p>This post is analogous to and heavily inspired by the <a href="https://nlp.seas.harvard.edu/annotated-transformer/">Annotated Transformer</a> but for KANs. It is fully functional as a standalone notebook, and provides intuition along with the code. Most of the code was written to be easy to follow and to mimic the structure of a standard deep learning model in PyTorch, but some parts like training loops and visualization code were adapted from the <a href="https://github.com/KindXiaoming/pykan">original codebase</a>. We decided to remove some sections from the original paper that were deemed unimportant, and also includes some extra works to motivate future research on these models.</p>
 
 <p>The original paper is titled <a href="https://arxiv.org/abs/2404.19756">“KAN: Kolmogorov-Arnold Networks”</a> <d-cite key="liu2024kankolmogorovarnoldnetworks"></d-cite>, and the authors on this paper are: <strong>Ziming Liu, Yixuan Wang, Sachin Vaidya, Fabian Ruehle, James Halverson, Marin Soljačić, Thomas Y. Hou, and Max Tegmark.</strong></p>
@@ -34,7 +34,7 @@ $$
 <p>where \(\Phi_{q,p}, \Phi_{q}\) are univariate functions from \(\mathbb{R}\) to \(\mathbb{R}\). In theory, we can parameterize and learn these (potentially non-smooth and highly irregular) univariate functions \(\Phi_{q,p}, \Phi_{q}\) by optimizing a loss function similar to any other deep learning model. But it’s not that obvious how one would “parameterize” a function the same way you would parameterize a weight matrix. For now, just assume that it is possible to parameterize these functions – the original authors choose to use a B-spline, but there is little reason to be stuck on this choice.</p>
 
 <h3 id="what-is-a-kan">What is a KAN?</h3>
-<p>The expression from the theorem above does not describe a KAN with $L$ layers. This was an initial point of confusion for me. The universal approximation guarantee is only for models specifically in the form of the Kolmogorov-Arnold representation, but currently we have no notion of a “layer” or anything scalable. In fact, the number of parameters in the above theorem is a function of the number of covariates and not the choice of the engineer! Instead, the authors define a KAN layer \(\mathcal{K}_{m,n}\) with input dimension\(n\) and output dimension \(m\) as a parameterized matrix of univariate functions, \(\Phi = \{\Phi_{i,j}\}_{i \in [m], j \in [n]}\).</p>
+<p>The expression from the theorem above does not describe a KAN with $L$ layers. This was an initial point of confusion for me. The universal approximation guarantee is only for models specifically in the form of the Kolmogorov-Arnold representation, but currently we have no notion of a “layer” or anything scalable. In fact, the number of parameters in the above theorem is a function of the number of covariates and not the choice of the engineer! Instead, the authors define a KAN layer \(\mathcal{K}_{m,n}\) with input dimension \(n\) and output dimension \(m\) as a parameterized matrix of univariate functions, \(\Phi = \{\Phi_{i,j}\}_{i \in [m], j \in [n]}\).</p>
 
 <p><span>
 <center>
@@ -148,7 +148,7 @@ class KANConfig:
 </d-code>
 
 <h3 id="the-kan-architecture-skeleton">The KAN Architecture Skeleton</h3>
-<p>If you understand how MLPs work, then the following architecture should look familiar. As always, given some set of input features \((x_1,...,x_n)\) and a desired output \((y_1,...,y_m)\), we can think of our KAN as a function \(f : \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}\) parameterized by weights $\theta$. Like any other deep learning model, we can decompose KANs in a layer-wise fashion and offload the computational details to the layer class. We will fully describe our model in terms of a list of integers <code class="language-plaintext highlighter-rouge">layer_widths</code>, where the first number denotes the input dimension\(n\), and the last number denotes the output dimension $m$.</p>
+<p>If you understand how MLPs work, then the following architecture should look familiar. As always, given some set of input features \((x_1,...,x_n)\) and a desired output \((y_1,...,y_m)\), we can think of our KAN as a function \(f : \mathbb{R}^{n} \rightarrow \mathbb{R}^{m}\) parameterized by weights \(\theta\). Like any other deep learning model, we can decompose KANs in a layer-wise fashion and offload the computational details to the layer class. We will fully describe our model in terms of a list of integers <code class="language-plaintext highlighter-rouge">layer_widths</code>, where the first number denotes the input dimension \(n\), and the last number denotes the output dimension \(m\).</p>
 
 <d-code block="" language="python" style="font-size:0.7em">
 class KAN(nn.Module):
@@ -198,7 +198,7 @@ class KAN(nn.Module):
 </d-code>
 
 <h3 id="the-kan-representation-layer">The KAN Representation Layer</h3>
-<p>The representation used at each layer is quite intuitive. For an input \(x \in \mathbb{R}^{n}\), we can directly compare a standard MLP layer with output dimension $m$ to an equivalent KAN layer:</p>
+<p>The representation used at each layer is quite intuitive. For an input \(x \in \mathbb{R}^{n}\), we can directly compare a standard MLP layer with output dimension \(m\) to an equivalent KAN layer:</p>
 
 <p><span>
 <center>
@@ -214,7 +214,7 @@ $$
 
 <p>In other words, both layers can be written in terms of a generalized matrix-vector operation, where for an MLP it is scalar multiplication, while for a KAN it is some <em>learnable</em> non-linear function \(\Phi_{i,k}\). Interestingly, both layers look extremely similar! <d-footnote>Remark. As a GPU enthusiast, I should mention that while these two expressions look quite similar, this minor difference can have a huge impact on efficiency. Having the same instruction (e.g. multiplication) applied to every operation fits well within the warp abstraction used in writing CUDA kernels, while having a different function application per operation has many issues like control divergence that significantly slow down performance.</d-footnote></p>
 
-<p>Let’s think through how we would perform this computation. For our analysis, we will ignore the batch dimension, as generally this is an easy extension. Suppose we have a KAN layer \(\mathcal{K}_{m,n}\) with input dimension\(n\) and output dimension $m$. As we discussed earlier, for input \((x_1,x_2,...,x_n)\),</p>
+<p>Let’s think through how we would perform this computation. For our analysis, we will ignore the batch dimension, as generally this is an easy extension. Suppose we have a KAN layer \(\mathcal{K}_{m,n}\) with input dimension\(n\) and output dimension \(m\). As we discussed earlier, for input \((x_1,x_2,...,x_n)\),</p>
 
 <p><span>
 <center>
