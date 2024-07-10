@@ -49,7 +49,7 @@ footer_fixed: false
 search_enabled: true
 
 # Dimensions
-max_width: 1200px
+max_width: 900px
 
 # TODO: add layout settings (single page vs. multi-page)
 
