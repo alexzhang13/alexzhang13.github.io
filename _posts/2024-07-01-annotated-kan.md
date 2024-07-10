@@ -90,7 +90,7 @@ $$
 where $$\Phi_{q,p}, \Phi_{q}$$ are univariate functions from $$\mathbb{R}$$ to $$\mathbb{R}$$. In theory, we can parameterize and learn these (potentially non-smooth and highly irregular) univariate functions $$\Phi_{q,p}, \Phi_{q}$$ by optimizing a loss function similar to any other deep learning model. But it's not that obvious how one would "parameterize" a function the same way you would parameterize a weight matrix. For now, just assume that it is possible to parameterize these functions -- the original authors choose to use a B-spline, but there is little reason to be stuck on this choice.
 
 ### What is a KAN?
-The expression from the theorem above does not describe a KAN with $L$ layers. This was an initial point of confusion for me. The universal approximation guarantee is only for models specifically in the form of the Kolmogorov-Arnold representation, but currently we have no notion of a "layer" or anything scalable. In fact, the number of parameters in the above theorem is a function of the number of covariates and not the choice of the engineer! Instead, the authors define a KAN layer $$\mathcal{K}_{m,n}$$ with input dimension$$n$$ and output dimension $$m$$ as a parameterized matrix of univariate functions, $$\Phi = \{\Phi_{i,j}\}_{i \in [m], j \in [n]}$$.
+The expression from the theorem above does not describe a KAN with $L$ layers. This was an initial point of confusion for me. The universal approximation guarantee is only for models specifically in the form of the Kolmogorov-Arnold representation, but currently we have no notion of a "layer" or anything scalable. In fact, the number of parameters in the above theorem is a function of the number of covariates and not the choice of the engineer! Instead, the authors define a KAN layer $$\mathcal{K}_{m,n}$$ with input dimension $$n$$ and output dimension $$m$$ as a parameterized matrix of univariate functions, $$\Phi = \{\Phi_{i,j}\}_{i \in [m], j \in [n]}$$.
 
 <p><span>
 <center>
@@ -210,7 +210,7 @@ class KANConfig:
 
 
 ### The KAN Architecture Skeleton
-If you understand how MLPs work, then the following architecture should look familiar. As always, given some set of input features $$(x_1,...,x_n)$$ and a desired output $$(y_1,...,y_m)$$, we can think of our KAN as a function $$f : \mathbb{R}^{n} \rightarrow \mathbb{R}^{m} $$ parameterized by weights $\theta$. Like any other deep learning model, we can decompose KANs in a layer-wise fashion and offload the computational details to the layer class. We will fully describe our model in terms of a list of integers `layer_widths`, where the first number denotes the input dimension$$n$$, and the last number denotes the output dimension $m$.
+If you understand how MLPs work, then the following architecture should look familiar. As always, given some set of input features $$(x_1,...,x_n)$$ and a desired output $$(y_1,...,y_m)$$, we can think of our KAN as a function $$f : \mathbb{R}^{n} \rightarrow \mathbb{R}^{m} $$ parameterized by weights $$\theta$$. Like any other deep learning model, we can decompose KANs in a layer-wise fashion and offload the computational details to the layer class. We will fully describe our model in terms of a list of integers `layer_widths`, where the first number denotes the input dimension $$n$$, and the last number denotes the output dimension $$m$$.
 
 
 <d-code block language="python" style="font-size:0.7em">
@@ -262,7 +262,7 @@ class KAN(nn.Module):
 
 
 ### The KAN Representation Layer
-The representation used at each layer is quite intuitive. For an input $$x \in \mathbb{R}^{n}$$, we can directly compare a standard MLP layer with output dimension $m$ to an equivalent KAN layer:
+The representation used at each layer is quite intuitive. For an input $$x \in \mathbb{R}^{n}$$, we can directly compare a standard MLP layer with output dimension $$m$$ to an equivalent KAN layer:
 
 <p><span>
 <center>
@@ -278,7 +278,7 @@ $$
 
 In other words, both layers can be written in terms of a generalized matrix-vector operation, where for an MLP it is scalar multiplication, while for a KAN it is some *learnable* non-linear function $$\Phi_{i,k}$$. Interestingly, both layers look extremely similar! <d-footnote>Remark. As a GPU enthusiast, I should mention that while these two expressions look quite similar, this minor difference can have a huge impact on efficiency. Having the same instruction (e.g. multiplication) applied to every operation fits well within the warp abstraction used in writing CUDA kernels, while having a different function application per operation has many issues like control divergence that significantly slow down performance.</d-footnote>
 
-Let's think through how we would perform this computation. For our analysis, we will ignore the batch dimension, as generally this is an easy extension. Suppose we have a KAN layer $$\mathcal{K}_{m,n}$$ with input dimension$$n$$ and output dimension $m$. As we discussed earlier, for input $$(x_1,x_2,...,x_n)$$, 
+Let's think through how we would perform this computation. For our analysis, we will ignore the batch dimension, as generally this is an easy extension. Suppose we have a KAN layer $$\mathcal{K}_{m,n}$$ with input dimension$$n$$ and output dimension $$m$$. As we discussed earlier, for input $$(x_1,x_2,...,x_n)$$, 
 
 <p><span>
 <center>
