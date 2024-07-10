@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alexzhang13.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alexzhang13.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-07-03T08:12:51+00:00</updated><id>https://alexzhang13.github.io/feed.xml</id><title type="html">blank</title><subtitle>Alex Zhang&apos;s Website.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alexzhang13.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alexzhang13.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-07-10T06:07:36+00:00</updated><id>https://alexzhang13.github.io/feed.xml</id><title type="html">blank</title><subtitle>Alex Zhang&apos;s Website.
 </subtitle><entry><title type="html">The Annotated Kolmogorov-Arnold Network (KAN)</title><link href="https://alexzhang13.github.io/blog/2024/annotated-kan/" rel="alternate" type="text/html" title="The Annotated Kolmogorov-Arnold Network (KAN)" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2024/annotated-kan</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2024/annotated-kan/"><![CDATA[<p>This post is analogous to and heavily inspired by the <a href="https://nlp.seas.harvard.edu/annotated-transformer/">Annotated Transformer</a> but for KANs. It is fully functional as a standalone notebook, and provides intuition along with the code. Most of the code was written to be easy to follow and to mimic the structure of a standard deep learning model in PyTorch, but some parts like training loops and visualization code were adapted from the <a href="https://github.com/KindXiaoming/pykan">original codebase</a>. We decided to remove some sections from the original paper that were deemed unimportant, and also includes some extra works to motivate future research on these models.</p>
 
 <p>The original paper is titled <a href="https://arxiv.org/abs/2404.19756">“KAN: Kolmogorov-Arnold Networks”</a> <d-cite key="liu2024kankolmogorovarnoldnetworks"></d-cite>, and the authors on this paper are: <strong>Ziming Liu, Yixuan Wang, Sachin Vaidya, Fabian Ruehle, James Halverson, Marin Soljačić, Thomas Y. Hou, and Max Tegmark.</strong></p>
@@ -82,9 +82,8 @@ $$
 <center>
 $$
 \begin{aligned}
-B_{i,\color{red}{0}}(x) &amp;\triangleq \mathbf{1}_{\{x \geq t_i\}} * \mathbf{1}_{\{x &lt; t_{i+1}\}} 
-\\
-B_{i,\color{red}{j}}(x) &amp;\triangleq \frac{x - t_i}{t_{i+j} - t_i} B_{i,\color{red}{j-1}}(x) + \frac{t_{i+j+1} - x}{t_{i+j+1} - t_{i+1}} B_{i+1,\color{red}{j-1}}(x)
+B_{i,0}(x) &amp;\triangleq \mathbf{1}_{\{x \geq t_i\}} * \mathbf{1}_{\{x &lt; t_{i+1}\}} \\
+B_{i, j}(x) &amp;\triangleq \frac{x - t_i}{t_{i+j} - t_i} B_{i,j-1}(x) + \frac{t_{i+j+1} - x}{t_{i+j+1} - t_{i+1}} B_{i+1,j-1}(x)
 \end{aligned}
 $$
 </center>
@@ -97,7 +96,7 @@ $$
     <figcaption> <center>Matplotlib plot of B-spline basis functions. Notably, the basis functions, like spline polynomials, are $0$ on most of the domain. But they overlap, unlike for splines. I generated this graph by adapting code from <a href="https://github.com/johntfoster/bspline/">https://github.com/johntfoster/bspline/</a>.</center> </figcaption>
 </figure>
 
-<p>When implementing B-splines for our KAN, we are not interested in the function \(f(\cdot)\) itself, rather we care about efficiently computing the function evaluated at a point \(f(x)\). We will later see a nice iterative bottom-up dynamic programming formulation of the Cox-de Boor recursion – I’ve colored the indices red to make it the DP relation clear.</p>
+<p>When implementing B-splines for our KAN, we are not interested in the function \(f(\cdot)\) itself, rather we care about efficiently computing the function evaluated at a point \(f(x)\). We will later see a nice iterative bottom-up dynamic programming formulation of the Cox-de Boor recursion.</p>
 
 <h2 id="part-i-the-minimal-kan-model-architecture">Part I: The Minimal KAN Model Architecture</h2>
 <p>In this section, we describe a barebones, minimal KAN model. The goal is to show that the architecture is structured quite similarly to deep learning code that the reader has most likely seen in the past. To summarize the components, we modularize our code into (1) a high-level KAN module, (2) the KAN layer, (3) the parameter initialization scheme, and (4) the plotting function for interpreting the model activations.</p>
@@ -452,7 +451,7 @@ $$
 \begin{aligned}
 B_x[i][0] &amp;\triangleq [x \geq t[i]] * [x &lt; t[i+1]]
 \\
-B_{x}[i][\color{red}{j} \color{black}] &amp;\triangleq \frac{x - t[i]}{t[i+j] - t[i]} B_{x}[i][\color{red}{j-1} \color{black}] + \frac{t[i+j+1] - x}{t[i+j+1] - t[i+1]} B_{x}[i+1][\color{red}{j-1} \color{black}]
+B_{x}[i][j] &amp;\triangleq \frac{x - t[i]}{t[i+j] - t[i]} B_{x}[i][j-1] + \frac{t[i+j+1] - x}{t[i+j+1] - t[i+1]} B_{x}[i+1][j-1]
 \end{aligned}
 $$
 </center>
