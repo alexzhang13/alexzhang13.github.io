@@ -138,9 +138,8 @@ where $$G$$ denotes the number of grid points and therefore basis functions (whi
 <center>
 $$
 \begin{aligned}
-B_{i,\color{red}{0}}(x) &\triangleq \mathbf{1}_{\{x \geq t_i\}} * \mathbf{1}_{\{x < t_{i+1}\}} 
-\\
-B_{i,\color{red}{j}}(x) &\triangleq \frac{x - t_i}{t_{i+j} - t_i} B_{i,\color{red}{j-1}}(x) + \frac{t_{i+j+1} - x}{t_{i+j+1} - t_{i+1}} B_{i+1,\color{red}{j-1}}(x)
+B_{i,0}(x) &\triangleq \mathbf{1}_{\{x \geq t_i\}} * \mathbf{1}_{\{x < t_{i+1}\}} \\
+B_{i, j}(x) &\triangleq \frac{x - t_i}{t_{i+j} - t_i} B_{i,j-1}(x) + \frac{t_{i+j+1} - x}{t_{i+j+1} - t_{i+1}} B_{i+1,j-1}(x)
 \end{aligned}
 $$
 </center>
@@ -153,7 +152,7 @@ We can plot an example for the basis functions of a B-spline with $G=5$ grid poi
     <figcaption> <center>Matplotlib plot of B-spline basis functions. Notably, the basis functions, like spline polynomials, are $0$ on most of the domain. But they overlap, unlike for splines. I generated this graph by adapting code from <a href="https://github.com/johntfoster/bspline/">https://github.com/johntfoster/bspline/</a>.</center> </figcaption>
 </figure>
 
-When implementing B-splines for our KAN, we are not interested in the function $$f(\cdot)$$ itself, rather we care about efficiently computing the function evaluated at a point $$f(x)$$. We will later see a nice iterative bottom-up dynamic programming formulation of the Cox-de Boor recursion -- I've colored the indices red to make it the DP relation clear.
+When implementing B-splines for our KAN, we are not interested in the function $$f(\cdot)$$ itself, rather we care about efficiently computing the function evaluated at a point $$f(x)$$. We will later see a nice iterative bottom-up dynamic programming formulation of the Cox-de Boor recursion.
 
 ## Part I: The Minimal KAN Model Architecture
 In this section, we describe a barebones, minimal KAN model. The goal is to show that the architecture is structured quite similarly to deep learning code that the reader has most likely seen in the past. To summarize the components, we modularize our code into (1) a high-level KAN module, (2) the KAN layer, (3) the parameter initialization scheme, and (4) the plotting function for interpreting the model activations.
@@ -523,7 +522,7 @@ $$
 \begin{aligned}
 B_x[i][0] &\triangleq [x \geq t[i]] * [x < t[i+1]]
 \\
-B_{x}[i][\color{red}{j} \color{black}] &\triangleq \frac{x - t[i]}{t[i+j] - t[i]} B_{x}[i][\color{red}{j-1} \color{black}] + \frac{t[i+j+1] - x}{t[i+j+1] - t[i+1]} B_{x}[i+1][\color{red}{j-1} \color{black}]
+B_{x}[i][j] &\triangleq \frac{x - t[i]}{t[i+j] - t[i]} B_{x}[i][j-1] + \frac{t[i+j+1] - x}{t[i+j+1] - t[i+1]} B_{x}[i+1][j-1]
 \end{aligned}
 $$
 </center>
