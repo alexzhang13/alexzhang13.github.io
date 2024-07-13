@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: (Just) Graduated at Princeton University '24
+subtitle: Princeton CS (& a bit of Math) '24
 profile:
   align: right
   image: Alex_Zhang_2024.png
@@ -18,20 +18,17 @@ news: true  # includes a list of news items
 social: false  # includes social icons at the bottom of the page
 ---
 
-Hey! I recently graduated from Princeton University studying computer science and
-math. There, I received the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize</a> in Computer Science, which is the **Princeton CS department's highest academic honor awarded to a single student**. I was also awarded the Outstanding Senior Thesis Prize for my work on <a href="https://arxiv.org/abs/2402.01695">augmenting decision-making agents with language capabilities.</a>
+Hey 👋! I graduated from Princeton CS advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. There, I received the **<a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize in Computer Science</a>**, which is the Princeton CS department's highest academic honor awarded to a single student. 
 
-Right now, I'm particularly interested in understanding <b><a href="https://arxiv.org/abs/2311.17593">grounding</a> and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested in <b>efficient <a href="https://arxiv.org/abs/2205.14135">training</a> and <a href="https://arxiv.org/abs/2302.01318">inference</a> of AI models</b> at a systems-level, particularly for generative models.
+Right now, I'm particularly interested in 
 
-<ul> <li>I am fortunate enough to be advised by Professor <a
-href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a
-href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a
-href="https://www.cs.princeton.edu/~li/">Kai Li</a>. </li>
-
-<li>I also <b>co-founded</b> and was the <b>president</b> of <a
-href="https://ai-house.vercel.app">AI@Princeton</a>, the undergraduate AI student organization at
-Princeton. I also helped organize the first <a href="https://ai-house.vercel.app/Framework/aitt.html">AI Tiger Trek</a>. </li>
+<ul>
+<li> Efficient <a href="https://arxiv.org/abs/2205.14135">training</a> and <a href="https://arxiv.org/abs/2302.01318">inference</a> of AI models at a systems-level </li>
+<li> Language <a href="https://arxiv.org/abs/2311.17593">grounding</a> across different data modalities </li>
+<li> <a href="https://arxiv.org/abs/2302.04449">Guiding agent behavior</a> through <a href="https://github.com/alexzhang13/world-models-papers/">world model representations </a> </li>
 </ul>
+
+<!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
 
 Feel free to reach out to talk through
 my email at [x]@princeton.edu where [x]=alzhang. 
