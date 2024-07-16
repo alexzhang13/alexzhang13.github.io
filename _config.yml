@@ -530,7 +530,7 @@ third_party_libraries:
     version: "1.9.4"
   mathjax:
     integrity:
-      js: "sha256-rjmgmaB99riUNcdlrDtcAiwtLIojSxNyUFdl+Qh+rB4="
+      js: ""
     local:
       fonts: "output/chtml/fonts/woff-v2/"
     url:
