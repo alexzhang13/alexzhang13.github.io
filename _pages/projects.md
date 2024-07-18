@@ -12,6 +12,8 @@ horizontal: false
 <!-- pages/projects.md -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<hr>
+
 <div class="projects">
 <h4>AI/ML</h4>
 <ul>
@@ -57,5 +59,8 @@ horizontal: false
         <li>
         <a href="https://alexzhang13.github.io/assets/pdfs/AlexBot.pdf"> 
         SLAM for Maze Navigation on Raspberry Pi Robot </a>  <a href="https://github.com/alexzhang13/rcj-code"><i class="fa fa-github" style="font-size:18px"></i></a>
+</li>
+<li> 
+        My Solutions to Sasha Rush's Triton Puzzles <a href="https://github.com/alexzhang13/Triton-Puzzles-Solutions"><i class="fa fa-github" style="font-size:18px"></i></a>
 </li>
 </ul>

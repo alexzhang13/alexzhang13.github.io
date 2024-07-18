@@ -18,7 +18,7 @@ news: true  # includes a list of news items
 social: false  # includes social icons at the bottom of the page
 ---
 
-Hey 👋! I graduated from Princeton CS advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. There, I received the **<a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize in Computer Science</a>**, which is the Princeton CS department's highest academic honor awarded to a single student. 
+Hey 👋! I graduated from Princeton University advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. There, I received the **<a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize in Computer Science</a>**, which is the Princeton CS department's highest academic honor awarded to a single student. 
 
 Right now, I'm particularly interested in 
 

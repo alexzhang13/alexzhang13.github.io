@@ -2,19 +2,24 @@
 layout: page
 permalink: /academics/
 title: academics
-description: Awards & coursework I've taken / TA'd for at Princeton.
+description: awards & coursework I've taken / TA'd for
 nav: true
 nav_order: 5
 ---
 
 <h3>school</h3>
-graduated <i>summa cum laude</i> from princeton university 🐅 with a degree in cs.
+
+\> graduated <i>summa cum laude (highest honors)</i> from princeton university 🐅 with a degree in cs.
 <ul>
-<li> <b>Phillip Goldman '86 Senior Prize in Computer Science</b>: Princeton CS department's highest academic honor awarded to a single student.  </li>
+<li> <b>Phillip Goldman '86 Senior Prize in Computer Science</b>: Princeton CS department's highest academic honor awarded to a single student. <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">[newsletter]</a> </li>
 <li> <b>Outstanding Senior Thesis Prize</b>: for work on <a href="">augmenting decision-making agents with language capabilities. </a> </li>
-<li> <b>Oustanding Computer Science Service Award</b>: co-founded and served as president of <a
+<li> <b>Outstanding Computer Science Service Award</b>: co-founded and served as president of <a
 href="https://ai-house.vercel.app">AI@Princeton</a> + helped organize first <a href="https://ai-house.vercel.app/Framework/aitt.html">AI Tiger Trek</a>. </li>
 </ul>
+
+\> graduated <i>valedictorian</i> (1/~400) from montgomery high school 🎓.
+
+<hr>
 
 <p> <em> * indicates graduate coursework</em> </p>
 <h3>computer science</h3>
@@ -362,6 +367,7 @@ href="https://ai-house.vercel.app">AI@Princeton</a> + helped organize first <a h
 </table>
 
 <br>
+<hr>
 <h3>stuff i ta'd or graded for</h3>
 <table>
 <tbody>
