@@ -18,7 +18,7 @@ horizontal: false
 <h4>AI/ML</h4>
 <ul>
 <li> 
-        Triton Implementation of FlashAttention2 with Custom Attention Masks<a href="https://github.com/alexzhang13/flashattention2-custom-mask"><i class="fa fa-github" style="font-size:18px"></i></a>
+        Triton Implementation of FlashAttention2 with Custom Attention Masks <a href="https://github.com/alexzhang13/flashattention2-custom-mask"><i class="fa fa-github" style="font-size:18px"></i></a>
 </li>
 <li> 
         <a href="https://alexzhang13.github.io/assets/pdfs/Reward_Shaping_LLM.pdf">A Simple Framework for Intrinsic Reward-Shaping for Reinforcement Learning using LLM Feedback</a> <a href="https://github.com/alexzhang13/reward-shaping-rl"><i class="fa fa-github" style="font-size:18px"></i></a>
