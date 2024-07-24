@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Princeton CS (& a bit of Math) '24
+subtitle: Princeton CS '24
 profile:
   align: right
   image: Alex_Zhang_2024.png

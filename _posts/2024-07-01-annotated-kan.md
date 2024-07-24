@@ -54,6 +54,8 @@ _styles: >
 
 ---
 
+***if the LaTeX is not loading, refresh the page.***
+
 This post is analogous to and heavily inspired by the [Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/) but for KANs. It is fully functional as a standalone notebook, and provides intuition along with the code. Most of the code was written to be easy to follow and to mimic the structure of a standard deep learning model in PyTorch, but some parts like training loops and visualization code were adapted from the [original codebase](https://github.com/KindXiaoming/pykan). We decided to remove some sections from the original paper that were deemed unimportant, and also includes some extra works to motivate future research on these models. 
 
 The original paper is titled ["KAN: Kolmogorov-Arnold Networks"](https://arxiv.org/abs/2404.19756) <d-cite key="liu2024kankolmogorovarnoldnetworks"></d-cite>, and the authors on this paper are: **Ziming Liu, Yixuan Wang, Sachin Vaidya, Fabian Ruehle, James Halverson, Marin Soljačić, Thomas Y. Hou, and Max Tegmark.**
