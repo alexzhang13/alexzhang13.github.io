@@ -23,7 +23,7 @@ Hey 👋! I graduated from Princeton University advised by Professor <a href="ht
 Right now, I'm particularly interested in 
 
 <ul>
-<li> Efficient <a href="https://arxiv.org/abs/2205.14135">training</a> and <a href="https://arxiv.org/abs/2302.01318">inference</a> of AI models at a systems-level </li>
+<li> Efficient <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency">training</a> and <a href="https://github.com/alexzhang13/flashattention2-custom-mask">inference</a> of AI models at a systems-level </li>
 <li> Language <a href="https://arxiv.org/abs/2311.17593">grounding</a> across different data modalities </li>
 <li> <a href="https://arxiv.org/abs/2302.04449">Guiding agent behavior</a> through <a href="https://github.com/alexzhang13/world-models-papers/">world model representations </a> </li>
 </ul>

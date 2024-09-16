@@ -18,6 +18,9 @@ horizontal: false
 <h4>AI/ML</h4>
 <ul>
 <li> 
+        Efficient Triton Implementation of MSA pair weighted averaging with gating for AlphaFold3 🧬 <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency"><i class="fa fa-github" style="font-size:18px"></i></a>
+</li>
+<li> 
         Triton Implementation of FlashAttention2 with Custom Attention Masks 🎭 <a href="https://github.com/alexzhang13/flashattention2-custom-mask"><i class="fa fa-github" style="font-size:18px"></i></a>
 </li>
 <li> 
