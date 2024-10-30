@@ -36,7 +36,7 @@ horizontal: false
         <a href="https://alexzhang13.github.io/assets/pdfs/Futures.pdf"> 
         Predicting Visual Futures with Image Captioning and Pre-Trained Language Models </a>  <a href="https://github.com/alexzhang13/image-gail"><i class="fa fa-github" style="font-size:18px"></i></a>
 </li>
-<li>g
+<li>
         <a href="https://ieeexplore.ieee.org/abstract/document/9660564"> 
         Developing a Device-Independent Software for Adaptive Tremor Suppression Orthoses </a>  <a href="https://github.com/alexzhang13/TremorWear_Env"><i class="fa fa-github" style="font-size:18px"></i></a>
         <p style="margin-left:25px">
