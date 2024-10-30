@@ -24,8 +24,8 @@ Right now, I'm particularly interested in
 
 <ul>
 <li> Efficient <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency">training</a> and <a href="https://github.com/alexzhang13/flashattention2-custom-mask">inference</a> of AI models at a systems-level </li>
-<li> Language <a href="https://arxiv.org/abs/2311.17593">grounding</a> across different data modalities </li>
-<li> <a href="https://arxiv.org/abs/2302.04449">Guiding agent behavior</a> through <a href="https://github.com/alexzhang13/world-models-papers/">world model representations </a> </li>
+<li> Language <a href="https://arxiv.org/abs/2402.01695">grounding</a> across different data modalities </li>
+<li> <a href="https://arxiv.org/abs/2410.03859">Guiding agent behavior</a> through <a href="https://github.com/alexzhang13/world-models-papers/">world model representations </a> </li>
 </ul>
 
 <!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
