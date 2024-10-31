@@ -6,7 +6,7 @@ nav: true
 tags: efficient
 giscus_comments: false
 related_posts: false
-description: A very long and thorough guide how deep learning algorithms have become more efficient from hardware to software stacks.
+description: A very long and thorough guide how deep learning algorithms, hardware, libraries, compilers, and more have become more efficient.
 authors:
   - name: Alex Zhang
     affiliations:
