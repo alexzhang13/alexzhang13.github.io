@@ -1148,7 +1148,7 @@ and find that existing theoretical works estimate these constants incorrectly �
 </center>
 </figure>
 
-**[Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361) (Kaplan et al., 2020<d-cite key="kaplan2020scalinglawsneurallanguage"></d-cite>)**. This paper proposes scaling laws across dataset size $D$, model size $N \in [768, 10^9]$, and compute budget $C \in [10^12, 10^21]$ FLOPS. They focus mainly on Transformer decoders on trained on [WebText2](https://openwebtext2.readthedocs.io/en/latest/), and they first analyze single-variable scaling laws by fixing $2/3$ of the above variables at a “sufficient level” and analyzing the third. They estimate in these models that each parameter costs roughly 6 FLOPS per token in the forward + backwards pass. These scaling laws are a power-law function of the test loss:
+**[Scaling Laws for Neural Language Models](https://arxiv.org/abs/2001.08361) (Kaplan et al., 2020<d-cite key="kaplan2020scalinglawsneurallanguage"></d-cite>)**. This paper proposes scaling laws across dataset size $D$, model size $N \in [768, 10^9]$, and compute budget $C \in [10^{12}, 10^{21}]$ FLOPS. They focus mainly on Transformer decoders on trained on [WebText2](https://openwebtext2.readthedocs.io/en/latest/), and they first analyze single-variable scaling laws by fixing $2/3$ of the above variables at a “sufficient level” and analyzing the third. They estimate in these models that each parameter costs roughly 6 FLOPS per token in the forward + backwards pass. These scaling laws are a power-law function of the test loss:
 
 <p>
 $$
