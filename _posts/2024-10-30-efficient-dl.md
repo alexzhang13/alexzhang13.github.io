@@ -1556,6 +1556,6 @@ Just as a formality, if you want to cite this for whatever reason, use the BibTe
   author  = "Zhang, Alex",
   year    = "2024",
   month   = "June",
-  url     = "https://alexzhang13.github.io/blog/2024/annotated-kan/"
+  url     = "https://alexzhang13.github.io/blog/2024/efficient-dl/"
 }
 ```
