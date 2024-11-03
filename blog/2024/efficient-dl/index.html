@@ -968,7 +968,7 @@ print(f"Average of {(OPS / time_taken * (1e-9)):.4f} GLOPS")
 
 <p><strong><a href="https://www.tensorflow.org/tutorials/quickstart/beginner" rel="external nofollow noopener" target="_blank">TensorFlow v2</a> (2019) &amp; <a href="https://keras.io/" rel="external nofollow noopener" target="_blank">Keras</a> (2015)</strong>. Keras was developed independently by François Chollet, and like PyTorch, it was designed to be intuitive for developers to define and train their models in a modular way. Eventually, Keras merged into TensorFlow, and TensorFlow 2 was released to enable eager execution development in TensorFlow. TensorFlow 2 has a lot of design differences than PyTorch, but I find it relatively easy to use one after you’ve learned the other.</p>
 
-<p><strong><a href="(https://jax.readthedocs.io/en/latest/)">Jax</a> (2020)</strong>. Google’s latest deep learning framework that emphasizes its functional design and its <a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" rel="external nofollow noopener" target="_blank">just-in-time</a> (JIT) XLA compiler for automatically fusing operations (we’ll talk about this more in the GPU section). Jax is more analogous to an amped up NumPy with autodifferentiation features, but it also has support for standard deep learning applications through subsequent libraries like Flax and Haiku. Jax has been getting more popular recently and has, in my opinion, replaced TensorFlow as Google’s primary deep learning framework. Finally, Jax has been optimized heavily for Google’s Tensor Processing Units (TPUs), i.e. anyone using cloud TPUs should be using Jax.</p>
+<p><strong><a href="https://jax.readthedocs.io/en/latest/" rel="external nofollow noopener" target="_blank">Jax</a> (2020)</strong>. Google’s latest deep learning framework that emphasizes its functional design and its <a href="https://en.wikipedia.org/wiki/Just-in-time_compilation" rel="external nofollow noopener" target="_blank">just-in-time</a> (JIT) XLA compiler for automatically fusing operations (we’ll talk about this more in the GPU section). Jax is more analogous to an amped up NumPy with autodifferentiation features, but it also has support for standard deep learning applications through subsequent libraries like Flax and Haiku. Jax has been getting more popular recently and has, in my opinion, replaced TensorFlow as Google’s primary deep learning framework. Finally, Jax has been optimized heavily for Google’s Tensor Processing Units (TPUs), i.e. anyone using cloud TPUs should be using Jax.</p>
 
 <p>By this point, we’ve set the stage for deep learning to flourish — frameworks are being developed to make research on deep learning far easier, so we can now move on to talking about the types of architectures people were interested in and the core research problems of the time.</p>
 
@@ -1106,7 +1106,7 @@ $$
 
 <hr style="margin-bottom: 20px;margin-top: 20px">
 
-<p><strong><a href="(https://arxiv.org/abs/1810.02340)">SNIP</a> (Lee et al. 2018<d-cite key="lee2019snipsingleshotnetworkpruning"></d-cite>)</strong>. The LTH showed that post-training / during-training pruning was more effective than randomly pruning before training, so SNIP proposed a metric to prune “unimportant” weights before training. They first sample a random batch of data $D$ and compute the loss gradients $g_i = \frac{\partial \mathcal{L}(D, \theta)}{\partial \theta_i}$. Then, they compute</p>
+<p><strong><a href="https://arxiv.org/abs/1810.02340" rel="external nofollow noopener" target="_blank">SNIP</a> (Lee et al. 2018<d-cite key="lee2019snipsingleshotnetworkpruning"></d-cite>)</strong>. The LTH showed that post-training / during-training pruning was more effective than randomly pruning before training, so SNIP proposed a metric to prune “unimportant” weights before training. They first sample a random batch of data $D$ and compute the loss gradients $g_i = \frac{\partial \mathcal{L}(D, \theta)}{\partial \theta_i}$. Then, they compute</p>
 
 <p>
 $$
@@ -2058,7 +2058,7 @@ $$
 
 <hr style="margin-bottom: 20px;margin-top: 20px">
 
-<p><strong><a href="(https://arxiv.org/abs/2402.17764)">BitNet b1.58</a> (Ma et al., 2024<d-cite key="ma2024era1bitllmslarge"></d-cite>)</strong>. A follow-up and <strong>arguably more successful variant of BitNet</strong> was the <strong>ternary</strong> version (i.e. $W_{i,j} \in$ { $-1,0,1$ }). The recipe is basically the same, except they compare to a half-precision LLaMA {1.3B, 3B, 7B, 13B, 70B}, and demonstrate better / comparable performance on a wide range of language reasoning tasks, as well as <strong>significantly faster throughput (up to 10x)</strong> and <strong>less active memory usage (up to 4x reduction)</strong><d-footnote>I have very little intuition as to why this paper does so much better than BitNet (maybe something key about LLaMA models?) and I think this paper should do a better job of explaining it as well. As much as I want to believe something like this works, it seems almost too good to be true in most practical settings. I hope some more follow ups investigate the “whys” that this paper leaves open.</d-footnote>!</p>
+<p><strong><a href="https://arxiv.org/abs/2402.17764" rel="external nofollow noopener" target="_blank">BitNet b1.58</a> (Ma et al., 2024<d-cite key="ma2024era1bitllmslarge"></d-cite>)</strong>. A follow-up and <strong>arguably more successful variant of BitNet</strong> was the <strong>ternary</strong> version (i.e. $W_{i,j} \in$ { $-1,0,1$ }). The recipe is basically the same, except they compare to a half-precision LLaMA {1.3B, 3B, 7B, 13B, 70B}, and demonstrate better / comparable performance on a wide range of language reasoning tasks, as well as <strong>significantly faster throughput (up to 10x)</strong> and <strong>less active memory usage (up to 4x reduction)</strong><d-footnote>I have very little intuition as to why this paper does so much better than BitNet (maybe something key about LLaMA models?) and I think this paper should do a better job of explaining it as well. As much as I want to believe something like this works, it seems almost too good to be true in most practical settings. I hope some more follow ups investigate the “whys” that this paper leaves open.</d-footnote>!</p>
 
 <hr style="margin-bottom: 20px;margin-top: 20px">
 
@@ -2250,7 +2250,7 @@ Andrej Karpathy’s super efficient implementation of GPT-2 (124M parameters) ca
 
 <ul>
   <li>
-<a href="**https://colab.google/"><strong>Google Colab</strong></a>. You can get access to a free <a href="https://www.nvidia.com/en-us/data-center/tesla-t4/" rel="external nofollow noopener" target="_blank">Tesla T4 16GB</a> when using their notebooks, but the time limits are not consistent and you’ll have to use multiple emails to get consistent usage.</li>
+<a href="https://colab.google/" rel="external nofollow noopener" target="_blank"><strong>Google Colab</strong></a>. You can get access to a free <a href="https://www.nvidia.com/en-us/data-center/tesla-t4/" rel="external nofollow noopener" target="_blank">Tesla T4 16GB</a> when using their notebooks, but the time limits are not consistent and you’ll have to use multiple emails to get consistent usage.</li>
   <li>
 <a href="https://studiolab.sagemaker.aws/" rel="external nofollow noopener" target="_blank"><strong>Amazon SageMaker Studio Lab</strong></a>. Another notebook service with a <a href="https://www.nvidia.com/en-us/data-center/tesla-t4/" rel="external nofollow noopener" target="_blank">Tesla T4 16GB</a> available with just an email! The time limits are also not great on this one.</li>
   <li>
@@ -2268,7 +2268,7 @@ Andrej Karpathy’s super efficient implementation of GPT-2 (124M parameters) ca
   <li>
 <a href="https://pytorch.org/torchtune/stable/index.html" rel="external nofollow noopener" target="_blank"><strong>torchtune</strong></a>. Torchtune is PyTorch’s newest module for fine-tuning large language models. They’ve heavily modularized their code and have some nice recent examples with LLaMA 3.</li>
   <li>
-<a href="**https://github.com/huggingface/peft"><strong>HuggingFace PEFT</strong></a>. PEFT integrates most of the existing parameter-efficient fine tuning (recall from <a href="#iii1c-fine-tuning-large-models-efficiently">III.1.c</a>) methods to work with models loaded from the Huggingface <code class="language-plaintext highlighter-rouge">transformers</code> library.</li>
+<a href="https://github.com/huggingface/peft" rel="external nofollow noopener" target="_blank"><strong>HuggingFace PEFT</strong></a>. PEFT integrates most of the existing parameter-efficient fine tuning (recall from <a href="#iii1c-fine-tuning-large-models-efficiently">III.1.c</a>) methods to work with models loaded from the Huggingface <code class="language-plaintext highlighter-rouge">transformers</code> library.</li>
   <li>
 <a href="https://github.com/huggingface/accelerate" rel="external nofollow noopener" target="_blank"><strong>accelerate</strong></a>. A super-thin wrapper around your PyTorch models, dataloader, and optimizer for launching multi-GPU jobs without a lot of extra code.</li>
   <li>
@@ -2284,7 +2284,7 @@ Andrej Karpathy’s super efficient implementation of GPT-2 (124M parameters) ca
 
 <ul>
   <li>
-<a href="**https://pytorch.org/docs/stable/quantization-support.html"><strong>torch.ao.quantization</strong></a> <strong>(2022)</strong>. Quantization used to be quite annoying to implement because it modifies how we represent our data in memory. The PyTorch team has done a lot of work</li>
+<a href="https://pytorch.org/docs/stable/quantization-support.html" rel="external nofollow noopener" target="_blank"><strong>torch.ao.quantization</strong></a> <strong>(2022)</strong>. Quantization used to be quite annoying to implement because it modifies how we represent our data in memory. The PyTorch team has done a lot of work</li>
   <li>
 <a href="https://github.com/bitsandbytes-foundation/bitsandbytes" rel="external nofollow noopener" target="_blank"><strong>bitsandbytes</strong></a> <strong>(2023)</strong>. A wrapper around your optimizers that allows you to use llm.int8() and Q-LoRA. It works very well with HuggingFace and PyTorch.</li>
   <li>
