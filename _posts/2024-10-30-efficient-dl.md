@@ -1555,7 +1555,7 @@ Just as a formality, if you want to cite this for whatever reason, use the BibTe
   title   = "A Meticulous Guide to Advances in Deep Learning Efficiency over the Years",
   author  = "Zhang, Alex",
   year    = "2024",
-  month   = "June",
+  month   = "October",
   url     = "https://alexzhang13.github.io/blog/2024/efficient-dl/"
 }
 ```
