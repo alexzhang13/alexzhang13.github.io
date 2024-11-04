@@ -821,7 +821,7 @@ Some architecture choices have been motivated by existing bottlenecks in scaling
 
 <hr style="margin-bottom: 20px;margin-top: 20px">
 
-**[Primer: Searching for Efficient Transformers for Language Modeling](ttps://arxiv.org/abs/2109.08668) (So et al., 2021<d-cite key="so2022primersearchingefficienttransformers"></d-cite>)**. There are plenty of existing works for tweaking and modifying the attention architecture to “scale” better. I’ve referenced this paper because it is quite simple and is one of the earlier works to propose tricks like ReLU^2 and neural architecture search over Transformers. I’m not entirely sure what is done in practice, but as far as I know, there are generally some “good practices” for Transformer blocks, and it is difficult to perform these architecture search algorithms for extremely large models.
+**[Primer: Searching for Efficient Transformers for Language Modeling](https://arxiv.org/abs/2109.08668) (So et al., 2021<d-cite key="so2022primersearchingefficienttransformers"></d-cite>)**. There are plenty of existing works for tweaking and modifying the attention architecture to “scale” better. I’ve referenced this paper because it is quite simple and is one of the earlier works to propose tricks like ReLU^2 and neural architecture search over Transformers. I’m not entirely sure what is done in practice, but as far as I know, there are generally some “good practices” for Transformer blocks, and it is difficult to perform these architecture search algorithms for extremely large models.
 
 <hr style="margin-bottom: 20px;margin-top: 20px">
 
