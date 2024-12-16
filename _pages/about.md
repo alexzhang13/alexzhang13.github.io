@@ -20,12 +20,14 @@ social: false  # includes social icons at the bottom of the page
 
 Hey 👋! I graduated from Princeton University advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. There, I received the **<a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize in Computer Science</a>**, which is the Princeton CS department's highest academic honor awarded to a single student. 
 
-Right now, I'm particularly interested in 
+Right now, I'm particularly interested in systems for/in ML, scaling and understanding language models, and applications of AI to the natural sciences! The most recent projects (+ research) I've led / majorly contributed to are:
 
 <ul>
-<li> Efficient <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency">training</a> and <a href="https://github.com/alexzhang13/flashattention2-custom-mask">inference</a> of AI models at a systems-level </li>
-<li> Language <a href="https://arxiv.org/abs/2402.01695">grounding</a> across different data modalities </li>
-<li> <a href="https://arxiv.org/abs/2410.03859">Guiding agent behavior</a> through <a href="https://github.com/alexzhang13/world-models-papers/">world model representations </a> </li>
+<li> GPUMode's open source <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> for generating GPU kernels with LLMs </li>
+<li> Fast <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency"> kernels for Ligo's open source AlphaFold3</a>. </li>
+<li> <a href="https://arxiv.org/abs/2402.01695">World models that can be conditioned on language </a> for model-based agents. </li>
+<li> <a href="https://arxiv.org/abs/2410.03859">Multi-modal task instances for SWEBench</a> with the original authors. </li>
+<li> <a href="https://github.com/alexzhang13/flashattention2-custom-mask">Simple FlashAttention2 with custom masks</a> in Triton. </li>
 </ul>
 
 <!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
