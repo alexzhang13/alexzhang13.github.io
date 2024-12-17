@@ -26,7 +26,7 @@ The most recent projects (+ research) I've led / majorly contributed to are:
 
 <ul>
 <li> Open source <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> for generating GPU kernels with LLMs. </li>
-<li> Fast <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency"> kernels for Ligo's open source AlphaFold3</a>. </li>
+<li> Fast <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency"> kernels for scaling Ligo's open source AlphaFold3</a>. </li>
 <li> World models that can be <a href="https://arxiv.org/abs/2402.01695">conditioned on language </a> for model-based agents. </li>
 <li> <a href="https://www.swebench.com/multimodal.html">Multi-modal task instances for SWEBench</a> with the original authors. </li>
 <li> Simple <a href="https://github.com/alexzhang13/flashattention2-custom-mask">FlashAttention2 with custom masks</a> in Triton. </li>
