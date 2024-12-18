@@ -37,9 +37,11 @@ The most recent projects (+ research) I've led / majorly contributed to are:
 Feel free to reach out to talk through
 my email at [x]@princeton.edu where [x]=alzhang. 
 
+<p>
 <em>I got into AI research because I wanted to design bots for video games when I was younger:</em>
 <ul>
-<li> I first started programming by making meme-y Android apps in Java.</li>
-<li> I used to make PC games, some of which were mildly popular (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">UE4 unfinished example.</a></li>
-<li> My favorite game of all time is <a href="https://en.wikipedia.org/wiki/Xenoblade_Chronicles_(video_game)">Xenoblade Chronicles</a>.</li>
+<li> <em> I first started programming by making meme-y Android apps in Java. </em> </li>
+<li> <em> I used to make PC games, some of which were mildly popular (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">UE4 unfinished example.</a> </em> </li>
+<li> <em> My favorite game of all time is <a href="https://en.wikipedia.org/wiki/Xenoblade_Chronicles_(video_game)">Xenoblade Chronicles</a>. </em> </li>
 </ul>
+</p>
