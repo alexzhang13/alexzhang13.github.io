@@ -16,6 +16,10 @@ latest_posts: true  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 news: true  # includes a list of news items
 social: false  # includes social icons at the bottom of the page
+_styles: >
+    p + ul {
+        margin-top: -10px;
+    }
 ---
 
 Hey 👋! I graduated from Princeton University advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. There, I received the **<a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize in Computer Science</a>**, which is the Princeton CS department's highest academic honor awarded to a single student. 
@@ -37,11 +41,11 @@ The most recent projects (+ research) I've led / majorly contributed to are:
 Feel free to reach out to talk through
 my email at [x]@princeton.edu where [x]=alzhang. 
 
-<p>
+<hr>
+
 <em>I got into AI research because I wanted to design bots for video games when I was younger:</em>
 <ul>
 <li> <em> I first started programming by making meme-y Android apps in Java. </em> </li>
 <li> <em> I used to make PC games, some of which were mildly popular (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">UE4 unfinished example.</a> </em> </li>
 <li> <em> My favorite game of all time is <a href="https://en.wikipedia.org/wiki/Xenoblade_Chronicles_(video_game)">Xenoblade Chronicles</a>. </em> </li>
 </ul>
-</p>
