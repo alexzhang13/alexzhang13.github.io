@@ -46,6 +46,6 @@ my email at [x]@princeton.edu where [x]=alzhang.
 <em>I got into AI research because I wanted to design intelligent bots for video games when I was younger:</em>
 <ul>
 <li> <em> I first started programming by making Android games in Java. </em> </li>
-<li> <em> I used to make PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">UE4 unfinished example.</a> </em> </li>
-<li> <em> My favorite game of all time is <a href="https://en.wikipedia.org/wiki/Xenoblade_Chronicles_(video_game)">Xenoblade Chronicles</a>. </em> </li>
+<li> <em> I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">UE4 unfinished example.</a> </em> </li>
+<li> <em> My favorite games of all time are <a href="https://en.wikipedia.org/wiki/Xenoblade_Chronicles_(video_game)">Xenoblade Chronicles</a> and <a href="https://www.teamfortress.com/">Team Fortress 2</a>. </em> </li>
 </ul>
