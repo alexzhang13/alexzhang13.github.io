@@ -26,7 +26,7 @@ Hey 👋! I graduated from Princeton University advised by Professor <a href="ht
 
 Right now, I'm particularly interested in systems for/in ML, scaling and understanding language models, and applications of AI to the natural sciences!
 
-The most recent projects (+ research) I've led / majorly contributed to are:
+<p style="margin-bottom: 0.1rem;">The most recent projects (+ research) I've led / majorly contributed to are:</p>
 
 <ul>
 <li> Open source <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> for generating GPU kernels with LLMs. </li>
