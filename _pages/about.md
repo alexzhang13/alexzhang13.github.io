@@ -32,7 +32,7 @@ Right now, I'm particularly interested in systems for/in ML, scaling and underst
 <li> Open source <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> for generating GPU kernels with LLMs. </li>
 <li> <a href="https://www.swebench.com/multimodal.html">Multi-modal task instances for SWE-bench</a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;"> with the original authors. </li>
 <li> Fast <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency"> kernels for scaling Ligo's open source AlphaFold3</a>, <b>900+ GitHub ⭐'s</b>. </li>
-<li> World models that can be <a href="https://arxiv.org/abs/2402.01695">conditioned on language </a> for model-based agents. </li>
+<li> World models that can be <a href="https://arxiv.org/abs/2402.01695">conditioned on language </a> for model-based RL agents. </li>
 <li> Simple <a href="https://github.com/alexzhang13/flashattention2-custom-mask">FlashAttention2 with custom masks 🎭</a> in Triton. </li>
 </ul>
 
