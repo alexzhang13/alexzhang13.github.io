@@ -146,8 +146,8 @@
     </div>
 
     <!-- Journal/Book title and date -->
-    {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
-    {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
+    {% assign proceedings = 'inproceedings,incollection' | split: '' %}
+    {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: '' %}
     {% if entry.type == 'article' %}
       {% capture entrytype %}<em>{{entry.journal}}</em>{% endcapture %}
     {% elsif proceedings contains entry.type %}
@@ -164,7 +164,7 @@
       {% capture entryyear %}{{ " " }}{{entry.year}}{% endcapture %}
     {% endif %}
     {% if entry.location %}
-      {% capture entrytype %}{{entrytype}}{{ ", " }}{{entry.location}}{% endcapture %}
+      {% capture entrytype %}{{entrytype}}{{ "" }}{{entry.location}}{% endcapture %}
     {% endif -%}
     {% if entry.additional_info %}
       {% capture entrytype %}{{entrytype}}{{entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endcapture %}
