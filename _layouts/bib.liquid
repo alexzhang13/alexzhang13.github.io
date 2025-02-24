@@ -146,8 +146,8 @@
     </div>
 
     <!-- Journal/Book title and date -->
-    {% assign proceedings = 'inproceedings,incollection' | split: '' %}
-    {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: '' %}
+    {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
+    {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
     {% if entry.type == 'article' %}
       {% capture entrytype %}<em>{{entry.journal}}</em>{% endcapture %}
     {% elsif proceedings contains entry.type %}
@@ -174,7 +174,7 @@
       {% include hook/bib.liquid %}
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
-    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{% endcapture %}
+    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %} {% endif %}{% endcapture %}
     <div class="periodical">
       {{ periodical | strip }}
     </div>
