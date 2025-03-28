@@ -26,7 +26,7 @@ Hey 👋! I graduated from Princeton University advised by Professor <a href="ht
 
 Right now, I'm particularly interested in systems for/in ML, scaling and understanding language models, and applications of AI to the natural sciences!
 
-<p style="margin-bottom: 0.5rem;">The most recent projects (+ research) I've led / majorly contributed to are (sorted by recency):</p>
+<p style="margin-bottom: 0.5rem;">The most recent projects (+ research) I've led / majorly contributed to are (🔀 by recency):</p>
 
 <ul>
 <li> <a href="https://www.vant.ai/neo-1"><b>Neo-1</b></a>, the first model for de novo molecular generation + structure prediction. </li>
