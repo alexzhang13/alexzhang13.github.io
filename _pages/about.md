@@ -39,7 +39,9 @@ Right now, I'm particularly interested in systems for/in ML, scaling and underst
 <!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
 
 Feel free to reach out to talk through
-my email at [x]@princeton.edu where [x]=alzhang. I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community and co-lead the <a href=https://gpu-mode.github.io/discord-cluster-manager/docs/intro/">GPU programming leaderboard</a>!
+my email at [x]@princeton.edu where [x]=alzhang. 
+I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community and 
+co-lead the <a href="https://gpu-mode.github.io/discord-cluster-manager/docs/intro/">GPU programming leaderboard</a>!
 
 <hr>
 
