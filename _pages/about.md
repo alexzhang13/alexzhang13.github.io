@@ -30,8 +30,8 @@ Right now, I'm particularly interested in systems for/in ML, scaling and underst
 
 <ul>
 <li> <a href="https://www.vant.ai/neo-1"><b>Neo-1</b></a>, the first model for de novo molecular generation + structure prediction. </li>
-<li> Open source <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> for <b>generating GPU kernels with LLMs</b> + the first <a href="https://gpu-mode.github.io/discord-cluster-manager/docs/intro/">GPU programming leaderboard</a>. </li>
-<li> The <a href="https://arxiv.org/abs/2502.10517v1">KernelBench</a> environment for evaluating LLM-generated CUDA / Triton kernels.</li>
+<li> Open source <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> for <b>generating GPU kernels with LLMs</b> </li>
+<li> <a href="https://arxiv.org/abs/2502.10517v1">KernelBench</a>: environment for evaluating LLM-generated CUDA / Triton kernels.</li>
 <li> <a href="https://www.swebench.com/multimodal.html">Multi-modal task instances for <b>SWE-bench</b></a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;"> with the original authors. </li>
 <li> Fast <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency"> kernels for scaling Ligo's <b>open source AlphaFold3</b></a>, <b>900+ GitHub ⭐'s</b>. </li>
 </ul>
@@ -39,7 +39,7 @@ Right now, I'm particularly interested in systems for/in ML, scaling and underst
 <!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
 
 Feel free to reach out to talk through
-my email at [x]@princeton.edu where [x]=alzhang. 
+my email at [x]@princeton.edu where [x]=alzhang. I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community and co-lead the <a href=https://gpu-mode.github.io/discord-cluster-manager/docs/intro/">GPU programming leaderboard</a>!
 
 <hr>
 
