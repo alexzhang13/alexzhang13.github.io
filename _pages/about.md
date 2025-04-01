@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Princeton CS '24
+subtitle: Researcher @ VantAI, Princeton CS '24
 profile:
   align: right
   image: Alex_Zhang_2024.png
@@ -26,7 +26,7 @@ Hey 👋! I graduated from Princeton University advised by Professor <a href="ht
 
 Right now, I'm particularly interested in systems for/in ML, scaling and understanding language models, and applications of AI to the natural sciences!
 
-<p style="margin-bottom: 0.5rem;">The most recent projects (+ research) I've led / majorly contributed to are (🔀 by recency):</p>
+<p style="margin-bottom: 0.5rem;">The most recent projects (+ research) I've led / majorly contributed to are (🔀 by ⏰):</p>
 
 <ul>
 <li> <a href="https://www.vant.ai/neo-1"><b>Neo-1</b></a>, the first model for de novo molecular generation + structure prediction. </li>
