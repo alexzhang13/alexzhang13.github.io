@@ -22,11 +22,10 @@ _styles: >
     }
 ---
 
-Hey 👋! The first thing you should do is check out [https://www.vgbench.com/](https://www.vgbench.com/), and then go participate in the [AMD x GPU MODE $100K GPU coding competition](https://www.datamonsters.com/amd-developer-challenge-2025)!
+The first thing you should do is check out **[vgbench.com](https://www.vgbench.com/)**, and then go participate in the **[AMD x GPU MODE $100K GPU coding competition](https://www.datamonsters.com/amd-developer-challenge-2025)**!
 
-I recently graduated after spending a wonderful 4 years at Princeton University advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. There, I received the **<a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize in Computer Science</a>**, which is awarded to the top undergraduate student in the Princeton CS department.
+Hey 👋! I recently graduated after spending a wonderful 4 years at Princeton University advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. There, I received the **<a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize in Computer Science</a>**, which is awarded to the top undergraduate student in the Princeton CS department.
 
-Right now, I'm particularly interested in systems for/in ML, scaling and understanding language models, and applications of AI to the natural sciences!
 
 <p style="margin-bottom: 0.5rem;">The most recent projects (+ research) I've led / majorly contributed to are (🔀 by ⏰):</p>
 
@@ -46,6 +45,7 @@ I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5
 co-lead the <a href="https://gpu-mode.github.io/discord-cluster-manager/docs/intro/">GPU programming leaderboard</a>!
 
 <hr>
+Right now, I'm particularly interested in systems for/in ML, scaling and understanding language models, and applications of AI to the natural sciences!
 
 <p style="margin-bottom: 0.1rem;">I got into AI research because I wanted to design intelligent bots for video games when I was younger:</p>
 <ul>
