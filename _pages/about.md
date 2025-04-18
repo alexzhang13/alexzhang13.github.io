@@ -42,7 +42,7 @@ Hey 👋! I recently graduated after spending a wonderful 4 years at Princeton U
 Feel free to reach out to talk through
 my email at [x]@princeton.edu where [x]=alzhang. 
 I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community and 
-co-lead the <a href="https://gpu-mode.github.io/discord-cluster-manager/docs/intro/">GPU programming leaderboard</a>!
+co-lead the <a href="https://www.gpumode.com/">GPU programming leaderboard</a>!
 
 <hr>
 Right now, I'm particularly interested in systems for/in ML, scaling and understanding language models, and applications of AI to the natural sciences!
