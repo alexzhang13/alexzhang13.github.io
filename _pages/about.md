@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Incoming PhD at MIT CSAIL, Researcher @ VantAI, Princeton CS '24
+subtitle: Incoming PhD Student at MIT CSAIL, Researcher @ VantAI, Princeton CS '24
 profile:
   align: right
   image: Alex_Zhang_2024.png
