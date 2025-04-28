@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Incoming PhD Student at MIT CSAIL, Researcher @ VantAI, Previously Princeton CS '24, Apple, Snapchat Research, Claryo
+subtitle: Incoming PhD Student at MIT CSAIL, Researcher @ VantAI, Princeton CS '24
 profile:
   align: right
   image: Alex_Zhang_2024.png
@@ -22,9 +22,9 @@ _styles: >
     }
 ---
 
-The first thing you should do is check out **[vgbench.com](https://www.vgbench.com/)**, and then go participate in the **[AMD x GPU MODE $100K GPU coding competition](https://www.datamonsters.com/amd-developer-challenge-2025)**!
+Hey 👋! The first thing you should do is check out **[vgbench.com](https://www.vgbench.com/)**, and then go participate in the **[AMD x GPU MODE $100K GPU coding competition](https://www.datamonsters.com/amd-developer-challenge-2025)**!
 
-Hey 👋! I recently graduated after spending a wonderful 4 years at Princeton University advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. There, I received the **<a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize in Computer Science</a>**, which is awarded to the top undergraduate student in the Princeton CS department.
+I recently graduated after spending a wonderful 4 years at Princeton University advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. There, I received the **<a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize in Computer Science</a>**, which is awarded to the top undergraduate student in the Princeton CS department.
 
 
 <hr>
@@ -38,14 +38,14 @@ Hey 👋! I recently graduated after spending a wonderful 4 years at Princeton U
 
 <p style="margin-bottom: 0.5rem;"><b>Models 🌎:</b></p>
 <ul>
-<li> <a href="https://www.vant.ai/neo-1"><b>Neo-1</b></a>: the first model for de novo molecular generation + structure prediction. </li>
+<li> <a href="https://www.vant.ai/neo-1"><b>Neo-1</b></a>: the first deep learning model for de novo molecular generation + structure prediction. </li>
 <li> <a href="https://arxiv.org/abs/2402.01695"><b>Language-guided World Models</b></a>: world model RL agents that can be conditioned on natural language hints. </li>
 </ul>
 
 <p style="margin-bottom: 0.5rem;"><b>MLSys ⚡:</b></p>
 <ul>
 <li> <a href="gpumode.com"><b>AMD x GPU MODE $100k MI300X GPU kernel competition</b></a>: write the fastest kernels on MI300s! </li>
-<li> Open source <a href="https://gpu-mode.github.io/popcorn/"><b>Project Popcorn 🍿</b></a> for <b>generating GPU kernels with LLMs</b>. </li>
+<li> <a href="https://gpu-mode.github.io/popcorn/"><b>Project Popcorn 🍿</b></a>: open source effort to build <b>LLM-generated GPU kernels</b>. </li>
 <li> <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency"><b>Fast Triton kernels</b></a> for Ligo Biosciences' open-source AlphaFold3 (950+ ⭐'s). </li>
 <li> <a href="https://github.com/alexzhang13/flashattention2-custom-mask"><b>FlashAttention2 with Custom Masks:</b></a> Simple Triton version of FlashAttention2 with custom masks (before FlexAttention came out). </li>
 </ul>
@@ -57,7 +57,6 @@ my email at [x]@princeton.edu where [x]=alzhang.
 I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community and 
 co-lead the <a href="https://www.gpumode.com/">GPU programming leaderboard</a>!
 
-<hr>
 <p style="margin-bottom: 0.1rem;"><b>Random.</b> I got into AI research because I wanted to design intelligent bots for video games when I was younger:</p>
 <ul>
 <li> <em> I first started programming by making Android games in Java. </em> </li>
