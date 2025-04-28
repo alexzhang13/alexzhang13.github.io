@@ -36,7 +36,7 @@ Hey 👋! I recently graduated after spending a wonderful 4 years at Princeton U
 <li> <a href="https://www.swebench.com/multimodal.html"><b>SWE-bench Multimodal</b></a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;">: Multi-modal task instances for SWE-bench with the original team. </li>
 </ul>
 
-<p style="margin-bottom: 0.5rem;"><b>Models :</b></p>
+<p style="margin-bottom: 0.5rem;"><b>Models 🌎:</b></p>
 <ul>
 <li> <a href="https://www.vant.ai/neo-1"><b>Neo-1</b></a>: the first model for de novo molecular generation + structure prediction. </li>
 <li> <a href="https://arxiv.org/abs/2402.01695"><b>Language-guided World Models</b></a>: world model RL agents that can be conditioned on natural language hints. </li>
@@ -44,11 +44,11 @@ Hey 👋! I recently graduated after spending a wonderful 4 years at Princeton U
 
 <p style="margin-bottom: 0.5rem;"><b>MLSys ⚡:</b></p>
 <ul>
-<li> <a href="gpumode.com">AMD x GPU MODE $100k MI300X GPU kernel competition</a>: write the fastest kernels on MI300s! </li>
-<li> Open source <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> for <b>generating GPU kernels with LLMs</b>. </li>
-<li> <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency">Fast Triton kernels</a> for Ligo Biosciences' open-source AlphaFold3 (950+ ⭐'s). </li>
-<li> <a href="https://github.com/alexzhang13/flashattention2-custom-mask">FlashAttention2 with Custom Masks:</a> Simple Triton version of FlashAttention2 with custom masks (before FlexAttention came out). </li>
-<ul>
+<li> <a href="gpumode.com"><b>AMD x GPU MODE $100k MI300X GPU kernel competition</b></a>: write the fastest kernels on MI300s! </li>
+<li> Open source <a href="https://gpu-mode.github.io/popcorn/"><b>Project Popcorn 🍿</b></a> for <b>generating GPU kernels with LLMs</b>. </li>
+<li> <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency"><b>Fast Triton kernels</b></a> for Ligo Biosciences' open-source AlphaFold3 (950+ ⭐'s). </li>
+<li> <a href="https://github.com/alexzhang13/flashattention2-custom-mask"><b>FlashAttention2 with Custom Masks:</b></a> Simple Triton version of FlashAttention2 with custom masks (before FlexAttention came out). </li>
+</ul>
 <hr>
 <!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
 
@@ -58,9 +58,7 @@ I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5
 co-lead the <a href="https://www.gpumode.com/">GPU programming leaderboard</a>!
 
 <hr>
-Right now, I'm particularly interested in systems for/in ML, scaling and understanding language models, and applications of AI to the natural sciences!
-
-<p style="margin-bottom: 0.1rem;">I got into AI research because I wanted to design intelligent bots for video games when I was younger:</p>
+<p style="margin-bottom: 0.1rem;"><b>Random.</b> I got into AI research because I wanted to design intelligent bots for video games when I was younger:</p>
 <ul>
 <li> <em> I first started programming by making Android games in Java. </em> </li>
 <li> <em> I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">UE4 unfinished example.</a> </em> </li>
