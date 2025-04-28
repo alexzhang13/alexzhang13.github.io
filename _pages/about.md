@@ -28,7 +28,7 @@ I recently graduated after spending a wonderful 4 years at Princeton University 
 
 
 <hr>
-<p style="margin-bottom: 0.5rem;">The most recent research (with 🔗's!) I've led / majorly contributed to are (🔀 by ⏰):</p>
+<p style="margin-bottom: 0.5rem;">The most recent research (with 🔗's!) I've led / majorly contributed to (🔀 by ⏰):</p>
 <p style="margin-bottom: 0.5rem;"><b>Benchmarks 🪑:</b></p>
 <ul>
 <li> <b><a href="https://vgbench.com">VideoGameBench</a></b>: environment for evaluating VLMs on popular video games!</li>
