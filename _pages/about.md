@@ -27,30 +27,29 @@ The first thing you should do is check out **[vgbench.com](https://www.vgbench.c
 Hey 👋! I recently graduated after spending a wonderful 4 years at Princeton University advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. There, I received the **<a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize in Computer Science</a>**, which is awarded to the top undergraduate student in the Princeton CS department.
 
 
-<div style="border: 2px solid #ccc; padding: 20px; border-radius: 5px; margin: 15px 0;">
-<p style="margin-bottom: 0.5rem;">The most recent projects (+ research) I've led / majorly contributed to:</p>
-<p style="margin-bottom: 0.5rem;"><b>Benchmarks:</b></p>
+<hr>
+<p style="margin-bottom: 0.5rem;">The most recent projects (+ research) I've led / majorly contributed to are (🔀 by ⏰):</p>
+<p style="margin-bottom: 0.5rem;"><b>Benchmarks 🪑:</b></p>
 <ul>
 <li> <b><a href="https://vgbench.com">VideoGameBench</a></b>: environment for evaluating VLMs on popular video games like Doom, Zelda, and more.</li>
 <li> <b><a href="https://arxiv.org/abs/2502.10517v1">KernelBench</a></b>: environment for evaluating LLM-generated CUDA / Triton kernels.</li>
 <li> <a href="https://www.swebench.com/multimodal.html"><b>SWE-bench Multimodal</b></a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;">: Multi-modal task instances for SWE-bench with the original team. </li>
 </ul>
 
-
-<p style="margin-bottom: 0.5rem;"><b>Models:</b></p>
+<p style="margin-bottom: 0.5rem;"><b>Models :</b></p>
 <ul>
-<li> <a href="https://www.vant.ai/neo-1"><b>Neo-1</b></a>, the first model for de novo molecular generation + structure prediction. </li>
+<li> <a href="https://www.vant.ai/neo-1"><b>Neo-1</b></a>: the first model for de novo molecular generation + structure prediction. </li>
 <li> <a href="https://arxiv.org/abs/2402.01695"><b>Language-guided World Models</b></a>: world model RL agents that can be conditioned on natural language hints. </li>
 </ul>
 
-<p style="margin-bottom: 0.5rem;"><b>MLSys:</b></p>
+<p style="margin-bottom: 0.5rem;"><b>MLSys ⚡:</b></p>
 <ul>
-<li> <a href="gpumode.com">AMD x GPU MODE $100k MI300X GPU kernel competition</a>: write the fastest MI300 kernels! </li>
+<li> <a href="gpumode.com">AMD x GPU MODE $100k MI300X GPU kernel competition</a>: write the fastest kernels on MI300s! </li>
 <li> Open source <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> for <b>generating GPU kernels with LLMs</b>. </li>
-<li> Fast <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency"> kernels for scaling Ligo's <b>open source AlphaFold3</b></a>, <b>900+ GitHub ⭐'s</b>. </li>
-</ul>
-</div>
-
+<li> <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency">Fast Triton kernels</a> for Ligo Biosciences' open-source AlphaFold3 (950+ ⭐'s). </li>
+<li> <a href="https://github.com/alexzhang13/flashattention2-custom-mask">FlashAttention2 with Custom Masks:</a> Simple Triton version of FlashAttention2 with custom masks (before FlexAttention came out). </li>
+<ul>
+<hr>
 <!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
 
 Feel free to reach out to talk through
