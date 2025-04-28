@@ -28,10 +28,10 @@ I recently graduated after spending a wonderful 4 years at Princeton University 
 
 
 <hr>
-<p style="margin-bottom: 0.5rem;">The most recent projects (+ research) I've led / majorly contributed to are (🔀 by ⏰):</p>
+<p style="margin-bottom: 0.5rem;">The most recent research (with 🔗's!) I've led / majorly contributed to are (🔀 by ⏰):</p>
 <p style="margin-bottom: 0.5rem;"><b>Benchmarks 🪑:</b></p>
 <ul>
-<li> <b><a href="https://vgbench.com">VideoGameBench</a></b>: environment for evaluating VLMs on popular video games like Doom, Zelda, and more.</li>
+<li> <b><a href="https://vgbench.com">VideoGameBench</a></b>: environment for evaluating VLMs on popular video games!</li>
 <li> <b><a href="https://arxiv.org/abs/2502.10517v1">KernelBench</a></b>: environment for evaluating LLM-generated CUDA / Triton kernels.</li>
 <li> <a href="https://www.swebench.com/multimodal.html"><b>SWE-bench Multimodal</b></a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;">: Multi-modal task instances for SWE-bench with the original team. </li>
 </ul>
@@ -47,7 +47,6 @@ I recently graduated after spending a wonderful 4 years at Princeton University 
 <li> <a href="gpumode.com"><b>AMD x GPU MODE $100k MI300X GPU kernel competition</b></a>: write the fastest kernels on MI300s! </li>
 <li> <a href="https://gpu-mode.github.io/popcorn/"><b>Project Popcorn 🍿</b></a>: open source effort to build <b>LLM-generated GPU kernels</b>. </li>
 <li> <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency"><b>Fast Triton kernels</b></a> for Ligo Biosciences' open-source AlphaFold3 (950+ ⭐'s). </li>
-<li> <a href="https://github.com/alexzhang13/flashattention2-custom-mask"><b>FlashAttention2 with Custom Masks:</b></a> Simple Triton version of FlashAttention2 with custom masks (before FlexAttention came out). </li>
 </ul>
 <hr>
 <!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
