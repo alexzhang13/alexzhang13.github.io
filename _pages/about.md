@@ -32,7 +32,7 @@ I recently graduated after spending a wonderful 4 years at Princeton University 
 <p style="margin-bottom: 0.5rem;"><b>Benchmarks 🪑:</b></p>
 <ul>
 <li> <b><a href="https://vgbench.com">VideoGameBench</a></b>: environment for evaluating VLMs on popular video games!</li>
-<li> <b><a href="https://arxiv.org/abs/2502.10517v1">KernelBench</a></b>: environment for evaluating LLM-generated CUDA / Triton kernels.</li>
+<li> <b><a href="https://arxiv.org/abs/2502.10517v1">KernelBench</a></b>: environment for evaluating LM-generated CUDA / Triton kernels.</li>
 <li> <a href="https://www.swebench.com/multimodal.html"><b>SWE-bench Multimodal</b></a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;">: Multi-modal task instances for SWE-bench with the original team. </li>
 </ul>
 
@@ -45,7 +45,7 @@ I recently graduated after spending a wonderful 4 years at Princeton University 
 <p style="margin-bottom: 0.5rem;"><b>MLSys ⚡:</b></p>
 <ul>
 <li> <a href="https://www.datamonsters.com/amd-developer-challenge-2025"><b>AMD x GPU MODE $100k MI300X GPU kernel competition</b></a>: write the fastest kernels on MI300s! </li>
-<li> <a href="https://gpu-mode.github.io/popcorn/"><b>Project Popcorn 🍿</b></a>: open source effort to build <b>LLM-generated GPU kernels</b>. </li>
+<li> <a href="https://gpu-mode.github.io/popcorn/"><b>Project Popcorn 🍿</b></a>: open source effort to build <b>LM-generated GPU kernels</b>. </li>
 <li> <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency"><b>Fast Triton kernels</b></a> for Ligo Biosciences' open-source AlphaFold3 (950+ ⭐'s). </li>
 </ul>
 <hr>
