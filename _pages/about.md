@@ -45,7 +45,7 @@ I recently graduated after spending a wonderful 4 years at Princeton University 
 <p style="margin-bottom: 0.5rem;"><b>MLSys ⚡:</b></p>
 <ul>
 <li> <a href="https://www.datamonsters.com/amd-developer-challenge-2025"><b>AMD x GPU MODE $100k MI300X GPU kernel competition</b></a>: write the fastest kernels on MI300s! </li>
-<li> <a href="https://gpu-mode.github.io/popcorn/"><b>Project Popcorn 🍿</b></a>: open source effort to build <b>LM-generated GPU kernels</b>. </li>
+<li> <a href="https://gpu-mode.github.io/popcorn/"><b>Project Popcorn 🍿</b></a>: open source effort to build <b>LM-generated GPU kernels</b>. See <a href="https://huggingface.co/facebook/KernelLLM">KernelLLM-8B</a>, an 8B parameter model we (w/ <a href="https://ai.meta.com/research/">FAIR</a>) built that generates Triton code. </li>
 <li> <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency"><b>Fast Triton kernels</b></a> for Ligo Biosciences' open-source AlphaFold3 (950+ ⭐'s). </li>
 </ul>
 <hr>
