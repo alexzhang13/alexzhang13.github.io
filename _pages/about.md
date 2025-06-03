@@ -33,7 +33,7 @@ I recently graduated after spending a wonderful 4 years at Princeton University 
 <ul>
 <li> <b><a href="https://vgbench.com">VideoGameBench</a></b>: environment for evaluating VLMs on popular video games!</li>
 <li> <b><a href="https://arxiv.org/abs/2502.10517v1">KernelBench</a></b>: environment for evaluating LM-generated CUDA / Triton kernels.</li>
-<li> <a href="https://www.swebench.com/multimodal.html"><b>SWE-bench Multimodal</b></a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;">: Multi-modal task instances for SWE-bench with the original team. </li>
+<li> <a href="https://www.swebench.com/multimodal.html"><b>SWE-bench Multimodal</b></a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;">: Multi-modal task instances for SWE-bench. </li>
 </ul>
 
 <p style="margin-bottom: 0.5rem;"><b>Models 🌎:</b></p>
@@ -55,10 +55,3 @@ Feel free to reach out to talk through
 my email at [x]@princeton.edu where [x]=alzhang. 
 I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community and 
 co-lead the <a href="https://www.gpumode.com/">GPU programming leaderboard</a>!
-
-<p style="margin-bottom: 0.1rem;"><b>Random.</b> I got into AI research because I wanted to design intelligent bots for video games when I was younger:</p>
-<ul>
-<li> <em> I first started programming by making Android games in Java. </em> </li>
-<li> <em> I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">UE4 unfinished example.</a> </em> </li>
-<li> <em> My favorite games of all time are <a href="https://en.wikipedia.org/wiki/Xenoblade_Chronicles_(video_game)">Xenoblade Chronicles</a> and <a href="https://www.teamfortress.com/">Team Fortress 2</a>. </em> </li>
-</ul>
