@@ -26,10 +26,7 @@ Hi 👋! I broadly work on problems related to evaluating language model capabil
 
 I will be a PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a> starting Fall 2025. For the past year I've been working as a researcher at <a href="https://www.vant.ai/neo-1">Vant AI</a> working on AI-based drug discovery. 
 
-Before that, I graduated as the top student of the Princeton CS department (<a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize</a>), where I was blessed with amazing mentors: Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, Dr. <a href="https://ofir.io">Ofir Press</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. 
-
-
-I got into AI research because I wanted to design intelligent bots for video games when I was younger. I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">UE4 unfinished example.</a> My favorite games of all time are <a href="https://en.wikipedia.org/wiki/Xenoblade_Chronicles_(video_game)">Xenoblade Chronicles</a> and <a href="https://www.teamfortress.com/">Team Fortress 2</a>.
+Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">top student of the Princeton CS department</a>, where I was blessed with amazing mentors: Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, Dr. <a href="https://ofir.io">Ofir Press</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. Before that, I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">UE4 unfinished example.</a> 
 
 <p>
 <br>
