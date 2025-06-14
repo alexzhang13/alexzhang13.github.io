@@ -43,7 +43,11 @@ Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class
 
 <p style="margin-bottom: 0.5rem;"><b>Systems.</b> <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> (2025), <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency">Triton kernels for OSS AlphaFold3</a> (2025),
 <!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
+
+<p>
 <br>
+<br>
+</p>
 
 Feel free to reach out to talk through my email at [x]@mit.edu where [x]=altzhang. 
 I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community and co-lead the <a href="https://www.gpumode.com/">GPU programming leaderboard</a>!
