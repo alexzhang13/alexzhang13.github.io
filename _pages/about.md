@@ -36,16 +36,16 @@ Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class
 
 ### research highlights:
 
-<p style="margin-bottom: 0.5rem;"><b>Benchmarks.</b> <a href="https://vgbench.com">VideoGameBench</a> (2025), <a href="https://arxiv.org/abs/2502.10517v1">KernelBench</a> (ICML, 2025), <a href="https://www.swebench.com/multimodal.html">SWE-bench Multimodal</a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;"> (ICLR, 2025).
+<p style="margin-bottom: 0.5rem;"><b>Language Model Benchmarks.</b> <a href="https://vgbench.com">VideoGameBench</a> (2025), <a href="https://arxiv.org/abs/2502.10517v1">KernelBench</a> (ICML, 2025), <a href="https://www.swebench.com/multimodal.html">SWE-bench Multimodal</a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;"> (ICLR, 2025).
 
 <p style="margin-bottom: 0.5rem;"><b>Models.</b> <a href="https://www.vant.ai/neo-1">Neo-1</a> (2025), <a href="https://huggingface.co/facebook/KernelLLM">KernelLLM-8B</a> (2025), <a href="https://arxiv.org/abs/2402.01695">Language-guided World Models</a> (SpLU-RoboNLP @ ACL, 2024).
 
-<p style="margin-bottom: 0.5rem;"><b>Systems.</b> <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> (2025), <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency">Triton kernels for OSS AlphaFold3</a> (2024), <a href="https://github.com/alexzhang13/flashattention2-custom-mask">FlashAttention2 with custom masking</a> (2024).
+<p style="margin-bottom: 0.5rem;"><b>ML Systems.</b> <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> (2025), <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency">Triton kernels for OSS AlphaFold3</a> (2024).
 <!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
 
 <p>
 <br>
 </p>
 
-Feel free to reach out to talk through my email at [x]@mit.edu where [x]=altzhang. 
+Feel free to reach out to talk about anything through my email at [x]@mit.edu where [x]=altzhang. It's not obvious from my research, but I spent most of my undergrad studying math + CS theory and love to yap about it.
 I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community and co-lead the <a href="https://www.gpumode.com/">GPU programming leaderboard</a>!
