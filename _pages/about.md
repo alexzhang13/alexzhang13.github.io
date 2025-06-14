@@ -22,14 +22,13 @@ _styles: >
     }
 ---
 
-Hi 👋! I broadly work on problems related to evaluating language model capabilities, systems programming for machine learning, and AI for science. I co-lead the <a href="https://www.gpumode.com/news">GPU MODE leaderboard</a>, which most recently hosted a <a href="https://www.datamonsters.com/amd-developer-challenge-2025">$200k competition</a> with <a href="https://www.amd.com/en/corporate.html">AMD</a>.
+Hi 👋! I broadly work on problems related to evaluating language model capabilities, systems programming for machine learning, and AI for science. I co-lead the <a href="https://www.gpumode.com/news">GPU MODE leaderboard</a>, which most recently hosted a <a href="https://www.datamonsters.com/amd-developer-challenge-2025">$100k competition</a> with <a href="https://www.amd.com/en/corporate.html">AMD</a>.
 
 I will be a PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a> starting Fall 2025. For the past year I've been working as a researcher at <a href="https://www.vant.ai/neo-1">Vant AI</a> working on AI-based drug discovery. 
 
-Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">top student of the Princeton CS department</a>, where I was blessed with amazing mentors: Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, Dr. <a href="https://ofir.io">Ofir Press</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. Before that, I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">UE4 unfinished example.</a> 
+Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">top student of the Princeton CS department</a>, where I was blessed with amazing mentors: Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, Dr. <a href="https://ofir.io">Ofir Press</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. Before that, I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">Example.</a> 
 
 <p>
-<br>
 <br>
 <br>
 </p>
@@ -45,7 +44,6 @@ Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class
 <!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
 
 <p>
-<br>
 <br>
 </p>
 
