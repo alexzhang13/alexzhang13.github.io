@@ -17,7 +17,7 @@ nav_order: 5
 href="https://ai-house.vercel.app">AI@Princeton</a> + helped organize first <a href="https://ai-house.vercel.app/Framework/aitt.html">AI Tiger Trek</a>. </li>
 </ul>
 
-\> graduated <i>valedictorian</i> (1/~400) from montgomery high school 🎓.
+\> graduated <i>valedictorian</i> (1/~400) from a public US high school 🎓.
 
 <hr>
 
