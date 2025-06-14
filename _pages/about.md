@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Incoming PhD Student at MIT CSAIL, Researcher @ VantAI, Princeton CS '24
+subtitle: Incoming PhD Student at MIT CSAIL, Princeton CS '24
 profile:
   align: right
   image: Alex_Zhang_2024.png
@@ -22,42 +22,26 @@ _styles: >
     }
 ---
 
-Hey 👋! The first thing you should do is check out **[vgbench.com](https://www.vgbench.com/)**, and then go participate in the **[AMD x GPU MODE $100K GPU coding competition](https://www.datamonsters.com/amd-developer-challenge-2025)**!
+Hi 👋! I broadly work on problems related to evaluating language model capabilities, systems programming for machine learning, and AI for science. I also co-lead the <a href="https://www.gpumode.com/news">GPU MODE leaderboard</a>, which most recently hosted a <a href="https://www.datamonsters.com/amd-developer-challenge-2025">$200K competition</a> sponsored by <a href="https://www.amd.com/en/corporate.html">AMD</a>.
 
-I recently graduated after spending a wonderful 4 years at Princeton University advised by Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. There, I received the **<a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize in Computer Science</a>**, which is awarded to the top undergraduate student in the Princeton CS department.
+I will be a PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a> starting Fall 2025. For the past year I've been working as a researcher at <a href="https://www.vant.ai/neo-1">Vant AI</a> working on foundation models for AI-based drug discovery. 
+
+Before that, I graduated as the top student of the Princeton CS department (<a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">Phillip Goldman '86 Senior Prize</a>) after 4 wonderful years at Princeton University with amazing advisors: Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, Dr. <a href="https://ofir.io">Ofir Press</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. 
 
 
 <hr>
-<p style="margin-bottom: 0.5rem;">The most recent research (with 🔗's!) I've led / majorly contributed to (🔀 by ⏰):</p>
-<p style="margin-bottom: 0.5rem;"><b>Benchmarks 🪑:</b></p>
-<ul>
-<li> <b><a href="https://vgbench.com">VideoGameBench</a></b>: environment for evaluating VLMs on popular video games!</li>
-<li> <b><a href="https://arxiv.org/abs/2502.10517v1">KernelBench</a></b>: environment for evaluating LM-generated CUDA / Triton kernels.</li>
-<li> <a href="https://www.swebench.com/multimodal.html"><b>SWE-bench Multimodal</b></a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;">: Multi-modal task instances for SWE-bench with the original team. </li>
-</ul>
 
-<p style="margin-bottom: 0.5rem;"><b>Models 🌎:</b></p>
-<ul>
-<li> <a href="https://www.vant.ai/neo-1"><b>Neo-1</b></a>: the first deep learning model for de novo molecular generation + structure prediction. </li>
-<li> <a href="https://arxiv.org/abs/2402.01695"><b>Language-guided World Models</b></a>: world model RL agents that can be conditioned on natural language hints. </li>
-</ul>
+### Some research highlights (🔀 by ⏰):
 
-<p style="margin-bottom: 0.5rem;"><b>MLSys ⚡:</b></p>
-<ul>
-<li> <a href="https://www.datamonsters.com/amd-developer-challenge-2025"><b>AMD x GPU MODE $100k MI300X GPU kernel competition</b></a>: write the fastest kernels on MI300s! </li>
-<li> <a href="https://gpu-mode.github.io/popcorn/"><b>Project Popcorn 🍿</b></a>: open source effort to build <b>LM-generated GPU kernels</b>. See <a href="https://huggingface.co/facebook/KernelLLM">KernelLLM-8B</a>, an 8B parameter model we (w/ <a href="https://ai.meta.com/research/">FAIR</a>) built that generates Triton code. </li>
-<li> <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency"><b>Fast Triton kernels</b></a> for Ligo Biosciences' open-source AlphaFold3 (950+ ⭐'s). </li>
-</ul>
+<p style="margin-bottom: 0.5rem;"><b>Benchmarks 🪑.</b> <a href="https://vgbench.com">VideoGameBench</a> (arXiv, 2025), <a href="https://arxiv.org/abs/2502.10517v1">KernelBench</a> (ICML, 2025), <a href="https://www.swebench.com/multimodal.html">SWE-bench Multimodal</a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;"> (ICLR, 2025).
+
+<p style="margin-bottom: 0.5rem;"><b>Models 🌎.</b> <a href="https://www.vant.ai/neo-1">Neo-1</a> (2025), <a href="https://arxiv.org/abs/2402.01695">Language-guided World Models</a> (SpLU-RoboNLP @ ACL, 2024), <a href="https://huggingface.co/facebook/KernelLLM">KernelLLM-8B</a> (2025).
+
+<p style="margin-bottom: 0.5rem;"><b>Systems ⚡.</b> <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> (2025), <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency">Fast Triton kernels for Open-source AlphaFold3 (2025)</a>,
 <hr>
 <!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
 
-Feel free to reach out to talk through
-my email at [x]@princeton.edu where [x]=alzhang. 
-I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community and 
-co-lead the <a href="https://www.gpumode.com/">GPU programming leaderboard</a>!
+Feel free to reach out to talk through my email at [x]@mit.edu where [x]=altzhang. 
+I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community and co-lead the <a href="https://www.gpumode.com/">GPU programming leaderboard</a>!
 
-<p style="margin-bottom: 0.1rem;"><b>Random.</b> I got into AI research because I wanted to design intelligent bots for video games when I was younger:</p>
-<ul>
-<li> <em> I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">UE4 unfinished example.</a> </em> </li>
-<li> <em> My favorite games of all time are <a href="https://en.wikipedia.org/wiki/Xenoblade_Chronicles_(video_game)">Xenoblade Chronicles</a> and <a href="https://www.teamfortress.com/">Team Fortress 2</a>. </em> </li>
-</ul>
+<p style="margin-bottom: 0.1rem;"><b>Random.</b> I got into AI research because I wanted to design intelligent bots for video games when I was younger. I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">UE4 unfinished example.</a> My favorite games of all time are <a href="https://en.wikipedia.org/wiki/Xenoblade_Chronicles_(video_game)">Xenoblade Chronicles</a> and <a href="https://www.teamfortress.com/">Team Fortress 2</a>. </p>
