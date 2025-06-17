@@ -26,7 +26,7 @@ Hi 👋! I broadly work on problems related to evaluating language model capabil
 
 I will be a PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a> starting Fall 2025. For the past year I've been working as a researcher at <a href="https://www.vant.ai/neo-1">VantAI</a> working on AI-based drug discovery. 
 
-Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">top student of the Princeton CS department</a>, where I was blessed with amazing mentors: Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, Dr. <a href="https://ofir.io">Ofir Press</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. Before that, I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">[example].</a> 
+Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">top student of the Princeton CS department</a>, where I was blessed with amazing mentors: Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, Dr. <a href="https://ofir.io">Ofir Press</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. Before that, I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">[example]</a> 
 
 <p>
 <br>
