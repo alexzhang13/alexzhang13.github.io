@@ -50,4 +50,4 @@ Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class
 </p>
 
 Feel free to reach out to talk about anything through my email at [x]@mit.edu where [x]=altzhang. It's not obvious from my research, but I spent most of my undergrad studying math + CS theory and love to chat about it! On that topic, check out my college roommate Evan's [math reading list](https://bigmanoncampus.notion.site/reading-9385f76e5a624d75bb1a0c3d773a65c8)!
-Finally, I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community and co-lead the <a href="https://www.gpumode.com/">GPU programming leaderboard</a>.
+Finally, I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community.
