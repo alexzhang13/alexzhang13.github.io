@@ -468,7 +468,7 @@ Quantization basically means instead of storing and using [32-bit floating point
 
 The concept of quantization is not specific to deep learning and is more of a data compression problem. Generally, we are interested in reducing the memory footprint of our models — i.e. if we quantize a model with FP32 parameters to INT8<d-footnote>FP32 means 32-bit floating point and INT8 means 8-bit integers. We will talk about this a little bit, but they are represented differently in memory. So even INT32 is quite different than FP32.</d-footnote>, we reduce the model size by 4x. However, as we will see later, modern hardware like the [NVIDIA A100](https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/a100/pdf/nvidia-a100-datasheet-us-nvidia-1758950-r4-web.pdf) introduces specialized instructions to significantly speed up lower precision operations. For now, we introduce some basic quantization strategies for transforming a value $X$.
 
-**[Absmax quantization](https://aman.ai/primers/ai/quantization/#absmax-absolute-maximum-quantization) to INT{b}** will map to to the closed interval $[- \max \|X\|, \max \|X\|]$ then evenly divide up the interval into $2^b - 1$ sections. Each value will get mapped to its closest point in the above mapping, and the quantization range is clearly symmetric.
+**[Absmax quantization](https://aman.ai/primers/ai/quantization/#absmax-absolute-maximum-quantization) to INT{b}** will map to the closed interval $[- \max \|X\|, \max \|X\|]$ then evenly divide up the interval into $2^b - 1$ sections. Each value will get mapped to its closest point in the above mapping, and the quantization range is clearly symmetric.
 
 <p>
 $$
@@ -1309,7 +1309,7 @@ One research direction that hasn’t really taken off for the past few years is 
 
 **Sparse factorizations.** One really interesting direction a few years back was factorizing model layers into sparse parameters, but ultimately it didn’t really take off. I am hopeful that people continue working on this direction, because derivable factorizations can say something about how our models work.
 
-- **[Butterfly Matrices](https://arxiv.org/abs/1903.05895) (Dao et al., 2019<d-cite key="dao2020learningfastalgorithmslinear"></d-cite>)**. In this work, they show that a large class of structured matrices (e.g. [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform), [DFT](https://en.wikipedia.org/wiki/Discrete_Fourier_transform) live in this family) can be recursively factorized into sparse matrices with a nice [block diagonal](https://linear.axler.net/BlockDiagonal.pdf) structure. While the implementations are not hardware friendly, these factorizations theoretically lead to a reduced number of operations and memory-footprint. I really
+- **[Butterfly Matrices](https://arxiv.org/abs/1903.05895) (Dao et al., 2019<d-cite key="dao2020learningfastalgorithmslinear"></d-cite>)**. In this work, they show that a large class of structured matrices (e.g. [FFT](https://en.wikipedia.org/wiki/Fast_Fourier_transform), [DFT](https://en.wikipedia.org/wiki/Discrete_Fourier_transform) live in this family) can be recursively factorized into sparse matrices with a nice [block diagonal](https://linear.axler.net/BlockDiagonal.pdf) structure. While the implementations are not hardware friendly, these factorizations theoretically lead to a reduced number of operations and memory-footprint.
 - **[Monarch Matrices](https://proceedings.mlr.press/v162/dao22a.html) (Dao et al., 2022<d-cite key="pmlr-v162-dao22a"></d-cite>)**. As a follow-up, they derive a less-expressive class of matrices with hardware-friendly factorizations. Despite now being practically interesting, I haven’t seen much follow up work in this area in recently.
 
 ## Part III.5: What about model inference?
@@ -1545,6 +1545,8 @@ Part of the difficulty of research in this field is sifting through the sheer nu
 
 ## Acknowledgements
 I am open to suggestions and edits, even those that are critical. I want to log these edits and changes made over time in this section to give credit where credit is due!
+
+* **Eddy Wu** for finding typos in the quantization and sparsity sections.
 
 
 ## Citation
