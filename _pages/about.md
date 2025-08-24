@@ -41,7 +41,7 @@ Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class
 
   <li><b>Models.</b> <a href="https://www.vant.ai/neo-1">Neo-1</a> (2025), <a href="https://huggingface.co/facebook/KernelLLM">KernelLLM-8B</a> (2025), <a href="https://arxiv.org/abs/2402.01695">Language-guided World Models</a> (SpLU-RoboNLP @ ACL, 2024)</li>
 
-  <li><b>ML Systems.</b> <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> (2025), <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency">Triton kernels for OSS AlphaFold3</a> (2024)</li>
+  <li><b>ML Systems.</b> <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> (2025), <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency">Triton kernels for OSS AlphaFold3 (1k+ ⭐'s)</a> (2024)</li>
 </ul>
 <!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
 
