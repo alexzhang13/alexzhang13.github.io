@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Incoming PhD Student at MIT CSAIL, Princeton CS '24
+subtitle: PhD Student at MIT CSAIL, Princeton CS '24
 profile:
   align: right
   image: Alex_Zhang_2024.png
@@ -22,9 +22,9 @@ _styles: >
     }
 ---
 
-Hi 👋! I broadly work on problems related to evaluating language model capabilities, systems programming for machine learning, and AI for science. I co-lead the <a href="https://www.gpumode.com/news">GPU MODE leaderboard</a>, which most recently hosted a <a href="https://www.datamonsters.com/amd-developer-challenge-2025">$100k competition</a> with <a href="https://www.amd.com/en/corporate.html">AMD</a>.
+Hi 👋! I broadly work on problems related to evaluating language model capabilities, systems programming for machine learning, and AI for science. I co-lead the <a href="https://www.gpumode.com/news">GPU MODE leaderboard</a>, where we recently hosted two <a href="https://www.datamonsters.com/amd-developer-challenge-2025">$100k competitions with AMD</a> and a <a href="https://www.janestreet.com/join-jane-street/programs-and-events/gpu-mode-hackathon/">model optimization competition with Jane Street</a>.
 
-I will be a PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a> starting Fall 2025. I'm now at <a href="https://sakana.ai">Sakana AI</a>. I spent a year before that as a researcher at <a href="https://www.vant.ai/neo-1">VantAI</a> working on AI-based drug discovery. 
+I am a PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a>. I spent the summer before at <a href="https://sakana.ai">Sakana AI</a>. I spent a year before that as a researcher at <a href="https://www.vant.ai/neo-1">VantAI</a> working on AI-based drug discovery. 
 
 Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">top student of the Princeton CS department</a>, where I was blessed with amazing mentors: Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, Dr. <a href="https://ofir.io">Ofir Press</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. During that time, I was doing some blend of AI/ML research while interning at <a href="https://research.snap.com">Snapchat</a>, <a href="https://machinelearning.apple.com">Apple </a>, and <a href="https://www.claryo.co">Claryo</a>. Before that, I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">[unfinished example]</a> 
 
