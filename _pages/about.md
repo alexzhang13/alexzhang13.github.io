@@ -5,7 +5,7 @@ permalink: /
 subtitle: PhD Student at MIT CSAIL, Princeton CS '24
 profile:
   align: right
-  image: Alex_Zhang_2024.png
+  image: az.png
   image_circular: false # crops the image to make it circular
   # address: >
   #   <p>555 your office number</p>
