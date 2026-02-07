@@ -22,7 +22,7 @@ _styles: >
     }
 ---
 
-Hi 👋! I broadly work on problems related to evaluating language model capabilities, systems and GPU programming for machine learning, and AI for code generation. Read my latest work on <a href="https://alexzhang13.github.io/blog/2025/rlm/">Recursive Language Models (RLMs)</a>. I co-lead the <a href="https://www.gpumode.com/v2/home">GPU MODE leaderboard</a>, where we are currently hosting the <a href="https://luma.com/9n27uem4">NVFP4 Blackwell competition with NVIDIA</a>, and recently hosted two <a href="https://www.datamonsters.com/amd-developer-challenge-2025">$100k competitions with AMD</a> and a <a href="https://www.gpumode.com/v2/news">model optimization competition with Jane Street</a>.
+Hi 👋! I broadly work on areas where I think language models are underutilized or inefficient. Read my latest work on <a href="https://alexzhang13.github.io/blog/2025/rlm/">Recursive Language Models (RLMs)</a>. I am part of the core team running the <a href="https://www.gpumode.com/v2/home">GPU MODE leaderboard</a>, where we are currently hosting the <a href="https://luma.com/9n27uem4">NVFP4 Blackwell competition with NVIDIA</a>, and recently hosted two <a href="https://www.datamonsters.com/amd-developer-challenge-2025">$100k competitions with AMD</a> and a <a href="https://www.gpumode.com/v2/news">model optimization competition with Jane Street</a>.
 
 I am a PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a> advised by <a href="https://omarkhattab.com">Omar Khattab</a> and <a href="https://people.csail.mit.edu/kraska/">Tim Kraska</a>. I spent the summer before at <a href="https://sakana.ai">Sakana AI</a> in Tokyo, Japan. I spent a year before that as a researcher at <a href="https://www.vant.ai/neo-1">VantAI</a> in NYC working on AI-based drug discovery. 
 
@@ -48,5 +48,4 @@ Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class
 <br>
 </p>
 
-Feel free to reach out to talk about anything through my email at [x]@mit.edu where [x]=altzhang. It's not obvious from my research, but I spent most of my undergrad studying math + CS theory and love to chat about it! On that topic, check out my college roommate Evan's [math reading list](https://bigmanoncampus.notion.site/reading-9385f76e5a624d75bb1a0c3d773a65c8)!
-Finally, I'm also very active in the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community.
+Feel free to reach out to talk about anything through my email at [x]@mit.edu where [x]=altzhang. Finally, I'm also fairly active in and help moderate the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community.
