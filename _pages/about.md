@@ -22,7 +22,7 @@ _styles: >
     }
 ---
 
-Hi 👋! I broadly work on areas where I think language models are underutilized or inefficient. Read my latest work on <a href="https://alexzhang13.github.io/blog/2025/rlm/">Recursive Language Models (RLMs)</a>. I am part of the core team running the <a href="https://www.gpumode.com/v2/home">GPU MODE leaderboard</a>, where we are currently hosting the <a href="https://luma.com/9n27uem4">NVFP4 Blackwell competition with NVIDIA</a>, and recently hosted two <a href="https://www.datamonsters.com/amd-developer-challenge-2025">$100k competitions with AMD</a> and a <a href="https://www.gpumode.com/v2/news">model optimization competition with Jane Street</a>.
+Hi 👋! I broadly work on areas where language models are underutilized or inefficient. Read my latest work on <a href="https://alexzhang13.github.io/blog/2025/rlm/">Recursive Language Models (RLMs)</a>. I am part of the core team running the <a href="https://www.gpumode.com/v2/home">GPU MODE leaderboard</a>, where we are currently hosting the <a href="https://luma.com/9n27uem4">NVFP4 Blackwell competition with NVIDIA</a>, and recently hosted two <a href="https://www.datamonsters.com/amd-developer-challenge-2025">$100k competitions with AMD</a> and a <a href="https://www.gpumode.com/v2/news">model optimization competition with Jane Street</a>.
 
 I am a PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a> advised by <a href="https://omarkhattab.com">Omar Khattab</a> and <a href="https://people.csail.mit.edu/kraska/">Tim Kraska</a>. I spent the summer before at <a href="https://sakana.ai">Sakana AI</a> in Tokyo, Japan. I spent a year before that as a researcher at <a href="https://www.vant.ai/neo-1">VantAI</a> in NYC working on AI-based drug discovery. 
 
