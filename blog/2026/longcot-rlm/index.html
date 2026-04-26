@@ -478,6 +478,8 @@
 
 <p><strong>Remark.</strong> I also asked it to write a similar set of tips for the LM to use as an ablation of the value of the RLM mechanism itself. I actually iterated on these prompts more than the RLM prompt, but generally just found worse performance versus the base prompt. Unfortunately, even though the LM becomes aware of the right decomposition, it is difficult for a pure reasoning language model to track and perform these decompositions through chain-of-thought.</p>
 
+<p><strong>Remark 2.</strong> The prompt is found in the trajectories repository (see Resources at the bottom), and is the same across all tasks. It describes the graph structure of LongCoT problems, an example of how to solve a fake problem, and tips for not brute-forcing problems. It illustrates that RLMs performing the correct decompositions are powerful, and ideally in the long run we want them to come up with these strategies on the fly from minimal prompting.</p>
+
 <h3 id="what-does-this-mean-for-lms-rlms-and-rlm-training">What does this mean for LMs, RLMs, and RLM training</h3>
 
 <p>There are some interesting takeaways from this mini experiment beyond the Mismanaged Geniuses Hypothesis that relate to training, and more specifically post-training on RLMs. We already knew that steering models with better prompts could yield wildly different results (my advisor has a whole collection of papers on this topic), but I think this effect is exaggerated with systems like RLMs that equip models with significantly more expressive capabilities.</p>
