@@ -21,12 +21,16 @@ _styles: >
         margin-top: -10px;
     }
 ---
+Hi! I broadly work on areas where language models are underutilized or inefficient. I am currently a PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a> advised by <a href="https://omarkhattab.com">Omar Khattab</a> and <a href="https://people.csail.mit.edu/kraska/">Tim Kraska</a>. 
 
-Hi 👋! I broadly work on areas where language models are underutilized or inefficient. Read my latest work on <a href="https://alexzhang13.github.io/blog/2025/rlm/">Recursive Language Models (RLMs)</a>. I am part of the core team running the <a href="https://www.gpumode.com/v2/home">GPU MODE leaderboard</a>, where we recently hosted the <a href="https://luma.com/9n27uem4">NVFP4 Blackwell competition with NVIDIA</a>, three <a href="https://www.amd.com/en/developer/resources/technical-articles/2026/new-gpumode-virtual-hackathon--e2e-model-speedrun.html">$100k-$1M competitions with AMD</a>, and a <a href="https://www.gpumode.com/news/jane-street-hackathon">model optimization competition with Jane Street</a>.
+Some notable things about me:
+<ul>
+  <li>Introduced <a href="https://alexzhang13.github.io/blog/2025/rlm/">Recursive Language Models (RLMs)</a>.</li>
+  <li>Part of the core team running the <a href="https://www.gpumode.com/v2/home">GPU MODE</a> competitions (<a href="https://luma.com/9n27uem4">NVIDIA NVFP4 Blackwell</a>, <a href="https://www.amd.com/en/developer/resources/technical-articles/2026/new-gpumode-virtual-hackathon--e2e-model-speedrun.html">AMD $1M speedrun</a>, <a href="https://www.gpumode.com/news/jane-street-hackathon">Jane Street model optimization</a>) and <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">community</a>.</li>
+  <li>Graduated as the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">top student of the Princeton CS department</a>, and fortunate to be advised by <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, <a href="https://machineslearner.com">Khanh Nguyen</a>, <a href="https://ofir.io">Ofir Press</a>, and <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>.</li>
+</ul>
 
-I am a PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a> advised by <a href="https://omarkhattab.com">Omar Khattab</a> and <a href="https://people.csail.mit.edu/kraska/">Tim Kraska</a>. I spent the summer before at <a href="https://sakana.ai">Sakana AI</a> in Tokyo, Japan. I spent a year before that as a researcher at <a href="https://www.vant.ai/neo-1">VantAI</a> in NYC working on AI-based drug discovery. 
-
-Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">top student of the Princeton CS department</a>, where I was blessed with amazing mentors: Professor <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, Dr. <a href="https://machineslearner.com">Khanh Nguyen</a>, Dr. <a href="https://ofir.io">Ofir Press</a>, and Professor <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. During that time, I founded and ran the <a href="https://www.aiatprinceton.com">largest AI student organization at Princeton</a>. I also interned doing AI/ML research during summers at <a href="https://research.snap.com">Snapchat</a>, <a href="https://machinelearning.apple.com">Apple </a>, and <a href="https://www.claryo.co">Claryo</a>. Before that, I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">[unfinished example]</a> 
+I've had brief but pleasant stints at a variety of companies: <a href="https://sakana.ai">Sakana AI</a>, <a href="https://www.vant.ai">VantAI</a>, <a href="https://research.snap.com">Snap Research</a>, <a href="https://machinelearning.apple.com">Apple</a>, and <a href="https://www.claryo.co">Claryo</a>.
 
 <p>
 <br>
@@ -48,4 +52,4 @@ Before that, I graduated as the <a href="https://www.cs.princeton.edu/news/class
 <br>
 </p>
 
-Feel free to reach out to talk about anything through my email at [x]@mit.edu where [x]=altzhang. Finally, I'm also fairly active in and help moderate the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community.
+Feel free to reach out to talk about anything through my email at [x]@mit.edu where [x]=altzhang. Finally, I'm also fairly active in and help moderate the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community. As a last fun fact, I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">[unfinished example]</a> 
