@@ -15,6 +15,25 @@ horizontal: false
 <hr>
 
 <div class="projects">
+<h4>GPU MODE Competitions</h4>
+<ul>
+<li>
+        <a href="https://luma.com/9n27uem4">NVIDIA NVFP4 Blackwell competition</a> (2026)
+</li>
+<li>
+        <a href="https://www.amd.com/en/developer/resources/technical-articles/2026/new-gpumode-virtual-hackathon--e2e-model-speedrun.html">AMD x GPU MODE E2E Model Speedrun</a> — $1.1M prize pool, MXFP4 MoE / MLA Decode / MXFP4 GEMM kernels and end-to-end DeepSeek-R1 / Kimi K2.5 inference on MI355X (2026)
+</li>
+<li>
+        <a href="https://amdchallenge2025.datamonsters.com/">AMD Developer Challenge 2025: Distributed Inference Kernels</a> — $100K grand prize, multi-GPU All-to-All / GEMM+ReduceScatter / AllGather+GEMM kernels on MI300X (2025)
+</li>
+<li>
+        <a href="https://www.datamonsters.com/amd-developer-challenge-2025">AMD Developer Challenge 2025: Inference Sprint</a> — $100K grand prize, MLA with RoPE / Fused MoE / FP8 GEMM kernels (2025)
+</li>
+<li>
+        <a href="https://www.gpumode.com/news/jane-street-hackathon">Jane Street model optimization competition</a> (2025)
+</li>
+</ul>
+
 <h4>AI/ML</h4>
 <ul>
 <li> 
