@@ -27,7 +27,7 @@ Some notable things worth mentioning:
 <ul>
   <li>Introduced <a href="https://alexzhang13.github.io/blog/2025/rlm/">Recursive Language Models (RLMs)</a>.</li>
   <li>Part of the core team running the <a href="https://www.gpumode.com/v2/home">GPU MODE</a> <a href="/projects/">competitions</a> and <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">community</a>.</li>
-  <li>Graduated as the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">top student of the Princeton CS department</a>, and fortunate to be advised by <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, <a href="https://machineslearner.com">Khanh Nguyen</a>, <a href="https://ofir.io">Ofir Press</a>, and <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>.</li>
+  <li>Graduated as the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">top student of the Princeton CS department</a>, and fortunate to have been advised by <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, <a href="https://machineslearner.com">Khanh Nguyen</a>, <a href="https://ofir.io">Ofir Press</a>, and <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>.</li>
 </ul>
 
 I've had brief but pleasant stints at a variety of companies: <a href="https://sakana.ai">Sakana AI</a>, <a href="https://www.vant.ai">VantAI</a>, <a href="https://research.snap.com">Snap Research</a>, <a href="https://machinelearning.apple.com">Apple</a>, and <a href="https://www.claryo.co">Claryo</a>.
