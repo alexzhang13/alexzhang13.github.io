@@ -515,7 +515,7 @@
 
 <h3 id="equivalence-classes-over-trajectories-induced-by-the-rlm-harness">Equivalence classes over trajectories induced by the RLM harness.</h3>
 
-<p>An ideal harness decomposes a task such that the main context is abstracted to <strong>literally</strong> appear token-for-token similar for similar problems, i.e. those that fall under the same harness-induced equivalence class $[\tau’] = {\tau \in \mathcal{T} : \tau’ \sim \tau}$. This isomorphism enables generalizations of the form: <em>if a system can solve task X, it should transitively be able to solve task Y</em>.</p>
+<p>An ideal harness decomposes a task such that the main context is abstracted to <strong>literally</strong> appear token-for-token similar for similar problems, i.e. those that fall under the same harness-induced equivalence class $[\tau^\prime] = {\tau \in \mathcal{T} : \tau^\prime \sim \tau}$. This isomorphism enables generalizations of the form: <em>if a system can solve task X, it should transitively be able to solve task Y</em>.</p>
 
 <figure>
 <center>
@@ -602,7 +602,7 @@
 
 <p>It is rather difficult to characterize whether a prompt $x$ is “in-distribution” for a language model, but we can use benchmark performance as a proxy for this kind of thing — e.g., LMs can solve most AIME problems, so we consider these tasks to be “in-distribution”. For agent trajectories, which are often long, multiple turns, and filled with extra fluff like tool calls and harness tokens, it is even harder to determine whether two trajectories will exhibit the same output distribution behavior.</p>
 
-<p>If the RLM produces a trajectory on an unseen task that is <em>token-for-token</em> identical to a trajectory generated during a training task, then we could easily argue that these two tasks are in the same equivalence class under $\sim_{RLM}$ and are viewed as isomorphic. Unfortunately, even small, one-token perturbations can semantically change the meaning of a text sequence, so arguing that $P_x$ and $P_{x’}$ have some bounded difference is difficult. In the <strong>Appendix</strong>, we discuss some proxies for determining whether two trajectories fall under the same equivalence class. Below, we provide various examples of eval trajectories from our experiments that are similar to some train trajectory on a different task.</p>
+<p>If the RLM produces a trajectory on an unseen task that is <em>token-for-token</em> identical to a trajectory generated during a training task, then we could easily argue that these two tasks are in the same equivalence class under $\sim_{RLM}$ and are viewed as isomorphic. Unfortunately, even small, one-token perturbations can semantically change the meaning of a text sequence, so arguing that $P_x$ and $P_{x^\prime}$ have some bounded difference is difficult. In the <strong>Appendix</strong>, we discuss some proxies for determining whether two trajectories fall under the same equivalence class. Below, we provide various examples of eval trajectories from our experiments that are similar to some train trajectory on a different task.</p>
 
 <div class="code-comparison-carousel" id="identical-pairs" data-code-comparison-carousel="" data-path="/assets/trajectories/identical_pairs_repr">
   <div class="ccc-toolbar">
