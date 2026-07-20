@@ -203,6 +203,15 @@
   display: block;
   text-align: center !important;
   margin: 0.5em 0 !important;
+} table.distance-metrics {
+  table-layout: fixed;
+  width: 100%;
+} table.distance-metrics th:nth-child(1), table.distance-metrics td:nth-child(1) {
+  width: 18%;
+} table.distance-metrics th:nth-child(2), table.distance-metrics td:nth-child(2) {
+  width: 28%;
+} table.distance-metrics th:nth-child(3), table.distance-metrics td:nth-child(3) {
+  width: 54%;
 }
 
       </style>
@@ -654,7 +663,7 @@ $$
 
 <p>We plot the similarity, i.e. $1 - d(\cdot,\cdot)$, of the average eval rollout of the best RLM vs. base Transformer checkpoint to any training trajectory that occurred before it. We consider the following distance metrics:</p>
 
-<table>
+<table class="distance-metrics">
   <tr>
     <th>Plot label</th>
     <th>Metric</th>
