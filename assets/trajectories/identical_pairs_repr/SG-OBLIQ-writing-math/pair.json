@@ -1,0 +1,41 @@
+{
+  "case": "SG-OBLIQ-writing-math",
+  "runs": [
+    "traj-data/strategy-gen/obliq-writing-math/strategygen-obliq-writing-to-math"
+  ],
+  "view": "raw (assistant + REPL output stdout + Turn nudges)",
+  "eval": {
+    "uid": "strategygen-obliq-writing-to-math/eval@281/20",
+    "reward": 1.0,
+    "num_turns": 5,
+    "example_id": 20,
+    "chars_raw": 10811
+  },
+  "train": {
+    "uid": "strategygen-obliq-writing-to-math/train@266/50",
+    "reward": 0.5742132669326778,
+    "num_turns": 5,
+    "example_id": 478,
+    "chars_raw": 10282
+  },
+  "sims_behaviour_view": {
+    "word3_jaccard": 0.17445743083953857,
+    "word5_jaccard": 0.12309329211711884,
+    "word3_containment": 0.31835490465164185,
+    "char4_jaccard": 0.3595644235610962,
+    "token_levenshtein": 0.3135351227869788,
+    "token_lcs": 0.49441504997060554,
+    "weighted_jaccard": 0.5527156549520766,
+    "len_ratio": 0.9428897772701313
+  },
+  "sims_raw": {
+    "word3_jaccard": 0.17974276840686798,
+    "word5_jaccard": 0.1386765092611313,
+    "word3_containment": 0.2992505431175232,
+    "char4_jaccard": 0.33229610323905945,
+    "token_levenshtein": 0.3564932702801018,
+    "token_lcs": 0.5281050801622561,
+    "weighted_jaccard": 0.5546546546546547,
+    "len_ratio": 0.8832302655511095
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "case": "OOLONG",
+  "runs": [
+    "traj-data/length-gen/oolong/lengthgen-oolong-nohints",
+    "traj-data/length-gen/oolong/lengthgen-oolong"
+  ],
+  "obs_dropped": true,
+  "eval": {
+    "uid": "lengthgen-oolong-nohints/eval@131/23",
+    "reward": 1.0,
+    "num_turns": 8,
+    "example_id": 23,
+    "chars": 3713,
+    "chars_raw": 9447
+  },
+  "train": {
+    "uid": "lengthgen-oolong-nohints/train@118/57",
+    "reward": 1.0,
+    "num_turns": 8,
+    "example_id": 36,
+    "chars": 3686,
+    "chars_raw": 9654
+  },
+  "top_pairs": [
+    {
+      "token_lcs": 0.8240252897787146,
+      "eval": "lengthgen-oolong-nohints/eval@131/23",
+      "train": "lengthgen-oolong-nohints/train@118/57"
+    },
+    {
+      "token_lcs": 0.7995139732685297,
+      "eval": "lengthgen-oolong-nohints/eval@131/17",
+      "train": "lengthgen-oolong-nohints/train@128/14"
+    },
+    {
+      "token_lcs": 0.7843342036553526,
+      "eval": "lengthgen-oolong-nohints/eval@131/23",
+      "train": "lengthgen-oolong-nohints/train@106/37"
+    },
+    {
+      "token_lcs": 0.7734724292101339,
+      "eval": "lengthgen-oolong-nohints/eval@131/32",
+      "train": "lengthgen-oolong-nohints/train@52/32"
+    },
+    {
+      "token_lcs": 0.7704367301231803,
+      "eval": "lengthgen-oolong-nohints/eval@150/0",
+      "train": "lengthgen-oolong-nohints/train@134/26"
+    },
+    {
+      "token_lcs": 0.7656415694591728,
+      "eval": "lengthgen-oolong-nohints/eval@131/23",
+      "train": "lengthgen-oolong-nohints/train@104/53"
+    },
+    {
+      "token_lcs": 0.7652533609100312,
+      "eval": "lengthgen-oolong-nohints/eval@111/0",
+      "train": "lengthgen-oolong-nohints/train@123/49"
+    },
+    {
+      "token_lcs": 0.7623574144486693,
+      "eval": "lengthgen-oolong-nohints/eval@150/23",
+      "train": "lengthgen-oolong-nohints/train@149/34"
+    },
+    {
+      "token_lcs": 0.7611253196930946,
+      "eval": "lengthgen-oolong-nohints/eval@111/0",
+      "train": "lengthgen-oolong-nohints/train@132/36"
+    },
+    {
+      "token_lcs": 0.7601438109912686,
+      "eval": "lengthgen-oolong-nohints/eval@111/0",
+      "train": "lengthgen-oolong-nohints/train@96/14"
+    },
+    {
+      "token_lcs": 0.7597707139134967,
+      "eval": "lengthgen-oolong-nohints/eval@101/44",
+      "train": "lengthgen-oolong-nohints/train@119/49"
+    },
+    {
+      "token_lcs": 0.758737316798196,
+      "eval": "lengthgen-oolong-nohints/eval@131/23",
+      "train": "lengthgen-oolong-nohints/train@137/17"
+    }
+  ],
+  "view": "raw (assistant + REPL output stdout + Turn nudges)",
+  "sims_behaviour_view": {
+    "word3_jaccard": 0.40867578983306885,
+    "word5_jaccard": 0.34217506647109985,
+    "word3_containment": 0.578352153301239,
+    "char4_jaccard": 0.5751238465309143,
+    "token_levenshtein": 0.7230290456431535,
+    "token_lcs": 0.8240252897787146,
+    "weighted_jaccard": 0.7956480605487228,
+    "len_ratio": 0.9688796680497925
+  },
+  "sims_raw": {
+    "word3_jaccard": 0.35101011395454407,
+    "word5_jaccard": 0.2751346528530121,
+    "word3_containment": 0.5310410857200623,
+    "char4_jaccard": 0.46149390935897827,
+    "token_levenshtein": 0.679788961038961,
+    "token_lcs": 0.77952274117887,
+    "weighted_jaccard": 0.7491972886193364,
+    "len_ratio": 0.9898538961038961
+  }
+}

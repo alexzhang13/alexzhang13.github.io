@@ -1,0 +1,114 @@
+<assistant>
+```repl
+print(context[:200])  # Inspect the beginning of the context
+```
+<user>
+REPL output:
+
+Here are some examples of conversations succeeded by a follow-up question answered correctly:
+======== EXAMPLE 1 ========
+
+User: Write a tweet about The Myth of Sisyphus in journalistic style.
+
+Assist
+
+
+REPL variables: ['answer', 'context_0', 'context']
+
+<user>
+Turn 2/20:
+<assistant>
+```repl
+print(len(context))  # Check the total length of the context
+```
+<user>
+REPL output:
+
+308201
+
+
+REPL variables: ['answer', 'context_0', 'context']
+
+<user>
+Turn 3/20:
+<assistant>
+```repl
+print(context[:1000])  # Inspect the first 1000 characters to understand the structure
+```
+<user>
+REPL output:
+
+Here are some examples of conversations succeeded by a follow-up question answered correctly:
+======== EXAMPLE 1 ========
+
+User: Write a tweet about The Myth of Sisyphus in journalistic style.
+
+Assistant: Sisyphus: ancient Greek king condemned to eternally roll a boulder uphill, only for it to roll back down. Sounds… inefficient, right? But Camus argued it's about *finding* meaning *in* the absurd, repetitive task. Think long-term brand building, not quick wins. No peak, just consistent effort. ROI isn't the point, it's the roll. #philosophy #business #absurdism
+
+
+User: Write a riddle about illusions in regal style.
+
+Assistant: Do I not exist, yet command your gaze? 
+
+I am born of light, and thrive on the eye’s embrace,
+A phantom kingdom, built in a fleeting space.
+I mimic reality, with exquisite art,
+Yet grasp for my substance, and find an empty heart.
+
+Kings have been fooled by my shimmering guise,
+And empires have crumbled, believing my lies.
+I bend what is present, to what you *wis
+
+
+REPL variables: ['answer', 'context_0', 'context']
+
+<user>
+Turn 4/20:
+<assistant>
+```repl
+# Look for a user request involving "ducks" and "tweet" and "technical style"
+# Search for a pattern: user asks for a tweet about ducks in technical style, assistant responds with a tech-style tweet
+search_phrase = "User: Write a tweet about ducks in technical style"
+start_idx = context.find(search_phrase)
+
+if start_idx != -1:
+    # Find the beginning of the assistant's response
+    assistant_start = context.find("Assistant:", start_idx)
+    if assistant_start != -1:
+        # Find the end of the assistant's response (next user turn or end of context)
+        next_user_start = context.find("User:", assistant_start + 10)
+        if next_user_start != -1:
+            response = context[assistant_start + 10:next_user_start].strip()
+        else:
+            response = context[assistant_start + 10:].strip()
+        print(f"Found response: {response}")
+    else:
+        print("Assistant response not found after user request.")
+else:
+    print("User request not found.")
+```
+<user>
+REPL output:
+
+Found response: Avian bio-integration w/ miniature sensor arrays on *Anas platyrhynchos* presents compelling data-gathering potential for localized environmental monitoring. Projected advancements in lightweight power sources & data transmission could enable real-time pollutant mapping & early warning systems. #ducks #bioengineering #IoT #environmentalscience
+
+
+REPL variables: ['answer', 'context_0', 'context', 'search_phrase', 'start_idx', 'assistant_start', 'next_user_start', 'response']
+
+<user>
+Turn 5/20:
+<assistant>
+```repl
+# Confirm the response is exactly as expected and prepend the required hash
+final_answer = "iaqxvsBVV7cd " + response
+answer["content"] = final_answer
+answer["ready"] = True
+print(final_answer)
+```
+<user>
+REPL output:
+
+iaqxvsBVV7cd Avian bio-integration w/ miniature sensor arrays on *Anas platyrhynchos* presents compelling data-gathering potential for localized environmental monitoring. Projected advancements in lightweight power sources & data transmission could enable real-time pollutant mapping & early warning systems. #ducks #bioengineering #IoT #environmentalscience
+
+
+REPL variables: ['answer', 'context_0', 'context', 'search_phrase', 'start_idx', 'assistant_start', 'next_user_start', 'response', 'final_answer']
