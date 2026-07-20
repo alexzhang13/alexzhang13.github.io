@@ -1,0 +1,107 @@
+{
+  "case": "OOLONG-Pairs",
+  "runs": [
+    "traj-data/length-gen/oolong-pairs/lengthgen-oolong-pairs-cap1k-iter30-nohints",
+    "traj-data/length-gen/oolong-pairs/lengthgen-oolong-pairs-cap1k-iter30"
+  ],
+  "obs_dropped": true,
+  "eval": {
+    "uid": "lengthgen-oolong-pairs-cap1k-iter30-nohints/eval@91/16",
+    "reward": 0.9092643376654346,
+    "num_turns": 6,
+    "example_id": 16,
+    "chars": 6442,
+    "chars_raw": 9056
+  },
+  "train": {
+    "uid": "lengthgen-oolong-pairs-cap1k-iter30-nohints/train@54/36",
+    "reward": 0.8141592920353983,
+    "num_turns": 6,
+    "example_id": 16,
+    "chars": 5700,
+    "chars_raw": 8275
+  },
+  "top_pairs": [
+    {
+      "token_lcs": 0.6283124128312413,
+      "eval": "lengthgen-oolong-pairs-cap1k-iter30-nohints/eval@91/16",
+      "train": "lengthgen-oolong-pairs-cap1k-iter30-nohints/train@54/36"
+    },
+    {
+      "token_lcs": 0.6043526785714286,
+      "eval": "lengthgen-oolong-pairs-cap1k-iter30-nohints/eval@111/12",
+      "train": "lengthgen-oolong-pairs-cap1k-iter30-nohints/train@86/42"
+    },
+    {
+      "token_lcs": 0.6033421284080915,
+      "eval": "lengthgen-oolong-pairs-cap1k-iter30/eval@81/15",
+      "train": "lengthgen-oolong-pairs-cap1k-iter30/train@38/44"
+    },
+    {
+      "token_lcs": 0.6011066398390342,
+      "eval": "lengthgen-oolong-pairs-cap1k-iter30-nohints/eval@121/14",
+      "train": "lengthgen-oolong-pairs-cap1k-iter30-nohints/train@32/30"
+    },
+    {
+      "token_lcs": 0.593939393939394,
+      "eval": "lengthgen-oolong-pairs-cap1k-iter30/eval@131/1",
+      "train": "lengthgen-oolong-pairs-cap1k-iter30/train@114/53"
+    },
+    {
+      "token_lcs": 0.5938718662952647,
+      "eval": "lengthgen-oolong-pairs-cap1k-iter30-nohints/eval@141/12",
+      "train": "lengthgen-oolong-pairs-cap1k-iter30-nohints/train@68/44"
+    },
+    {
+      "token_lcs": 0.5925732217573222,
+      "eval": "lengthgen-oolong-pairs-cap1k-iter30-nohints/eval@111/12",
+      "train": "lengthgen-oolong-pairs-cap1k-iter30-nohints/train@87/48"
+    },
+    {
+      "token_lcs": 0.5924304035032844,
+      "eval": "lengthgen-oolong-pairs-cap1k-iter30-nohints/eval@91/16",
+      "train": "lengthgen-oolong-pairs-cap1k-iter30-nohints/train@89/0"
+    },
+    {
+      "token_lcs": 0.5919306796642295,
+      "eval": "lengthgen-oolong-pairs-cap1k-iter30/eval@91/12",
+      "train": "lengthgen-oolong-pairs-cap1k-iter30/train@79/24"
+    },
+    {
+      "token_lcs": 0.5919282511210763,
+      "eval": "lengthgen-oolong-pairs-cap1k-iter30-nohints/eval@91/16",
+      "train": "lengthgen-oolong-pairs-cap1k-iter30-nohints/train@23/53"
+    },
+    {
+      "token_lcs": 0.5919134931828868,
+      "eval": "lengthgen-oolong-pairs-cap1k-iter30/eval@131/1",
+      "train": "lengthgen-oolong-pairs-cap1k-iter30/train@51/0"
+    },
+    {
+      "token_lcs": 0.5905053598774885,
+      "eval": "lengthgen-oolong-pairs-cap1k-iter30-nohints/eval@91/16",
+      "train": "lengthgen-oolong-pairs-cap1k-iter30-nohints/train@88/25"
+    }
+  ],
+  "view": "raw (assistant + REPL output stdout + Turn nudges)",
+  "sims_behaviour_view": {
+    "word3_jaccard": 0.2461538463830948,
+    "word5_jaccard": 0.1596638709306717,
+    "word3_containment": 0.3855421543121338,
+    "char4_jaccard": 0.4548536241054535,
+    "token_levenshtein": 0.46875,
+    "token_lcs": 0.6283124128312413,
+    "weighted_jaccard": 0.6980461811722913,
+    "len_ratio": 0.9069148936170213
+  },
+  "sims_raw": {
+    "word3_jaccard": 0.2680555582046509,
+    "word5_jaccard": 0.18945102393627167,
+    "word3_containment": 0.4174477159976959,
+    "char4_jaccard": 0.4362400472164154,
+    "token_levenshtein": 0.5459363957597173,
+    "token_lcs": 0.679219288174512,
+    "weighted_jaccard": 0.7125442390876917,
+    "len_ratio": 0.9235865724381626
+  }
+}

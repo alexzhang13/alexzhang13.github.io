@@ -1,0 +1,47 @@
+{% comment %}
+  Code comparison carousel — side-by-side train/eval LLM trajectories.
+
+  Usage in a post (with front matter `code_comparison: true`):
+
+  {% include code_comparison_carousel.liquid path="/assets/trajectories/identical_pairs_repr" %}
+{% endcomment %}
+{% assign ccc_path = include.path | default: "/assets/trajectories/identical_pairs_repr" %}
+{% assign ccc_id = include.id | default: "code-comparison" %}
+
+<div
+  class="code-comparison-carousel"
+  id="{{ ccc_id }}"
+  data-code-comparison-carousel
+  data-path="{{ ccc_path | relative_url }}"
+>
+  <div class="ccc-toolbar">
+    <div class="ccc-nav">
+      <button type="button" class="ccc-btn" data-ccc-prev aria-label="Previous environment">← Prev</button>
+      <select class="ccc-select" data-ccc-select aria-label="Environment"></select>
+      <button type="button" class="ccc-btn" data-ccc-next aria-label="Next environment">Next →</button>
+    </div>
+    <div class="ccc-meta" data-ccc-meta></div>
+  </div>
+
+  <div class="ccc-panels">
+    <div class="ccc-panel ccc-panel--train" aria-label="Train trajectory">
+      <div class="ccc-panel-header">
+        <span>Train</span>
+        <span class="ccc-panel-sub" data-ccc-train-sub></span>
+      </div>
+      <div class="ccc-panel-body" data-ccc-train>
+        <div class="ccc-status">Loading…</div>
+      </div>
+    </div>
+
+    <div class="ccc-panel ccc-panel--eval" aria-label="Eval trajectory">
+      <div class="ccc-panel-header">
+        <span>Eval</span>
+        <span class="ccc-panel-sub" data-ccc-eval-sub></span>
+      </div>
+      <div class="ccc-panel-body" data-ccc-eval>
+        <div class="ccc-status">Loading…</div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+{
+  "case": "SG-OOLONG-trec-spam",
+  "runs": [
+    "traj-data/strategy-gen/oolong-trec-spam/strategygen-oolong-trec32k-to-spam132k"
+  ],
+  "obs_dropped": true,
+  "eval": {
+    "uid": "strategygen-oolong-trec32k-to-spam132k/eval@161/25",
+    "reward": 1.0,
+    "num_turns": 5,
+    "example_id": 25,
+    "chars": 4249,
+    "chars_raw": 6686
+  },
+  "train": {
+    "uid": "strategygen-oolong-trec32k-to-spam132k/train@150/0",
+    "reward": 1.0,
+    "num_turns": 5,
+    "example_id": 36,
+    "chars": 3922,
+    "chars_raw": 6369
+  },
+  "top_pairs": [
+    {
+      "token_lcs": 0.5136950904392764,
+      "eval": "strategygen-oolong-trec32k-to-spam132k/eval@161/25",
+      "train": "strategygen-oolong-trec32k-to-spam132k/train@150/0"
+    },
+    {
+      "token_lcs": 0.49175093134646086,
+      "eval": "strategygen-oolong-trec32k-to-spam132k/eval@461/41",
+      "train": "strategygen-oolong-trec32k-to-spam132k/train@328/44"
+    },
+    {
+      "token_lcs": 0.4817649707339036,
+      "eval": "strategygen-oolong-trec32k-to-spam132k/eval@161/25",
+      "train": "strategygen-oolong-trec32k-to-spam132k/train@60/29"
+    },
+    {
+      "token_lcs": 0.47890387124836886,
+      "eval": "strategygen-oolong-trec32k-to-spam132k/eval@281/3",
+      "train": "strategygen-oolong-trec32k-to-spam132k/train@264/9"
+    },
+    {
+      "token_lcs": 0.4784254352763058,
+      "eval": "strategygen-oolong-trec32k-to-spam132k/eval@401/20",
+      "train": "strategygen-oolong-trec32k-to-spam132k/train@358/32"
+    },
+    {
+      "token_lcs": 0.478169507354658,
+      "eval": "strategygen-oolong-trec32k-to-spam132k/eval@461/41",
+      "train": "strategygen-oolong-trec32k-to-spam132k/train@390/56"
+    },
+    {
+      "token_lcs": 0.4725085910652921,
+      "eval": "strategygen-oolong-trec32k-to-spam132k/eval@71/25",
+      "train": "strategygen-oolong-trec32k-to-spam132k/train@191/24"
+    },
+    {
+      "token_lcs": 0.47195767195767196,
+      "eval": "strategygen-oolong-trec32k-to-spam132k/eval@301/35",
+      "train": "strategygen-oolong-trec32k-to-spam132k/train@322/19"
+    },
+    {
+      "token_lcs": 0.4714901772879732,
+      "eval": "strategygen-oolong-trec32k-to-spam132k/eval@161/25",
+      "train": "strategygen-oolong-trec32k-to-spam132k/train@324/0"
+    },
+    {
+      "token_lcs": 0.4701159678858162,
+      "eval": "strategygen-oolong-trec32k-to-spam132k/eval@71/10",
+      "train": "strategygen-oolong-trec32k-to-spam132k/train@251/0"
+    },
+    {
+      "token_lcs": 0.4690810544469081,
+      "eval": "strategygen-oolong-trec32k-to-spam132k/eval@461/41",
+      "train": "strategygen-oolong-trec32k-to-spam132k/train@398/36"
+    },
+    {
+      "token_lcs": 0.46725410812098117,
+      "eval": "strategygen-oolong-trec32k-to-spam132k/eval@301/35",
+      "train": "strategygen-oolong-trec32k-to-spam132k/train@313/24"
+    }
+  ],
+  "view": "raw (assistant + REPL output stdout + Turn nudges)",
+  "sims_behaviour_view": {
+    "word3_jaccard": 0.16905900835990906,
+    "word5_jaccard": 0.07871536165475845,
+    "word3_containment": 0.2636815905570984,
+    "char4_jaccard": 0.3494687080383301,
+    "token_levenshtein": 0.36,
+    "token_lcs": 0.5136950904392764,
+    "weighted_jaccard": 0.5200314218381775,
+    "len_ratio": 0.8428571428571429
+  },
+  "sims_raw": {
+    "word3_jaccard": 0.1662140190601349,
+    "word5_jaccard": 0.09276595711708069,
+    "word3_containment": 0.26288658380508423,
+    "char4_jaccard": 0.3203631639480591,
+    "token_levenshtein": 0.36539589442815246,
+    "token_lcs": 0.5397412199630315,
+    "weighted_jaccard": 0.5362044486512069,
+    "len_ratio": 0.9038123167155425
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "cases": [
+    {
+      "id": "OOLONG",
+      "label": "OOLONG",
+      "train": "OOLONG/train.txt",
+      "eval": "OOLONG/eval.txt",
+      "verdict": "NEARLY_IDENTICAL",
+      "lined_up": "93/100",
+      "sims": {
+        "word3_jaccard": 0.40867578983306885,
+        "word5_jaccard": 0.34217506647109985,
+        "word3_containment": 0.578352153301239,
+        "char4_jaccard": 0.5751238465309143,
+        "token_levenshtein": 0.7230290456431535,
+        "token_lcs": 0.8240252897787146,
+        "weighted_jaccard": 0.7956480605487228,
+        "len_ratio": 0.9688796680497925
+      },
+      "train_meta": {
+        "uid": "lengthgen-oolong-nohints/train@118/57",
+        "reward": 1.0,
+        "num_turns": 8,
+        "example_id": 36,
+        "chars": 3686,
+        "chars_raw": 9654
+      },
+      "eval_meta": {
+        "uid": "lengthgen-oolong-nohints/eval@131/23",
+        "reward": 1.0,
+        "num_turns": 8,
+        "example_id": 23,
+        "chars": 3713,
+        "chars_raw": 9447
+      }
+    },
+    {
+      "id": "LongBenchPro",
+      "label": "LongBenchPro",
+      "train": "LongBenchPro/train.txt",
+      "eval": "LongBenchPro/eval.txt",
+      "verdict": "NEARLY_IDENTICAL",
+      "lined_up": "95/100",
+      "sims": {
+        "word3_jaccard": 0.4837758243083954,
+        "word5_jaccard": 0.3781725764274597,
+        "word3_containment": 0.6332046389579773,
+        "char4_jaccard": 0.5132837295532227,
+        "token_levenshtein": 0.6646341463414633,
+        "token_lcs": 0.7669902912621359,
+        "weighted_jaccard": 0.6931506849315069,
+        "len_ratio": 0.8841463414634146
+      },
+      "train_meta": {
+        "uid": "lengthgen-longbenchpro-nohint/train@43/0",
+        "reward": 1.0,
+        "num_turns": 4,
+        "example_id": 15,
+        "chars": 1078,
+        "chars_raw": 2031
+      },
+      "eval_meta": {
+        "uid": "lengthgen-longbenchpro-nohint/eval@131/100",
+        "reward": 1.0,
+        "num_turns": 4,
+        "example_id": 100,
+        "chars": 1249,
+        "chars_raw": 2209
+      }
+    },
+    {
+      "id": "GraphWalks",
+      "label": "GraphWalks",
+      "train": "GraphWalks/train.txt",
+      "eval": "GraphWalks/eval.txt",
+      "verdict": "NEARLY_IDENTICAL",
+      "lined_up": "93/100",
+      "sims": {
+        "word3_jaccard": 0.27255985140800476,
+        "word5_jaccard": 0.19381344318389893,
+        "word3_containment": 0.4484848380088806,
+        "char4_jaccard": 0.46222662925720215,
+        "token_levenshtein": 0.4764621968616263,
+        "token_lcs": 0.6211502782931354,
+        "weighted_jaccard": 0.7111111111111111,
+        "len_ratio": 0.9222539229671898
+      },
+      "train_meta": {
+        "uid": "lengthgen-graphwalks/train@118/29",
+        "reward": 1.0,
+        "num_turns": 6,
+        "example_id": 207,
+        "chars": 5279,
+        "chars_raw": 8852
+      },
+      "eval_meta": {
+        "uid": "lengthgen-graphwalks/eval@121/8",
+        "reward": 1.0,
+        "num_turns": 6,
+        "example_id": 8,
+        "chars": 4833,
+        "chars_raw": 8189
+      }
+    },
+    {
+      "id": "OOLONG-Pairs",
+      "label": "OOLONG-Pairs",
+      "train": "OOLONG-Pairs/train.txt",
+      "eval": "OOLONG-Pairs/eval.txt",
+      "verdict": "MOSTLY_SAME",
+      "lined_up": "84/100",
+      "sims": {
+        "word3_jaccard": 0.2461538463830948,
+        "word5_jaccard": 0.1596638709306717,
+        "word3_containment": 0.3855421543121338,
+        "char4_jaccard": 0.4548536241054535,
+        "token_levenshtein": 0.46875,
+        "token_lcs": 0.6283124128312413,
+        "weighted_jaccard": 0.6980461811722913,
+        "len_ratio": 0.9069148936170213
+      },
+      "train_meta": {
+        "uid": "lengthgen-oolong-pairs-cap1k-iter30-nohints/train@54/36",
+        "reward": 0.8141592920353983,
+        "num_turns": 6,
+        "example_id": 16,
+        "chars": 5700,
+        "chars_raw": 8275
+      },
+      "eval_meta": {
+        "uid": "lengthgen-oolong-pairs-cap1k-iter30-nohints/eval@91/16",
+        "reward": 0.9092643376654346,
+        "num_turns": 6,
+        "example_id": 16,
+        "chars": 6442,
+        "chars_raw": 9056
+      }
+    },
+    {
+      "id": "AdaLEval-BestAnswer",
+      "label": "AdaLEval-BestAnswer",
+      "train": "AdaLEval-BestAnswer/train.txt",
+      "eval": "AdaLEval-BestAnswer/eval.txt",
+      "verdict": "SAME_STRATEGY",
+      "lined_up": "84/100",
+      "sims": {
+        "word3_jaccard": 0.21501706540584564,
+        "word5_jaccard": 0.16082915663719177,
+        "word3_containment": 0.3437926471233368,
+        "char4_jaccard": 0.357342928647995,
+        "token_levenshtein": 0.4125379170879676,
+        "token_lcs": 0.5643459915611814,
+        "weighted_jaccard": 0.5919395465994962,
+        "len_ratio": 0.917087967644085
+      },
+      "train_meta": {
+        "uid": "lengthgen-adaleval-bestanswer-8k-to-128k/train@87/25",
+        "reward": 1.0,
+        "num_turns": 7,
+        "example_id": 13,
+        "chars": 3582,
+        "chars_raw": 15863
+      },
+      "eval_meta": {
+        "uid": "lengthgen-adaleval-bestanswer-8k-to-128k/eval@111/45",
+        "reward": 1.0,
+        "num_turns": 6,
+        "example_id": 45,
+        "chars": 4148,
+        "chars_raw": 13111
+      }
+    },
+    {
+      "id": "MRCR",
+      "label": "MRCR",
+      "train": "MRCR/train.txt",
+      "eval": "MRCR/eval.txt",
+      "verdict": "SAME_STRATEGY",
+      "lined_up": "82/100",
+      "sims": {
+        "word3_jaccard": 0.3229398727416992,
+        "word5_jaccard": 0.23280423879623413,
+        "word3_containment": 0.43283581733703613,
+        "char4_jaccard": 0.4693140685558319,
+        "token_levenshtein": 0.5182795698924731,
+        "token_lcs": 0.6674612634088201,
+        "weighted_jaccard": 0.6228239845261122,
+        "len_ratio": 0.8043010752688172
+      },
+      "train_meta": {
+        "uid": "lengthgen-mrcr-nohints/train@43/32",
+        "reward": 1.0,
+        "num_turns": 5,
+        "example_id": 93,
+        "chars": 1573,
+        "chars_raw": 4054
+      },
+      "eval_meta": {
+        "uid": "lengthgen-mrcr-nohints/eval@61/17",
+        "reward": 1.0,
+        "num_turns": 7,
+        "example_id": 17,
+        "chars": 1904,
+        "chars_raw": 12123
+      }
+    },
+    {
+      "id": "SG-OBLIQ-twitter-wildchat",
+      "label": "SG-OBLIQ-twitter-wildchat",
+      "train": "SG-OBLIQ-twitter-wildchat/train.txt",
+      "eval": "SG-OBLIQ-twitter-wildchat/eval.txt",
+      "verdict": "SAME_STRATEGY",
+      "lined_up": "86/100",
+      "sims": {
+        "word3_jaccard": 0.24011299014091492,
+        "word5_jaccard": 0.15172414481639862,
+        "word3_containment": 0.36286020278930664,
+        "char4_jaccard": 0.4068758487701416,
+        "token_levenshtein": 0.46980976013234077,
+        "token_lcs": 0.5994550408719346,
+        "weighted_jaccard": 0.6061269146608315,
+        "len_ratio": 0.8213399503722084
+      },
+      "train_meta": {
+        "uid": "strategygen-obliq-twitter-to-wildchat/train@172/60",
+        "reward": 0.6279912202494327,
+        "num_turns": 6,
+        "example_id": 77,
+        "chars": 4433,
+        "chars_raw": 6755
+      },
+      "eval_meta": {
+        "uid": "strategygen-obliq-twitter-to-wildchat/eval@181/0",
+        "reward": 1.0,
+        "num_turns": 6,
+        "example_id": -1,
+        "chars": 5272,
+        "chars_raw": 7061
+      }
+    },
+    {
+      "id": "SG-OOLONG-trec-spam",
+      "label": "SG-OOLONG-trec-spam",
+      "train": "SG-OOLONG-trec-spam/train.txt",
+      "eval": "SG-OOLONG-trec-spam/eval.txt",
+      "verdict": "NEARLY_IDENTICAL",
+      "lined_up": "92/100",
+      "sims": {
+        "word3_jaccard": 0.16905900835990906,
+        "word5_jaccard": 0.07871536165475845,
+        "word3_containment": 0.2636815905570984,
+        "char4_jaccard": 0.3494687080383301,
+        "token_levenshtein": 0.36,
+        "token_lcs": 0.5136950904392764,
+        "weighted_jaccard": 0.5200314218381775,
+        "len_ratio": 0.8428571428571429
+      },
+      "train_meta": {
+        "uid": "strategygen-oolong-trec32k-to-spam132k/train@150/0",
+        "reward": 1.0,
+        "num_turns": 5,
+        "example_id": 36,
+        "chars": 3922,
+        "chars_raw": 6369
+      },
+      "eval_meta": {
+        "uid": "strategygen-oolong-trec32k-to-spam132k/eval@161/25",
+        "reward": 1.0,
+        "num_turns": 5,
+        "example_id": 25,
+        "chars": 4249,
+        "chars_raw": 6686
+      }
+    },
+    {
+      "id": "SG-OBLIQ-writing-math",
+      "label": "SG-OBLIQ-writing-math",
+      "train": "SG-OBLIQ-writing-math/train.txt",
+      "eval": "SG-OBLIQ-writing-math/eval.txt",
+      "verdict": "NEARLY_IDENTICAL",
+      "lined_up": "93/100",
+      "sims": {
+        "word3_jaccard": 0.17445743083953857,
+        "word5_jaccard": 0.12309329211711884,
+        "word3_containment": 0.31835490465164185,
+        "char4_jaccard": 0.3595644235610962,
+        "token_levenshtein": 0.3135351227869788,
+        "token_lcs": 0.49441504997060554,
+        "weighted_jaccard": 0.5527156549520766,
+        "len_ratio": 0.9428897772701313
+      },
+      "train_meta": {
+        "uid": "strategygen-obliq-writing-to-math/train@266/50",
+        "reward": 0.5742132669326778,
+        "num_turns": 5,
+        "example_id": 478,
+        "chars_raw": 10282
+      },
+      "eval_meta": {
+        "uid": "strategygen-obliq-writing-to-math/eval@281/20",
+        "reward": 1.0,
+        "num_turns": 5,
+        "example_id": 20,
+        "chars_raw": 10811
+      }
+    }
+  ]
+}

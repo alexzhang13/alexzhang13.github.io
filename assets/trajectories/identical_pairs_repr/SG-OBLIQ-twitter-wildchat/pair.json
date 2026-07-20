@@ -1,0 +1,106 @@
+{
+  "case": "SG-OBLIQ-twitter-wildchat",
+  "runs": [
+    "traj-data/strategy-gen/obliq-twitter-wildchat/strategygen-obliq-twitter-to-wildchat"
+  ],
+  "obs_dropped": true,
+  "eval": {
+    "uid": "strategygen-obliq-twitter-to-wildchat/eval@181/0",
+    "reward": 1.0,
+    "num_turns": 6,
+    "example_id": -1,
+    "chars": 5272,
+    "chars_raw": 7061
+  },
+  "train": {
+    "uid": "strategygen-obliq-twitter-to-wildchat/train@172/60",
+    "reward": 0.6279912202494327,
+    "num_turns": 6,
+    "example_id": 77,
+    "chars": 4433,
+    "chars_raw": 6755
+  },
+  "top_pairs": [
+    {
+      "token_lcs": 0.5994550408719346,
+      "eval": "strategygen-obliq-twitter-to-wildchat/eval@181/0",
+      "train": "strategygen-obliq-twitter-to-wildchat/train@172/60"
+    },
+    {
+      "token_lcs": 0.5969209237228831,
+      "eval": "strategygen-obliq-twitter-to-wildchat/eval@71/22",
+      "train": "strategygen-obliq-twitter-to-wildchat/train@67/10"
+    },
+    {
+      "token_lcs": 0.5852842809364549,
+      "eval": "strategygen-obliq-twitter-to-wildchat/eval@181/12",
+      "train": "strategygen-obliq-twitter-to-wildchat/train@164/30"
+    },
+    {
+      "token_lcs": 0.5824782951854774,
+      "eval": "strategygen-obliq-twitter-to-wildchat/eval@111/5",
+      "train": "strategygen-obliq-twitter-to-wildchat/train@97/44"
+    },
+    {
+      "token_lcs": 0.574980574980575,
+      "eval": "strategygen-obliq-twitter-to-wildchat/eval@111/5",
+      "train": "strategygen-obliq-twitter-to-wildchat/train@88/44"
+    },
+    {
+      "token_lcs": 0.5671179883945842,
+      "eval": "strategygen-obliq-twitter-to-wildchat/eval@111/5",
+      "train": "strategygen-obliq-twitter-to-wildchat/train@95/12"
+    },
+    {
+      "token_lcs": 0.5666080843585237,
+      "eval": "strategygen-obliq-twitter-to-wildchat/eval@141/7",
+      "train": "strategygen-obliq-twitter-to-wildchat/train@135/18"
+    },
+    {
+      "token_lcs": 0.5661341853035143,
+      "eval": "strategygen-obliq-twitter-to-wildchat/eval@121/1",
+      "train": "strategygen-obliq-twitter-to-wildchat/train@115/18"
+    },
+    {
+      "token_lcs": 0.5634563456345635,
+      "eval": "strategygen-obliq-twitter-to-wildchat/eval@181/0",
+      "train": "strategygen-obliq-twitter-to-wildchat/train@176/10"
+    },
+    {
+      "token_lcs": 0.5579053373615306,
+      "eval": "strategygen-obliq-twitter-to-wildchat/eval@171/7",
+      "train": "strategygen-obliq-twitter-to-wildchat/train@167/19"
+    },
+    {
+      "token_lcs": 0.5574439157036031,
+      "eval": "strategygen-obliq-twitter-to-wildchat/eval@71/22",
+      "train": "strategygen-obliq-twitter-to-wildchat/train@64/4"
+    },
+    {
+      "token_lcs": 0.5565363598150483,
+      "eval": "strategygen-obliq-twitter-to-wildchat/eval@171/9",
+      "train": "strategygen-obliq-twitter-to-wildchat/train@163/21"
+    }
+  ],
+  "view": "raw (assistant + REPL output stdout + Turn nudges)",
+  "sims_behaviour_view": {
+    "word3_jaccard": 0.24011299014091492,
+    "word5_jaccard": 0.15172414481639862,
+    "word3_containment": 0.36286020278930664,
+    "char4_jaccard": 0.4068758487701416,
+    "token_levenshtein": 0.46980976013234077,
+    "token_lcs": 0.5994550408719346,
+    "weighted_jaccard": 0.6061269146608315,
+    "len_ratio": 0.8213399503722084
+  },
+  "sims_raw": {
+    "word3_jaccard": 0.2059139758348465,
+    "word5_jaccard": 0.1306343972682953,
+    "word3_containment": 0.3290378153324127,
+    "char4_jaccard": 0.3557867407798767,
+    "token_levenshtein": 0.4644744568408691,
+    "token_lcs": 0.5893300248138957,
+    "weighted_jaccard": 0.5734504636408004,
+    "len_ratio": 0.8931297709923665
+  }
+}

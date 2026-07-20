@@ -1,0 +1,107 @@
+{
+  "case": "GraphWalks",
+  "runs": [
+    "traj-data/length-gen/graphwalks/lengthgen-graphwalks-nohints",
+    "traj-data/length-gen/graphwalks/lengthgen-graphwalks"
+  ],
+  "obs_dropped": true,
+  "eval": {
+    "uid": "lengthgen-graphwalks/eval@121/8",
+    "reward": 1.0,
+    "num_turns": 6,
+    "example_id": 8,
+    "chars": 4833,
+    "chars_raw": 8189
+  },
+  "train": {
+    "uid": "lengthgen-graphwalks/train@118/29",
+    "reward": 1.0,
+    "num_turns": 6,
+    "example_id": 207,
+    "chars": 5279,
+    "chars_raw": 8852
+  },
+  "top_pairs": [
+    {
+      "token_lcs": 0.6211502782931354,
+      "eval": "lengthgen-graphwalks/eval@121/8",
+      "train": "lengthgen-graphwalks/train@118/29"
+    },
+    {
+      "token_lcs": 0.6177533806399786,
+      "eval": "lengthgen-graphwalks-nohints/eval@71/21",
+      "train": "lengthgen-graphwalks-nohints/train@63/42"
+    },
+    {
+      "token_lcs": 0.6129230769230769,
+      "eval": "lengthgen-graphwalks-nohints/eval@111/27",
+      "train": "lengthgen-graphwalks-nohints/train@107/36"
+    },
+    {
+      "token_lcs": 0.6106304079110012,
+      "eval": "lengthgen-graphwalks/eval@91/44",
+      "train": "lengthgen-graphwalks/train@83/48"
+    },
+    {
+      "token_lcs": 0.6036499766027141,
+      "eval": "lengthgen-graphwalks/eval@101/19",
+      "train": "lengthgen-graphwalks/train@84/1"
+    },
+    {
+      "token_lcs": 0.6004813477737665,
+      "eval": "lengthgen-graphwalks-nohints/eval@111/27",
+      "train": "lengthgen-graphwalks-nohints/train@96/60"
+    },
+    {
+      "token_lcs": 0.5999405999405999,
+      "eval": "lengthgen-graphwalks-nohints/eval@61/25",
+      "train": "lengthgen-graphwalks-nohints/train@44/19"
+    },
+    {
+      "token_lcs": 0.594302554027505,
+      "eval": "lengthgen-graphwalks/eval@111/27",
+      "train": "lengthgen-graphwalks/train@84/1"
+    },
+    {
+      "token_lcs": 0.5933412604042807,
+      "eval": "lengthgen-graphwalks-nohints/eval@111/9",
+      "train": "lengthgen-graphwalks-nohints/train@103/4"
+    },
+    {
+      "token_lcs": 0.5914445133292003,
+      "eval": "lengthgen-graphwalks/eval@111/41",
+      "train": "lengthgen-graphwalks/train@95/48"
+    },
+    {
+      "token_lcs": 0.590065828845003,
+      "eval": "lengthgen-graphwalks-nohints/eval@111/9",
+      "train": "lengthgen-graphwalks-nohints/train@96/60"
+    },
+    {
+      "token_lcs": 0.589511754068716,
+      "eval": "lengthgen-graphwalks-nohints/eval@71/25",
+      "train": "lengthgen-graphwalks-nohints/train@63/44"
+    }
+  ],
+  "view": "raw (assistant + REPL output stdout + Turn nudges)",
+  "sims_behaviour_view": {
+    "word3_jaccard": 0.27255985140800476,
+    "word5_jaccard": 0.19381344318389893,
+    "word3_containment": 0.4484848380088806,
+    "char4_jaccard": 0.46222662925720215,
+    "token_levenshtein": 0.4764621968616263,
+    "token_lcs": 0.6211502782931354,
+    "weighted_jaccard": 0.7111111111111111,
+    "len_ratio": 0.9222539229671898
+  },
+  "sims_raw": {
+    "word3_jaccard": 0.35328465700149536,
+    "word5_jaccard": 0.27689993381500244,
+    "word3_containment": 0.5483383536338806,
+    "char4_jaccard": 0.5093023180961609,
+    "token_levenshtein": 0.6281276962899052,
+    "token_lcs": 0.7345844504021448,
+    "weighted_jaccard": 0.7726732673267327,
+    "len_ratio": 0.9309749784296808
+  }
+}

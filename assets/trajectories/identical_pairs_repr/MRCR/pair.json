@@ -1,0 +1,106 @@
+{
+  "case": "MRCR",
+  "runs": [
+    "traj-data/length-gen/mrcr/lengthgen-mrcr-nohints"
+  ],
+  "obs_dropped": true,
+  "eval": {
+    "uid": "lengthgen-mrcr-nohints/eval@61/17",
+    "reward": 1.0,
+    "num_turns": 7,
+    "example_id": 17,
+    "chars": 1904,
+    "chars_raw": 12123
+  },
+  "train": {
+    "uid": "lengthgen-mrcr-nohints/train@43/32",
+    "reward": 1.0,
+    "num_turns": 5,
+    "example_id": 93,
+    "chars": 1573,
+    "chars_raw": 4054
+  },
+  "top_pairs": [
+    {
+      "token_lcs": 0.6674612634088201,
+      "eval": "lengthgen-mrcr-nohints/eval@61/17",
+      "train": "lengthgen-mrcr-nohints/train@43/32"
+    },
+    {
+      "token_lcs": 0.649325626204239,
+      "eval": "lengthgen-mrcr-nohints/eval@61/17",
+      "train": "lengthgen-mrcr-nohints/train@49/21"
+    },
+    {
+      "token_lcs": 0.6452991452991453,
+      "eval": "lengthgen-mrcr-nohints/eval@61/17",
+      "train": "lengthgen-mrcr-nohints/train@64/4"
+    },
+    {
+      "token_lcs": 0.6384364820846905,
+      "eval": "lengthgen-mrcr-nohints/eval@61/17",
+      "train": "lengthgen-mrcr-nohints/train@40/4"
+    },
+    {
+      "token_lcs": 0.6144366197183098,
+      "eval": "lengthgen-mrcr-nohints/eval@61/7",
+      "train": "lengthgen-mrcr-nohints/train@39/56"
+    },
+    {
+      "token_lcs": 0.6063454759106933,
+      "eval": "lengthgen-mrcr-nohints/eval@61/17",
+      "train": "lengthgen-mrcr-nohints/train@19/52"
+    },
+    {
+      "token_lcs": 0.6053719008264463,
+      "eval": "lengthgen-mrcr-nohints/eval@61/17",
+      "train": "lengthgen-mrcr-nohints/train@20/32"
+    },
+    {
+      "token_lcs": 0.60262891809909,
+      "eval": "lengthgen-mrcr-nohints/eval@61/17",
+      "train": "lengthgen-mrcr-nohints/train@57/48"
+    },
+    {
+      "token_lcs": 0.6024489795918367,
+      "eval": "lengthgen-mrcr-nohints/eval@31/8",
+      "train": "lengthgen-mrcr-nohints/train@20/32"
+    },
+    {
+      "token_lcs": 0.5985699693564862,
+      "eval": "lengthgen-mrcr-nohints/eval@61/17",
+      "train": "lengthgen-mrcr-nohints/train@40/20"
+    },
+    {
+      "token_lcs": 0.598326359832636,
+      "eval": "lengthgen-mrcr-nohints/eval@61/17",
+      "train": "lengthgen-mrcr-nohints/train@48/48"
+    },
+    {
+      "token_lcs": 0.5966996699669966,
+      "eval": "lengthgen-mrcr-nohints/eval@41/7",
+      "train": "lengthgen-mrcr-nohints/train@60/20"
+    }
+  ],
+  "view": "raw (assistant + REPL output stdout + Turn nudges)",
+  "sims_behaviour_view": {
+    "word3_jaccard": 0.3229398727416992,
+    "word5_jaccard": 0.23280423879623413,
+    "word3_containment": 0.43283581733703613,
+    "char4_jaccard": 0.4693140685558319,
+    "token_levenshtein": 0.5182795698924731,
+    "token_lcs": 0.6674612634088201,
+    "weighted_jaccard": 0.6228239845261122,
+    "len_ratio": 0.8043010752688172
+  },
+  "sims_raw": {
+    "word3_jaccard": 0.1407000720500946,
+    "word5_jaccard": 0.11644657701253891,
+    "word3_containment": 0.18687328696250916,
+    "char4_jaccard": 0.2349056601524353,
+    "token_levenshtein": 0.19756592292089248,
+    "token_lcs": 0.3343230403800475,
+    "weighted_jaccard": 0.26521412471825695,
+    "len_ratio": 0.3663286004056795
+  }
+}

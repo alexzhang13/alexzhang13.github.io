@@ -243,4 +243,12 @@ d-article {
     grid-column-start: 3;
     grid-column-end: -3;
   }
+  mjx-container[display="true"],
+  .katex-display {
+    grid-column-start: 3;
+    grid-column-end: -3;
+    display: block;
+    text-align: center;
+    margin: 0.5em 0;
+  }
 }

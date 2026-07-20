@@ -1,0 +1,535 @@
+/*******************************************************************************
+ * Code comparison carousel — side-by-side train/eval LLM trajectories
+ ******************************************************************************/
+
+.code-comparison-carousel {
+  width: 100%;
+  margin: 1.5rem 0 2rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+  background: var(--global-card-bg-color);
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+
+  /* Distill forces `d-article div { grid-column: 3 / -3 }`, which makes nested
+     panel divs span the whole inner grid and stack. Reset placement inside. */
+  div,
+  span,
+  p,
+  pre,
+  code,
+  button,
+  select {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .ccc-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem 0.85rem;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    background: rgba(0, 0, 0, 0.02);
+  }
+
+  .ccc-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .ccc-btn {
+    appearance: none;
+    border: 1px solid var(--global-divider-color);
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    border-radius: 6px;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.85rem;
+    line-height: 1.2;
+    cursor: pointer;
+
+    &:hover:not(:disabled) {
+      border-color: var(--global-theme-color);
+      color: var(--global-theme-color);
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+
+  .ccc-select {
+    min-width: 12rem;
+    max-width: 100%;
+    padding: 0.35rem 0.55rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    background: var(--global-bg-color);
+    color: var(--global-text-color);
+    font-size: 0.9rem;
+  }
+
+  .ccc-meta {
+    margin-left: auto;
+    font-size: 0.78rem;
+    color: var(--global-text-color-light);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.75rem;
+  }
+
+  .ccc-badge {
+    display: inline-block;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    background: rgba($orange-color, 0.12);
+    color: var(--global-theme-color);
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+  }
+
+  .ccc-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    height: min(70vh, 720px);
+    min-height: 420px;
+    overflow: hidden;
+    padding: 0.75rem;
+    background: #f0f1f3;
+  }
+
+  .ccc-panel {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 !important;
+    border: 1.5px solid var(--global-divider-color);
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  }
+
+  .ccc-panel--train {
+    border-color: rgba($blue-color, 0.35);
+    background: linear-gradient(180deg, rgba($blue-color, 0.04), #fff 48px);
+  }
+
+  .ccc-panel--eval {
+    border-color: rgba($orange-color, 0.4);
+    background: linear-gradient(180deg, rgba($orange-color, 0.06), #fff 48px);
+  }
+
+  .ccc-panel-header {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.55rem 0.85rem;
+    border-bottom: 1px solid var(--global-divider-color);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--global-text-color);
+  }
+
+  .ccc-panel--train .ccc-panel-header {
+    background: rgba($blue-color, 0.08);
+    border-bottom-color: rgba($blue-color, 0.2);
+    color: darken($blue-color, 8%);
+  }
+
+  .ccc-panel--eval .ccc-panel-header {
+    background: rgba($orange-color, 0.1);
+    border-bottom-color: rgba($orange-color, 0.22);
+    color: darken($orange-color, 5%);
+  }
+
+  .ccc-panel-sub {
+    font-weight: 400;
+    color: var(--global-text-color-light);
+    font-size: 0.72rem;
+  }
+
+  .ccc-panel-body {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    padding: 0.75rem 0.85rem 1rem;
+    background: #fafafa;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.35) transparent;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.04);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.28);
+      border-radius: 999px;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(0, 0, 0, 0.42);
+      background-clip: padding-box;
+    }
+  }
+
+  .ccc-scroll-spacer {
+    width: 100%;
+    flex-shrink: 0;
+    pointer-events: none;
+  }
+
+  .ccc-status {
+    padding: 2rem 1rem;
+    text-align: center;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+  }
+
+  .ccc-msg {
+    margin: 0 0 0.75rem;
+    border-radius: 10px;
+    border: 1px solid var(--global-divider-color);
+    overflow: hidden;
+    background: #fff;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .ccc-msg-role {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.7rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--global-divider-color);
+  }
+
+  .ccc-msg--user .ccc-msg-role {
+    background: rgba($blue-color, 0.08);
+    color: darken($blue-color, 8%);
+  }
+
+  .ccc-msg--assistant .ccc-msg-role {
+    background: rgba($orange-color, 0.1);
+    color: darken($orange-color, 5%);
+  }
+
+  .ccc-msg--stdout .ccc-msg-role {
+    background: rgba($green-color, 0.1);
+    color: darken($green-color, 8%);
+  }
+
+  .ccc-msg--turn .ccc-msg-role {
+    background: rgba($blue-color, 0.08);
+    color: darken($blue-color, 8%);
+  }
+
+  .ccc-msg-content {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--global-text-color);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .ccc-turn-nudge {
+    margin: 0 !important;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.78rem;
+    color: var(--global-text-color-light);
+  }
+
+  .ccc-stdout {
+    margin: 0;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #111827;
+    overflow: hidden;
+  }
+
+  .ccc-stdout-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.28rem 0.65rem;
+    background: #1f2937;
+    color: #86efac !important;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    span,
+    * {
+      color: #86efac !important;
+    }
+  }
+
+  .ccc-stdout-pre {
+    margin: 0 !important;
+    padding: 0.7rem 0.8rem !important;
+    overflow-x: auto;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    color: #d1fae5 !important;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.74rem;
+    line-height: 1.45;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .ccc-stdout-vars {
+    margin-top: 0.45rem;
+    padding: 0.35rem 0.55rem;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--global-divider-color);
+    font-size: 0.72rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.55rem;
+    align-items: baseline;
+
+    .ccc-stdout-vars-label {
+      font-weight: 600;
+      color: var(--global-text-color-light);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 0.66rem;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      color: var(--global-text-color) !important;
+      font-size: 0.72rem;
+      background: transparent !important;
+    }
+  }
+
+  .ccc-msg-content p {
+    margin: 0 0 0.55rem;
+    white-space: pre-wrap;
+    word-break: break-word;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .ccc-repl {
+    margin: 0.55rem 0;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #1e1e1e;
+    overflow: hidden;
+  }
+
+  .ccc-repl-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.28rem 0.65rem;
+    background: #2a2a2a;
+    color: #c8c8c8 !important;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    /* Beat distill `span { color: var(--global-text-color) }` (black in light mode). */
+    span,
+    * {
+      color: #c8c8c8 !important;
+    }
+  }
+
+  .ccc-repl pre {
+    margin: 0 !important;
+    padding: 0.7rem 0.8rem !important;
+    overflow-x: auto;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+  }
+
+  .ccc-repl code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.75rem;
+    line-height: 1.45;
+    color: #d4d4d4 !important;
+    background: transparent !important;
+    text-shadow: none !important;
+    white-space: pre;
+  }
+
+  /* Prism token colors on dark REPL background (beat distill/Prism defaults). */
+  .ccc-repl .token {
+    background: none !important;
+    text-shadow: none !important;
+  }
+
+  .ccc-repl .token.comment,
+  .ccc-repl .token.prolog,
+  .ccc-repl .token.doctype,
+  .ccc-repl .token.cdata {
+    color: #6a9955 !important;
+  }
+
+  .ccc-repl .token.punctuation {
+    color: #d4d4d4 !important;
+  }
+
+  .ccc-repl .token.property,
+  .ccc-repl .token.tag,
+  .ccc-repl .token.boolean,
+  .ccc-repl .token.number,
+  .ccc-repl .token.constant,
+  .ccc-repl .token.symbol {
+    color: #b5cea8 !important;
+  }
+
+  .ccc-repl .token.selector,
+  .ccc-repl .token.attr-name,
+  .ccc-repl .token.string,
+  .ccc-repl .token.char,
+  .ccc-repl .token.inserted,
+  .ccc-repl .token.string-interpolation,
+  .ccc-repl .token.triple-quoted-string {
+    color: #ce9178 !important;
+  }
+
+  .ccc-repl .token.builtin {
+    color: #4ec9b0 !important;
+  }
+
+  /* f-string `{expr}` regions */
+  .ccc-repl .token.interpolation {
+    color: #d4d4d4 !important;
+  }
+
+  .ccc-repl .token.interpolation .token.punctuation {
+    color: #569cd6 !important;
+  }
+
+  .ccc-repl .token.format-spec,
+  .ccc-repl .token.conversion-option {
+    color: #d7ba7d !important;
+  }
+
+  .ccc-repl .token.operator,
+  .ccc-repl .token.entity,
+  .ccc-repl .token.url,
+  .ccc-repl .token.variable {
+    color: #d4d4d4 !important;
+  }
+
+  .ccc-repl .token.atrule,
+  .ccc-repl .token.attr-value,
+  .ccc-repl .token.keyword {
+    color: #569cd6 !important;
+  }
+
+  .ccc-repl .token.function,
+  .ccc-repl .token.class-name {
+    color: #dcdcaa !important;
+  }
+
+  .ccc-repl .token.decorator,
+  .ccc-repl .token.annotation {
+    color: #dcdcaa !important;
+  }
+
+  @media (max-width: 600px) {
+    grid-column: text;
+
+    .ccc-panels {
+      grid-template-columns: 1fr;
+      height: auto;
+      max-height: none;
+    }
+
+    .ccc-panel {
+      height: 55vh;
+    }
+
+    .ccc-meta {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
+
+d-article .code-comparison-carousel {
+  /* Match body text / figures: d-article p, figure use columns 3 / -3 */
+  grid-column-start: 3 !important;
+  grid-column-end: -3 !important;
+  width: 100%;
+  max-width: 100%;
+
+  div,
+  span,
+  p,
+  pre,
+  code,
+  button,
+  select {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  a {
+    border-bottom: none !important;
+  }
+
+  .ccc-panel {
+    margin: 0 !important;
+  }
+
+  .ccc-msg-content p {
+    margin-top: 0 !important;
+    margin-bottom: 0.55rem !important;
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .ccc-repl pre {
+    margin: 0 !important;
+  }
+}
