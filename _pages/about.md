@@ -21,7 +21,7 @@ _styles: >
         margin-top: -10px;
     }
 ---
-Hi! I broadly work on areas where language models are underutilized or inefficient. I am currently a PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a> advised by <a href="https://omarkhattab.com">Omar Khattab</a> and <a href="https://people.csail.mit.edu/kraska/">Tim Kraska</a>. I am grateful to be a <a href="https://www.laude.org">Laude Open Research Resident</a> and a research fellow at <a href="https://www.primeintellect.ai">Prime Intellect</a> to push forward open science. I am also a recipient of the <a href="https://www.nsfgrfp.org">NSF GRFP</a>.
+Hi! I broadly work on areas where language models are underutilized or inefficient. I am currently a 1st year PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a> advised by <a href="https://omarkhattab.com">Omar Khattab</a> and <a href="https://people.csail.mit.edu/kraska/">Tim Kraska</a>. I am grateful to be a <a href="https://www.laude.org">Laude Open Research Resident</a> and a research fellow at <a href="https://www.primeintellect.ai">Prime Intellect</a> to push forward open science. I am also a recipient of the <a href="https://www.nsfgrfp.org">NSF GRFP</a>.
 
 Some notable things worth mentioning:
 <ul>
