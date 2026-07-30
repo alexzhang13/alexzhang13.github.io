@@ -214,46 +214,49 @@
     
   </head>
 
-  <body>
-<d-front-matter>
-    <script async type="text/json">
-      {
-            "title": "A Meticulous Guide to Advances in Deep Learning Efficiency over the Years",
-            "description": "A very long and thorough guide how deep learning algorithms, hardware, libraries, compilers, and more have become more efficient.",
-            "published": "October 30, 2024",
-            "authors": [
-              
-              {
-                "author": "Alex Zhang",
-                "authorURL": "",
-                "affiliations": [
+  <body class="fixed-top-nav sticky-bottom-footer">
+    <!--
+      Keep d-front-matter inside <body>. If it sits between </head> and <body>,
+      HTML parsers invent an empty <body> and drop fixed-top-nav / sticky-bottom-footer.
+    -->
+    <d-front-matter>
+      <script async type="text/json">
+        {
+              "title": "A Meticulous Guide to Advances in Deep Learning Efficiency over the Years",
+              "description": "A very long and thorough guide how deep learning algorithms, hardware, libraries, compilers, and more have become more efficient.",
+              "published": "October 30, 2024",
+              "authors": [
+                
+                {
+                  "author": "Alex Zhang",
+                  "authorURL": "",
+                  "affiliations": [
+                    {
+                      "name": "Princeton University",
+                      "url": ""
+                    }
+                  ]
+                }
+                
+              ],
+              "katex": {
+                "delimiters": [
                   {
-                    "name": "Princeton University",
-                    "url": ""
+                    "left": "$",
+                    "right": "$",
+                    "display": false
+                  },
+                  {
+                    "left": "$$",
+                    "right": "$$",
+                    "display": true
                   }
                 ]
               }
-              
-            ],
-            "katex": {
-              "delimiters": [
-                {
-                  "left": "$",
-                  "right": "$",
-                  "display": false
-                },
-                {
-                  "left": "$$",
-                  "right": "$$",
-                  "display": true
-                }
-              ]
             }
-          }
-    </script>
-  </d-front-matter>
+      </script>
+    </d-front-matter>
 
-  
     <!-- Header -->
     <header>
   <!-- Nav Bar -->
@@ -2551,6 +2554,5 @@ Andrej Karpathy’s super efficient implementation of GPT-2 (124M parameters) ca
 
     
 
-  
-</body>
+  </body>
 </html>

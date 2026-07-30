@@ -203,46 +203,49 @@
     
   </head>
 
-  <body>
-<d-front-matter>
-    <script async type="text/json">
-      {
-            "title": "The Annotated Kolmogorov-Arnold Network (KAN)",
-            "description": "An annotated guide to the Kolmogorov-Arnold Network",
-            "published": "July 01, 2024",
-            "authors": [
-              
-              {
-                "author": "Alex Zhang",
-                "authorURL": "",
-                "affiliations": [
+  <body class="fixed-top-nav sticky-bottom-footer">
+    <!--
+      Keep d-front-matter inside <body>. If it sits between </head> and <body>,
+      HTML parsers invent an empty <body> and drop fixed-top-nav / sticky-bottom-footer.
+    -->
+    <d-front-matter>
+      <script async type="text/json">
+        {
+              "title": "The Annotated Kolmogorov-Arnold Network (KAN)",
+              "description": "An annotated guide to the Kolmogorov-Arnold Network",
+              "published": "July 01, 2024",
+              "authors": [
+                
+                {
+                  "author": "Alex Zhang",
+                  "authorURL": "",
+                  "affiliations": [
+                    {
+                      "name": "(Very) Recent Graduate of Princeton University",
+                      "url": ""
+                    }
+                  ]
+                }
+                
+              ],
+              "katex": {
+                "delimiters": [
                   {
-                    "name": "(Very) Recent Graduate of Princeton University",
-                    "url": ""
+                    "left": "$",
+                    "right": "$",
+                    "display": false
+                  },
+                  {
+                    "left": "$$",
+                    "right": "$$",
+                    "display": true
                   }
                 ]
               }
-              
-            ],
-            "katex": {
-              "delimiters": [
-                {
-                  "left": "$",
-                  "right": "$",
-                  "display": false
-                },
-                {
-                  "left": "$$",
-                  "right": "$$",
-                  "display": true
-                }
-              ]
             }
-          }
-    </script>
-  </d-front-matter>
+      </script>
+    </d-front-matter>
 
-  
     <!-- Header -->
     <header>
   <!-- Nav Bar -->
@@ -2091,6 +2094,5 @@ plot_results(results)
 
     
 
-  
-</body>
+  </body>
 </html>

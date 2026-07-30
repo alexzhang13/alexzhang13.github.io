@@ -218,57 +218,60 @@
     
   </head>
 
-  <body>
-<d-front-matter>
-    <script async type="text/json">
-      {
-            "title": "Language model harnesses are compositional generalizers",
-            "description": "Harnesses can lead to compositional generalization: we observe a property in training RLMs, in which similarly structured tasks are viewed as isomorphic and all individual LM calls in the harness become in-distribution.",
-            "published": "July 20, 2026",
-            "authors": [
-              
-              {
-                "author": "Alex Zhang",
-                "authorURL": "",
-                "affiliations": [
+  <body class="fixed-top-nav sticky-bottom-footer">
+    <!--
+      Keep d-front-matter inside <body>. If it sits between </head> and <body>,
+      HTML parsers invent an empty <body> and drop fixed-top-nav / sticky-bottom-footer.
+    -->
+    <d-front-matter>
+      <script async type="text/json">
+        {
+              "title": "Language model harnesses are compositional generalizers",
+              "description": "Harnesses can lead to compositional generalization: we observe a property in training RLMs, in which similarly structured tasks are viewed as isomorphic and all individual LM calls in the harness become in-distribution.",
+              "published": "July 20, 2026",
+              "authors": [
+                
+                {
+                  "author": "Alex Zhang",
+                  "authorURL": "",
+                  "affiliations": [
+                    {
+                      "name": "MIT CSAIL",
+                      "url": ""
+                    }
+                  ]
+                },
+                
+                {
+                  "author": "Omar Khattab",
+                  "authorURL": "",
+                  "affiliations": [
+                    {
+                      "name": "MIT CSAIL",
+                      "url": ""
+                    }
+                  ]
+                }
+                
+              ],
+              "katex": {
+                "delimiters": [
                   {
-                    "name": "MIT CSAIL",
-                    "url": ""
-                  }
-                ]
-              },
-              
-              {
-                "author": "Omar Khattab",
-                "authorURL": "",
-                "affiliations": [
+                    "left": "$",
+                    "right": "$",
+                    "display": false
+                  },
                   {
-                    "name": "MIT CSAIL",
-                    "url": ""
+                    "left": "$$",
+                    "right": "$$",
+                    "display": true
                   }
                 ]
               }
-              
-            ],
-            "katex": {
-              "delimiters": [
-                {
-                  "left": "$",
-                  "right": "$",
-                  "display": false
-                },
-                {
-                  "left": "$$",
-                  "right": "$$",
-                  "display": true
-                }
-              ]
             }
-          }
-    </script>
-  </d-front-matter>
+      </script>
+    </d-front-matter>
 
-  
     <!-- Header -->
     <header>
   <!-- Nav Bar -->
@@ -548,7 +551,7 @@
   <li>
 <a href="https://arxiv.org/abs/2511.02817" rel="external nofollow noopener" target="_blank"><strong>OOLONG</strong></a> [trec-coarse] (32k to 256k setting). A set of aggregation style questions to answer statistics about a dataset of information.</li>
   <li>
-<a href="https://arxiv.org/abs/2512.24601" rel="external nofollow noopener" target="_blank"><strong>OOLONG-Pairs</strong></a> (8k to 32k input, 7k to 146k output setting). A modified variant of OOLONG to find pairs of elements in the OOLONG dataset satisfying certain constraints.</li>
+<a href="https://www.alphaxiv.org/abs/2512.24601" rel="external nofollow noopener" target="_blank"><strong>OOLONG-Pairs</strong></a> (8k to 32k input, 7k to 146k output setting). A modified variant of OOLONG to find pairs of elements in the OOLONG dataset satisfying certain constraints.</li>
   <li>
 <a href="https://arxiv.org/abs/2404.06480" rel="external nofollow noopener" target="_blank"><strong>Ada-LEval</strong></a> [best-answer] (8k to 128k setting). Given a question and a large number of potential candidate and distractor answers, pick out the most suitable to answer the question.</li>
 </ul>
@@ -709,7 +712,7 @@ $$
 
 <h3 id="acknowledgements">Acknowledgements</h3>
 
-<p>Special thanks to Braden Hancock and the Laude Institute for generously providing several 8xH100 nodes on short notice to help run these experiments through the Laude Slingshots program. Alex thanks his wonderful labmates at MIT OASYS and Noah Ziems for helpful feedback while writing the blog.</p>
+<p>Special thanks to Braden Hancock and the Laude Institute for generously providing several 8xH100 nodes on short notice to help run these experiments through the Laude Slingshots program. This research is supported by the NVIDIA Academic Grant Program. Alex thanks his wonderful labmates at MIT OASYS and Noah Ziems for helpful feedback while writing the blog.</p>
 
 <h2 id="citation">Citation</h2>
 <p>You can cite this blog here:</p>
@@ -861,6 +864,5 @@ $$
   <script defer src="/assets/js/code-comparison-carousel.js?19df98a0540497fb6bebb76152f5d81e"></script>
 
 
-  
-</body>
+  </body>
 </html>

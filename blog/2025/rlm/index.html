@@ -203,57 +203,60 @@
     
   </head>
 
-  <body>
-<d-front-matter>
-    <script async type="text/json">
-      {
-            "title": "Recursive Language Models",
-            "description": "We propose Recursive Language Models (RLMs), an inference strategy where language models can decompose and recursively interact with input context of unbounded length through REPL environments.",
-            "published": "October 15, 2025",
-            "authors": [
-              
-              {
-                "author": "Alex Zhang",
-                "authorURL": "",
-                "affiliations": [
+  <body class="fixed-top-nav sticky-bottom-footer">
+    <!--
+      Keep d-front-matter inside <body>. If it sits between </head> and <body>,
+      HTML parsers invent an empty <body> and drop fixed-top-nav / sticky-bottom-footer.
+    -->
+    <d-front-matter>
+      <script async type="text/json">
+        {
+              "title": "Recursive Language Models",
+              "description": "We propose Recursive Language Models (RLMs), an inference strategy where language models can decompose and recursively interact with input context of unbounded length through REPL environments.",
+              "published": "October 15, 2025",
+              "authors": [
+                
+                {
+                  "author": "Alex Zhang",
+                  "authorURL": "",
+                  "affiliations": [
+                    {
+                      "name": "MIT CSAIL",
+                      "url": ""
+                    }
+                  ]
+                },
+                
+                {
+                  "author": "Omar Khattab",
+                  "authorURL": "",
+                  "affiliations": [
+                    {
+                      "name": "MIT CSAIL",
+                      "url": ""
+                    }
+                  ]
+                }
+                
+              ],
+              "katex": {
+                "delimiters": [
                   {
-                    "name": "MIT CSAIL",
-                    "url": ""
-                  }
-                ]
-              },
-              
-              {
-                "author": "Omar Khattab",
-                "authorURL": "",
-                "affiliations": [
+                    "left": "$",
+                    "right": "$",
+                    "display": false
+                  },
                   {
-                    "name": "MIT CSAIL",
-                    "url": ""
+                    "left": "$$",
+                    "right": "$$",
+                    "display": true
                   }
                 ]
               }
-              
-            ],
-            "katex": {
-              "delimiters": [
-                {
-                  "left": "$",
-                  "right": "$",
-                  "display": false
-                },
-                {
-                  "left": "$$",
-                  "right": "$$",
-                  "display": true
-                }
-              ]
             }
-          }
-    </script>
-  </d-front-matter>
+      </script>
+    </d-front-matter>
 
-  
     <!-- Header -->
     <header>
   <!-- Nav Bar -->
@@ -436,7 +439,7 @@
 
       <d-article>
         
-        <p><em>The full paper is now available here: <a href="https://arxiv.org/abs/2512.24601" rel="external nofollow noopener" target="_blank">https://arxiv.org/abs/2512.24601</a>.</em></p>
+        <p><em>The full paper is now available here: <a href="https://www.alphaxiv.org/abs/2512.24601" rel="external nofollow noopener" target="_blank">https://www.alphaxiv.org/abs/2512.24601</a>.</em></p>
 
 <p>You can find the official codebase for Recursive Language Models (RLMs) here: <a href="https://github.com/alexzhang13/rlm" rel="external nofollow noopener" target="_blank">https://github.com/alexzhang13/rlm</a></p>
 
@@ -914,6 +917,5 @@ index 868d98c..7c335bb 100644
 
     
 
-  
-</body>
+  </body>
 </html>
