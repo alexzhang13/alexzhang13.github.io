@@ -67,6 +67,7 @@ og_image: https://alexzhang13.github.io/assets/img/preview/default.png # The sit
 # -----------------------------------------------------------------------------
 
 acm_id: # your dl.acm.org/profile/id
+alphaxiv_url: https://www.alphaxiv.org/researchers/alex-l-zhang # your alphaXiv researcher profile URL
 blogger_url: # your blogger URL
 bluesky_url: # your bluesky URL
 dblp_url: # your DBLP profile url

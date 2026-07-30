@@ -244,6 +244,9 @@ ul.task-list input[type="checkbox"] {
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+  /* Bootstrap defaults to 0.5rem; keep the bar flush to the viewport top. */
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .navbar .dropdown-menu {
@@ -312,8 +315,17 @@ ul.task-list input[type="checkbox"] {
         transition-property: all 0.2s ease-in-out;
       }
 
+      &.social-icon-svg {
+        color: var(--global-text-color);
+        transition: color 0.2s ease-in-out;
+      }
+
       &:hover {
         i::before {
+          color: var(--global-theme-color);
+        }
+
+        &.social-icon-svg {
           color: var(--global-theme-color);
         }
       }
@@ -387,8 +399,17 @@ ul.task-list input[type="checkbox"] {
         transition-property: all 0.2s ease-in-out;
       }
 
+      &.social-icon-svg {
+        color: var(--global-text-color);
+        transition: color 0.2s ease-in-out;
+      }
+
       &:hover {
         i::before {
+          color: var(--global-theme-color);
+        }
+
+        &.social-icon-svg {
           color: var(--global-theme-color);
         }
       }
@@ -397,6 +418,17 @@ ul.task-list input[type="checkbox"] {
 
   .contact-note {
     font-size: 0.8rem;
+  }
+}
+
+// Custom SVG social icons (e.g. alphaXiv) sized like Font Awesome glyphs
+a.social-icon-svg {
+  svg {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    // Match Font Awesome's default optical alignment
+    vertical-align: -0.125em;
   }
 }
 

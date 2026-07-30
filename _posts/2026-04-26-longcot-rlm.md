@@ -96,6 +96,6 @@ In general, our intuition about how an RLM *should* behave is likely sub-optimal
 - LongCoT Repository: [https://github.com/LongHorizonReasoning/longcot](https://github.com/LongHorizonReasoning/longcot)
 - LongCoT paper: [https://arxiv.org/abs/2604.14140](https://arxiv.org/abs/2604.14140)
 - Raymond Weitekamp’s blog on RLMs: [https://raw.works/longcot-a-benchmark-worthy-of-a-rlms-attention/](https://raw.works/longcot-a-benchmark-worthy-of-a-rlms-attention/)
-- Recursive Language Models (RLM) paper: [https://arxiv.org/abs/2512.24601](https://arxiv.org/abs/2512.24601)
+- Recursive Language Models (RLM) paper: [https://www.alphaxiv.org/abs/2512.24601](https://www.alphaxiv.org/abs/2512.24601)
 - My RLM implementation: [https://github.com/alexzhang13/rlm](https://github.com/alexzhang13/rlm)
 - Prime Intellect’s RLM implementation in verifiers: [https://github.com/PrimeIntellect-ai/verifiers/blob/main/verifiers/envs/experimental/rlm_env.py](https://github.com/PrimeIntellect-ai/verifiers/blob/main/verifiers/envs/experimental/rlm_env.py)

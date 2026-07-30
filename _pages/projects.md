@@ -49,7 +49,7 @@ horizontal: false
         <a href="https://alexzhang13.github.io/assets/pdfs/Pruning_KMatrix_AZ.pdf">Pruning Methods with Sparse Factorizations of Neural Networks</a> <a href="https://github.com/alexzhang13/COS598D-Pruning"><i class="fa fa-github" style="font-size:18px"></i></a>
 </li>
 <li> 
-        <a href="https://arxiv.org/abs/2311.11427">Appearance Codes using Joint Embedding Learning of Multiple Modalities</a> <a href="https://github.com/edogariu/alex-zhang"><i class="fa fa-github" style="font-size:18px"></i></a>
+        <a href="https://www.alphaxiv.org/abs/2311.11427">Appearance Codes using Joint Embedding Learning of Multiple Modalities</a> <a href="https://github.com/edogariu/alex-zhang"><i class="fa fa-github" style="font-size:18px"></i></a>
 </li>
 <li>
         <a href="https://alexzhang13.github.io/assets/pdfs/Futures.pdf"> 
@@ -70,7 +70,7 @@ horizontal: false
         <a href="https://alexzhang13.github.io/assets/pdfs/Overparameterized.pdf">Robustness of Overparameterized Deep Learning </a> 
 </li>
 <li>
-<a href="https://arxiv.org/abs/2302.06769">Transaction Fee Mining and Mechanism Design</a>
+<a href="https://www.alphaxiv.org/abs/2302.06769">Transaction Fee Mining and Mechanism Design</a>
 </li>
 
 <li>

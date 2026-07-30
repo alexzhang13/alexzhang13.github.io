@@ -26,45 +26,49 @@
     {% endif %}
   </head>
 
-  <d-front-matter>
-    <script async type="text/json">
-      {
-            "title": "{{ page.title }}",
-            "description": "{{ page.description }}",
-            "published": "{{ page.date | date: '%B %d, %Y' }}",
-            "authors": [
-              {% for author in page.authors %}
-              {
-                "author": "{{ author.name }}",
-                "authorURL": "{{ author.url }}",
-                "affiliations": [
+  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    <!--
+      Keep d-front-matter inside <body>. If it sits between </head> and <body>,
+      HTML parsers invent an empty <body> and drop fixed-top-nav / sticky-bottom-footer.
+    -->
+    <d-front-matter>
+      <script async type="text/json">
+        {
+              "title": "{{ page.title }}",
+              "description": "{{ page.description }}",
+              "published": "{{ page.date | date: '%B %d, %Y' }}",
+              "authors": [
+                {% for author in page.authors %}
+                {
+                  "author": "{{ author.name }}",
+                  "authorURL": "{{ author.url }}",
+                  "affiliations": [
+                    {
+                      "name": "{{ author.affiliations.name }}",
+                      "url": "{{ author.affiliations.url }}"
+                    }
+                  ]
+                }{% if forloop.last == false %},{% endif %}
+                {% endfor %}
+              ],
+              "katex": {
+                "delimiters": [
                   {
-                    "name": "{{ author.affiliations.name }}",
-                    "url": "{{ author.affiliations.url }}"
+                    "left": "$",
+                    "right": "$",
+                    "display": false
+                  },
+                  {
+                    "left": "$$",
+                    "right": "$$",
+                    "display": true
                   }
                 ]
-              }{% if forloop.last == false %},{% endif %}
-              {% endfor %}
-            ],
-            "katex": {
-              "delimiters": [
-                {
-                  "left": "$",
-                  "right": "$",
-                  "display": false
-                },
-                {
-                  "left": "$$",
-                  "right": "$$",
-                  "display": true
-                }
-              ]
+              }
             }
-          }
-    </script>
-  </d-front-matter>
+      </script>
+    </d-front-matter>
 
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
     <!-- Header -->
     {% include header.liquid %}
 
