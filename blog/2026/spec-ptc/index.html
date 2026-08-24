@@ -617,6 +617,8 @@
 
 <script src="/assets/js/sptc-teaser.js?4a6c3a09d7b505cdc2cced4a9e169cfd"></script>
 
+<p>The associated code is here: <a href="https://github.com/alexzhang13/spec-ptc" rel="external nofollow noopener" target="_blank">https://github.com/alexzhang13/spec-ptc</a></p>
+
 <p>It is no surprise from my <a href="https://alexzhang13.github.io/blog/2026/harness/">previous writing</a> and work on <a href="https://arxiv.org/abs/2512.24601" rel="external nofollow noopener" target="_blank">Recursive Language Models (RLMs)</a> that I believe (1) code in a REPL is the only “tool” a system needs; (2) all other tools should be functions in that code tool. When code becomes the primary action space of your system, you need to start thinking about overlapping these specialized tool calls with the code being generated and executed.</p>
 
 <p>Inspired by <a href="https://en.wikipedia.org/wiki/Speculative_execution" rel="external nofollow noopener" target="_blank">speculative execution</a> in CPUs and <a href="https://arxiv.org/abs/2211.17192" rel="external nofollow noopener" target="_blank">speculative decoding</a> in LLMs, a relatively simple and useful trick I’m proposing in harness design is <strong>speculative programmatic tool calling</strong> (<strong>sPTC</strong>), in which we speculate and pre-launch tool calls from partially generated REPL calls as the harness is still generating tokens, rather than waiting for it to finish the entire generation. In particular, this is mostly useful when the tool of interest is a sub-LLM or sub-agent call, such as in the RLM. If the fully generated REPL actually ends up calling these tools, they immediately return with their cached outputs from the speculated call.</p>
@@ -934,7 +936,7 @@ c = llm_query("Summarize: " + a)  # speculated after a
 
     
 
-    <script src="/assets/js/sptc-code.js?92ab0177186861799c7646919c295d9a"></script>
+    <script src="/assets/js/sptc-code.js?b3974167040b3bad1d1b798631936045"></script>
 
   </body>
 </html>
