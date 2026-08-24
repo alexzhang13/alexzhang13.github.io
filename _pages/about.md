@@ -21,34 +21,42 @@ _styles: >
         margin-top: -10px;
     }
 ---
-Hi! I broadly work on areas where language models are underutilized or inefficient. I am currently a 1st year PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a> advised by <a href="https://omarkhattab.com">Omar Khattab</a> and <a href="https://people.csail.mit.edu/kraska/">Tim Kraska</a>. I am grateful to be a <a href="https://www.laude.org">Laude Open Research Resident</a> and a research fellow at <a href="https://www.primeintellect.ai">Prime Intellect</a> to push forward open science. I am also a recipient of the <a href="https://www.nsfgrfp.org">NSF GRFP</a>.
+Hi! I broadly work on areas where language models are underutilized or inefficient. I am currently a 2nd year PhD student at <a href="https://www.csail.mit.edu">MIT CSAIL</a> advised by <a href="https://omarkhattab.com">Omar Khattab</a> and <a href="https://people.csail.mit.edu/kraska/">Tim Kraska</a>. I am grateful to be a <a href="https://www.laude.org">Laude Open Research Resident</a> and a research fellow at <a href="https://www.primeintellect.ai">Prime Intellect</a> to push forward open science. I am also a recipient of the <a href="https://www.nsfgrfp.org">NSF GRFP</a>.
 
-Some notable things worth mentioning:
+<b> To understand what I'm thinking about right now, read in order:</b>
 <ul>
-  <li>Introduced <a href="https://alexzhang13.github.io/blog/2025/rlm/">Recursive Language Models (RLMs)</a>.</li>
-  <li>Part of the core team running the <a href="https://www.gpumode.com/v2/home">GPU MODE</a> <a href="/projects/">competitions</a> and <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">community</a>.</li>
-  <li>Graduated as the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">top student of the Princeton CS department</a>, and fortunate to have been advised by <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, <a href="https://machineslearner.com">Khanh Nguyen</a>, <a href="https://ofir.io">Ofir Press</a>, and <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>.</li>
+  <li><a href="https://alexzhang13.github.io/blog/2025/rlm/">Recursive Language Models (RLMs)</a>.</li>
+  <li><a href="https://alexzhang13.github.io/blog/2026/mgh/">The Mismanaged Geniuses Hypothesis</a>.</li>
+  <li>Empirical evidence of <a href="https://alexzhang13.github.io/blog/2026/harness/">harnesses inducing locally in-distribution trajectories</a>.</li>
+  <li><a href="https://github.com/PrimeIntellect-ai/prime-agent">Prime Agent</a>, a production RLM harness.</li>
+  <li><a href="https://alexzhang13.github.io/blog/2026/spec-ptc/">Speculative programmatic tool calling (PTC)</a>.</li>
+</ul>
+
+<b>Some other notable things worth mentioning:</b>
+<ul>
+  <li>I used to make a lot of benchmarks: <a href="http://www.vgbench.com">VideoGameBench</a>, <a href="https://www.alphaxiv.org/abs/2502.10517">KernelBench</a>, <a href="https://www.swebench.com/multimodal.html">SWE-bench Multimodal</a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;">.</li>
+  <li>I am part of the core team running the <a href="https://www.gpumode.com/v2/home">GPU MODE</a> <a href="/projects/">competitions</a> and <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">community</a>.</li>
+  <li>I graduated as the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">top student of the Princeton CS department</a>.</li>
 </ul>
 
 I've had brief but pleasant stints at a variety of companies: <a href="https://sakana.ai">Sakana AI</a>, <a href="https://www.vant.ai">VantAI</a>, <a href="https://research.snap.com">Snap Research</a>, <a href="https://machinelearning.apple.com">Apple</a>, and <a href="https://www.claryo.co">Claryo</a>.
 
+<!-- 
 <p>
 <br>
-</p>
+</p> -->
 
-
-### research highlights:
+<!-- ### research highlights:
 
 <ul>
-  <li><b>ML Systems.</b> <a href="https://www.alphaxiv.org/abs/2512.24601">Recursive Language Models (RLMs)</a> (2025), <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> (2025), <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency">Triton kernels for OSS AlphaFold3 (1k+ ⭐'s)</a> (2024)</li>
+  <li><b>ML Systems.</b> <a href="https://www.alphaxiv.org/abs/2512.24601">Recursive Language Models (RLMs)</a> (2025), <a href="https://gpu-mode.github.io/popcorn/">Project Popcorn 🍿</a> (2025), <a href="https://github.com/Ligo-Biosciences/AlphaFold3?tab=readme-ov-file#msa-pair-averaging-efficiency">Triton kernels for OSS AlphaFold3</a> (2024)</li>
   <li><b>Language Model Benchmarks.</b> <a href="http://www.vgbench.com">VideoGameBench</a> (2025), <a href="https://www.alphaxiv.org/abs/2502.10517">KernelBench</a> (ICML, 2025), <a href="https://www.swebench.com/multimodal.html">SWE-bench Multimodal</a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;"> (ICLR, 2025)</li>
   <li><b>Models.</b> <a href="https://www.vant.ai/neo-1">Neo-1</a> (2025), <a href="https://huggingface.co/facebook/KernelLLM">KernelLLM-8B</a> (2025), <a href="https://www.alphaxiv.org/abs/2402.01695">Language-guided World Models</a> (SpLU-RoboNLP @ ACL, 2024)</li>
 
-</ul>
-<!-- in  and <a href="https://arxiv.org/abs/2302.04449">guiding</a> agent behavior in different data modalities</b> to create more reliable, interpretable, and less data hungry AI models. I'm also very interested -->
+</ul> -->
 
-<p>
+<!-- <p>
 <br>
-</p>
+</p> -->
 
-Feel free to reach out to talk about anything through my email at [x]@mit.edu where [x]=altzhang. Finally, I'm also fairly active in and help moderate the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community. As a last fun fact, I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">[unfinished example]</a> 
+Feel free to reach out to talk about anything through my email at [x]@mit.edu where [x]=altzhang. I also help moderate the <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">GPU MODE</a> community. As a last fun fact, I used to make and sell PC games, one of which was mildly successful (~100k+ players). <a href="https://www.youtube.com/watch?v=6Mmfo44FxhA">[unfinished example]</a> 

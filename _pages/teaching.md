@@ -15,6 +15,7 @@ nav_order: 5
 <li> <b>Outstanding Senior Thesis Prize</b>: for work on <a href="https://dataspace.princeton.edu/handle/88435/dsp014j03d301r">augmenting decision-making agents with language capabilities. </a> </li>
 <li> <b>Outstanding Computer Science Service Award</b>: co-founded and served as president of <a
 href="https://ai-house.vercel.app">AI@Princeton</a> + helped organize first <a href="https://ai-house.vercel.app/Framework/aitt.html">AI Tiger Trek</a>. </li>
+<li> Fortunate to have been advised by <a href="https://www.cs.princeton.edu/~karthikn/">Karthik Narasimhan</a>, <a href="https://machineslearner.com">Khanh Nguyen</a>, <a href="https://ofir.io">Ofir Press</a>, and <a href="https://www.cs.princeton.edu/~li/">Kai Li</a>. </li>
 </ul>
 
 \> graduated <i>valedictorian</i> (1/~400) from a public US high school 🎓.
