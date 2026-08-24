@@ -1,5 +1,277 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alexzhang13.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alexzhang13.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-08-10T00:45:50+00:00</updated><id>https://alexzhang13.github.io/feed.xml</id><title type="html">blank</title><subtitle>Alex Zhang&apos;s Website.
-</subtitle><entry><title type="html">Language model harnesses are compositional generalizers</title><link href="https://alexzhang13.github.io/blog/2026/harness/" rel="alternate" type="text/html" title="Language model harnesses are compositional generalizers" /><published>2026-07-20T00:00:00+00:00</published><updated>2026-07-20T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2026/harness</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2026/harness/"><![CDATA[<p><strong>Modern post-training has become a brute-force paradigm of curating ever more environments and ever longer training horizons.</strong> In large part, this is because frontier Transformers are still poor at <em>compositional generalization</em>, the ability to solve unseen problems by composing familiar ones. Unless our models compose the individual lessons they learn, scaling will have slower returns than it should, as every new domain will demand its own investment in the form of training data.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alexzhang13.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alexzhang13.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-08-24T17:04:55+00:00</updated><id>https://alexzhang13.github.io/feed.xml</id><title type="html">blank</title><subtitle>Alex Zhang&apos;s Website.
+</subtitle><entry><title type="html">Speculative Programmatic Tool Calling</title><link href="https://alexzhang13.github.io/blog/2026/spec-ptc/" rel="alternate" type="text/html" title="Speculative Programmatic Tool Calling" /><published>2026-08-24T00:00:00+00:00</published><updated>2026-08-24T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2026/spec-ptc</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2026/spec-ptc/"><![CDATA[<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" />
+
+<figure id="sptc-teaser">
+  <div class="teaser">
+    <div class="teaser-heading">Fig 1. Speculative Programmatic Tool Calling (sPTC) Example</div>
+    <div class="teaser-grid">
+      <div class="teaser-term">
+        <div class="term-head"><span class="dot" id="sptc-dot"></span><span id="sptc-title">the model's turn — streaming</span></div>
+        <div class="term-body" id="sptc-term-body" aria-live="off"></div>
+      </div>
+      <div class="teaser-time">
+      <svg viewBox="0 0 420 262" preserveAspectRatio="none" role="img" aria-label="Compact timeline driven by the time slider. With speculation: the decode bar grows while six thin sub-call bars and a dependent judge call run inside it, so the execute bar is a short stub of seven cache hits. Without speculation the same program runs its seven calls serially after decode, answering far later.">
+        <rect data-grow="" x="93.4" data-t0="0" data-t1="34" y="28" height="148" fill="var(--sp-run)" fill-opacity=".08" />
+        <rect data-grow="" x="181.05" data-t0="34" data-t1="47" y="28" height="148" fill="var(--sp-ok)" fill-opacity=".08" />
+        <rect data-grow="" x="93.4" data-t0="0" data-t1="34" y="190" height="36" fill="var(--sp-run)" fill-opacity=".08" />
+        <rect data-grow="" x="181.05" data-t0="34" data-t1="112" y="190" height="36" fill="var(--sp-ok)" fill-opacity=".06" />
+        <text x="8" y="20" font-family="IBM Plex Mono, monospace" font-size="9" font-weight="600" letter-spacing="1" fill="var(--sp-spec)">WITH SPECULATION</text>
+        <text data-show="0.5" x="136.92" y="20" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" font-weight="600" letter-spacing="1.2" fill="var(--sp-run)">DECODE</text>
+        <text data-show="34" x="200.16" y="20" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="9" font-weight="600" letter-spacing="1.2" fill="var(--sp-ok)">EXECUTE</text>
+        <line data-show="34" x1="181.05" y1="28" x2="181.05" y2="226" stroke="var(--sp-faint)" stroke-width="1" stroke-dasharray="3 4" />
+        <g font-family="IBM Plex Mono, monospace" font-size="9.5" fill="var(--sp-dim)" text-anchor="end">
+          <text x="86" y="48">prep</text>
+          <text x="86" y="89">sub-calls ×6</text>
+          <text x="86" y="131">judge</text>
+          <text x="86" y="153">execute</text>
+          <text x="86" y="208">baseline</text>
+        </g>
+        <rect data-grow="" x="93.4" data-t0="0" data-t1="34" y="38" height="12" rx="2" fill="var(--sp-run)" fill-opacity=".22" stroke="var(--sp-run)" stroke-width=".9" />
+        <g fill="var(--sp-spec)" fill-opacity=".28" stroke="var(--sp-spec)" stroke-width=".7">
+          <rect data-grow="" x="147.53" data-t0="21" data-t1="32" y="58" height="6" rx="1.5" />
+          <rect data-grow="" x="148.28" data-t0="21.3" data-t1="32.3" y="68" height="6" rx="1.5" />
+          <rect data-grow="" x="149.09" data-t0="21.6" data-t1="32.6" y="78" height="6" rx="1.5" />
+          <rect data-grow="" x="149.84" data-t0="21.9" data-t1="32.9" y="88" height="6" rx="1.5" />
+          <rect data-grow="" x="150.59" data-t0="22.2" data-t1="33.2" y="98" height="6" rx="1.5" />
+          <rect data-grow="" x="151.4" data-t0="22.5" data-t1="33.5" y="108" height="6" rx="1.5" />
+        </g>
+        <g fill="var(--sp-ok)">
+          <circle data-show="32" cx="149.79" cy="61" r="2" />
+          <circle data-show="32.3" cx="150.3" cy="71" r="2" />
+          <circle data-show="32.6" cx="150.85" cy="81" r="2" />
+          <circle data-show="32.9" cx="151.36" cy="91" r="2" />
+          <circle data-show="33.2" cx="151.87" cy="101" r="2" />
+          <circle data-show="33.5" cx="152.42" cy="111" r="2" />
+        </g>
+        <rect data-grow="" x="179.76" data-t0="33.5" data-t1="45.5" y="124" height="8" rx="1.5" fill="var(--sp-spec)" fill-opacity=".28" stroke="var(--sp-spec)" stroke-width=".7" />
+        <circle data-show="45.5" cx="173.46" cy="128" r="2" fill="var(--sp-ok)" />
+        <rect data-grow="" x="181.05" data-t0="34" data-t1="46" y="144" height="11" rx="2" fill="var(--sp-ok)" fill-opacity=".22" stroke="var(--sp-ok)" stroke-width="1" />
+        <circle data-show="46" cx="174.16" cy="149.5" r="3" fill="var(--sp-ok)" />
+        <text data-show="46" x="219.2" y="153" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--sp-ok)">answer · 7/7 claims</text>
+        <text x="8" y="185" font-family="IBM Plex Mono, monospace" font-size="9" font-weight="600" letter-spacing="1" fill="var(--sp-dim)">WITHOUT SPECULATION · SAME PROGRAM</text>
+        <text data-show="112" x="399.4" y="185" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--sp-amber)">answer</text>
+        <rect data-grow="" x="93.4" data-t0="0" data-t1="34" y="198" height="12" rx="2" fill="var(--sp-run)" fill-opacity=".22" stroke="var(--sp-run)" stroke-width=".9" />
+        <g fill="var(--sp-amber)" fill-opacity=".16" stroke="var(--sp-amber)" stroke-width=".9">
+          <rect data-grow="" x="181.05" data-t0="34" data-t1="45" y="198" height="12" rx="2" />
+          <rect data-grow="" x="209.41" data-t0="45" data-t1="56" y="198" height="12" rx="2" />
+          <rect data-grow="" x="237.76" data-t0="56" data-t1="67" y="198" height="12" rx="2" />
+          <rect data-grow="" x="266.12" data-t0="67" data-t1="78" y="198" height="12" rx="2" />
+          <rect data-grow="" x="294.41" data-t0="78" data-t1="89" y="198" height="12" rx="2" />
+          <rect data-grow="" x="322.76" data-t0="89" data-t1="100" y="198" height="12" rx="2" />
+          <rect data-grow="" x="351.12" data-t0="100" data-t1="112" y="198" height="12" rx="2" />
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="8.5" fill="var(--sp-amber)" text-anchor="middle">
+          <text data-show="39" x="195.2" y="207">c₁</text><text data-show="50" x="223.55" y="207">c₂</text>
+          <text data-show="61" x="251.91" y="207">c₃</text><text data-show="72" x="280.26" y="207">c₄</text>
+          <text data-show="83" x="308.55" y="207">c₅</text><text data-show="94" x="336.91" y="207">c₆</text>
+          <text data-show="105" x="366.56" y="207">judge</text>
+        </g>
+        <circle data-show="112" cx="289.76" cy="204" r="3" fill="var(--sp-amber)" />
+        <text data-show="112" x="296.72" y="238" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="var(--sp-ok)">execute collapses — 2.4×, no async</text>
+        <g data-show="112" stroke="var(--sp-ok)" stroke-width="1.2">
+          <line x1="211.99" y1="250" x2="382.06" y2="250" />
+          <line x1="211.99" y1="244" x2="211.99" y2="256" />
+          <line x1="382.06" y1="244" x2="382.06" y2="256" />
+        </g>
+      </svg>
+      </div>
+    </div>
+    <div class="teaser-controls">
+      <button id="sptc-play" type="button">▶ play</button>
+      <input id="sptc-slider" type="range" min="0" max="115" step="0.25" value="0" aria-label="scrub time through the turn" />
+      <span class="readout" id="sptc-readout">Time t</span>
+    </div>
+  </div>
+  <!-- <figcaption><b>Scrub the turn.</b> Left: the model's raw stream — thinking tokens, then the
+  program; the cell holds only model-generated tokens. Highlights are live, not history:
+  <b style="color:#46c364">green</b> while the fork runs a line,
+  <b style="color:#c39bff">purple</b> while its speculated calls are in flight, and
+  <b style="color:#d29922">amber</b> marks the line the <i>without-speculation</i> twin is stuck
+  on — it crawls through the same program long after the speculated run has answered. Right: the
+  same moments as time bars — six sub-calls and the judge (whose prompt needs their results) all
+  run inside decode, so execute collapses to seven cache hits; without speculation the same
+  program runs its seven calls one at a time, after decode.</figcaption> -->
+</figure>
+
+<script src="/assets/js/sptc-teaser.js?4a6c3a09d7b505cdc2cced4a9e169cfd"></script>
+
+<p>It is no surprise from my <a href="https://alexzhang13.github.io/blog/2026/harness/">previous writing</a> and work on <a href="https://arxiv.org/abs/2512.24601">Recursive Language Models (RLMs)</a> that I believe (1) code in a REPL is the only “tool” a system needs; (2) all other tools should be functions in that code tool. When code becomes the primary action space of your system, you need to start thinking about overlapping these specialized tool calls with the code being generated and executed.</p>
+
+<p>Inspired by <a href="https://en.wikipedia.org/wiki/Speculative_execution">speculative execution</a> in CPUs and <a href="https://arxiv.org/abs/2211.17192">speculative decoding</a> in LLMs, a relatively simple and useful trick I’m proposing in harness design is <strong>speculative programmatic tool calling</strong> (<strong>sPTC</strong>), in which we speculate and pre-launch tool calls from partially generated REPL calls as the harness is still generating tokens, rather than waiting for it to finish the entire generation. In particular, this is mostly useful when the tool of interest is a sub-LLM or sub-agent call, such as in the RLM. If the fully generated REPL actually ends up calling these tools, they immediately return with their cached outputs from the speculated call.</p>
+
+<div class="sptc-video">
+  <div class="sptc-video-frame teaser">
+    <iframe title="Speculative programmatic tool calling teaser" src="/assets/video/player.html?src=teaser.mp4" allow="autoplay"></iframe>
+  </div>
+</div>
+
+<p>A key observation is that LLM tools, such as sub-agents or search APIs, are often high-latency and are usually the bottleneck in harnesses that rely on code execution as actions. Furthermore, the actual generation of the main context is often also a significant latency bottleneck that blocks intermediate calls from happening.</p>
+
+<p>For the rest of this blog, I’ll mostly be discussing inference time savings with respect to an RLM, but note that this generally applies to harnesses that generate code (i.e. CodeAct-like or “code mode” harnesses). There are two obvious areas where you save time:</p>
+
+<ol>
+  <li><strong>Overlapping already-generated tool calls during token streaming.</strong> Most harness designs will wait for the entire model generation to complete its generation before executing the tools. This design is likely a consequence of JSON-style tool-calling, where this was not really a bottleneck. Because the generation of the main context per turn is often slow, this represents a significant portion of time that can be cut, especially for models that <em>think</em> for a long time.</li>
+  <li><strong>Acting as a JIT compiler over REPL calls.</strong> Even without streaming enabled, an obvious optimization is that many REPL programs contain blocking tool calls that aren’t actually blocking — e.g. two independent sub-agent calls that the code does not write as asynchronous, can still be run in parallel. <strong>sPTC</strong> acts as a <em>really naive</em> JIT compiler to prevent such cases, and likely can be improved further across languages and REPL designs.</li>
+</ol>
+
+<div class="sptc-video">
+  <div class="sptc-video-frame comparison">
+    <iframe title="Side-by-side speculation examples" src="/assets/video/player.html?src=comparison.mp4" allow="autoplay"></iframe>
+  </div>
+  <p class="caption">Side-by-side example of sub-agents with string literal inputs, sub-agents with variable dependencies, and loops over sub-agents with variable dependencies being speculated and overlapped with the main context generation.</p>
+</div>
+
+<p>On locally running LLMs running one or a few chat instances at a time, your inference engine is often highly memory-bound from decoding just the main context, and speculation can help increase the arithmetic intensity. For high-volume serving systems (e.g. if you’re using a frontier lab or model router API), batched requests are abstracted away to various, likely disjoint serving engines, so the gain is purely from either overlapping computation with the main context, or overlapping execution time with a slow REPL call.</p>
+
+<h2 id="some-comparison-numbers-on-rlms">Some Comparison Numbers on RLMs</h2>
+
+<p>I’ll start by highlighting some basic runtime numbers, although you can probably reason through the runtime benefit. The actual implementation details are quite simple and easy to follow in the codebase, which I will talk about in the latter half of the blog.</p>
+
+<p>You should keep in mind that it’s very difficult to estimate the exact speed-ups because it’s highly dependent on the latency of the tools, the number of tokens generated, the load of your serving engine, and the actual choices the harness makes. We can isolate some components (e.g. fix a program) to highlight obvious cases that don’t really need benchmarking to understand, but the simplest example is just to replicate a setting and harness we know and benchmark the runtimes averaged over many samples.</p>
+
+<p>We run below on <a href="https://arxiv.org/abs/2511.02817">OOLONG (trec-coarse, 132k)</a> and <a href="https://huggingface.co/datasets/mit-oasys/oolong-pairs">OOLONG-Pairs (32k)</a> from the original paper, with a node of 8xH100 80B running a vLLM server. We tested two cases with <code class="language-plaintext highlighter-rouge">Qwen3-30B-A3B-Instruct-0527</code>, one with the standard temperature=0.7 and one with temperature=0.0 to control the variance of these RLM runs, whose speed is highly dependent on the trajectory it takes. We run each experiment 5 times. We report the average number of sub-calls and turns to give a relative sense for what each model is doing as well, and report across a setting where we have 4 concurrent runs, and 8 concurrent runs over the same serving engine.</p>
+
+<figure>
+<center>
+    <img src="/assets/img/spec-plot.png" style="width:100%; margin-bottom: 10px" alt="Speculative PTC vs. Base RLM on OOLONG and OOLONG-Pairs" />
+</center>
+</figure>
+
+<p>The speed-ups for the RLM are generally on the order of 1-1.2x. We also tested a more “deterministic” suite of LM programs where we’d observe hypothetical or realistic runtime speed-ups in the codebase, but we omit them here because they are too specific.</p>
+
+<h2 id="designing-speculative-ptc-methods">Designing Speculative PTC Methods</h2>
+
+<p>The <a href="https://github.com/alexzhang13/spec-ptc/">code</a> is quite short and readable, but I’ll talk a bit about the design philosophy below.</p>
+
+<p>The high-level design is to have imported tool calls in our REPL have a hook that can be called earlier and replaced with a cached output when needed. We want a library and frontend contract that allows us to define (1) what tools should be speculated and what shouldn’t (e.g. maybe we want sub-LLM calls to be speculated, but a sub-RLM call is too costly); and (2) a mechanism for speculating on tool calls whose inputs rely on variables in memory that were computed previously, rather than just literals.</p>
+
+<p>At a high-level, the type of contract we want is a hook around functions we want speculated (e.g. the sub-call <code class="language-plaintext highlighter-rouge">llm_query()</code> in the RLM) so that we can run it asynchronously when we parse it, save it to some global store of tool outputs, and treat it like a promise that draws from this store when it is actually invoked in the REPL. We also want to distinguish between multiple invocations of identical tool calls for when they are non-deterministic (like a sub-call).</p>
+
+<div class="sptc-py"><pre>
+@spec.tool(speculatable=True, pure=True)
+def tool(...) -&gt; OutputType:
+    ...
+
+# Speculated version
+def tool_spec(...):
+    promise = launch(tool(...))
+    register_speculation(promise)
+
+# Hooked version run in real REPL
+def tool_real(...):
+    if exists(promise, ID(...)):
+        return promise
+    else:
+        return tool(...)
+</pre></div>
+
+<p>The contract above lets us define a “shadowed” namespace which invokes these modified tool calls while the LLM output is being parsed, and save them as futures in some store that can be invoked by the real tool. This gives us the relatively simple logic below:</p>
+
+<div class="sptc-py"><pre>
+real_ns = {**locals, real_tools}
+shadow_ns = replace_tools(real_ns)
+
+# speculate while LLM is streaming
+while not LLM.done:
+    code += LLM.next_tokens()
+    parse_and_peek(code, shadow_ns)  # queue without code execution
+    parse_and_speculate(code, shadow_ns)  # re-run shadow REPL
+
+# real tools now route to promised tools
+exec(code, real_ns)
+</pre></div>
+
+<p><strong>Shadowed execution for speculation.</strong> The easy cases for speculation are when you can parse a tool call and infer the inputs from the tokens directly, i.e. when the inputs are literals. The nastier cases come when tool calls are embedded inside conditional or looping logic, or the inputs are dependent on some variable in memory that was computed earlier in the REPL call. In the former case, we may not know a-priori whether the conditional is satisfied, or how long the loop runs for. In the latter case, we’re unsure if computing the variable input is not <em>pure</em> and modifies some external state, meaning we cannot compute this beforehand.</p>
+
+<p>There are many potential ways to solve this issue which could span an entire line of work, but to keep it simple, I chose to maintain a deepcopy fork of our primary code REPL, which we label as a <em>shadow REPL</em>, which executes the partial REPL on the fly. To prevent unwanted side-effects, most external libraries and functions like <code class="language-plaintext highlighter-rouge">open</code> get marked as “unsafe”, and any speculatable tools that have input dependencies using those functions are not speculated.</p>
+
+<p><strong>Note</strong>: I intentionally chose not to use the partial “speculator” executor as the real REPL executor, because there’s a chance the entire REPL the model produces error-prone code or an incomplete tool call. In these cases, we do not want the speculator to actually modify the REPL state, and we want to treat the entire REPL cell as a unit of computation.</p>
+
+<h2 id="what-you-can-speculate-and-run-ahead-of-time">What you can speculate and “run” ahead-of-time.</h2>
+
+<p>There’s a bit of consideration into what exactly can be speculated, how aggressive you want to be, and the overall safety of running partial code. We generally care about understanding (1) do we have enough information to run the tool call ahead of time; (2) can we figure out if that tool call will actually execute, especially around conditionals.</p>
+
+<p>In PTC, we can uniquely index into a tool call by its <strong>inputs</strong> (and occurrence if non-deterministic). During streaming, if the inputs to each tool call are known without code execution (i.e. all inputs are literals like a string literal), we can immediately invoke this tool call asynchronously. The more common case is where the inputs have dependencies on other variables, some of which we can <em>safely</em> compute, and others that we cannot. For identical tool calls, such as computing a majority vote over several sub-agents, we do not want a single speculated tool call to route to each copy, so we need to track unique instances of the same tool call, unless we know the call is deterministic.</p>
+
+<p>We can look a few cases below of what currently gets <em>speculated</em> and what doesn’t to provide some intuition:</p>
+
+<p><strong>Case 1: Literals.</strong> String, integer, or other literals can immediately be parsed and converted into a tool call even without shadowed execution of each line.</p>
+
+<div class="sptc-py"><pre>
+title = llm_query("Give a title for: The Odyssey")  # parses
+blurb = llm_query("One-line blurb for: The Odyssey")  # parses
+print(title, blurb)
+</pre></div>
+
+<p><strong>Case 2: Input dependencies.</strong> When input dependencies are involved, as long as all inputs are <em>safe</em> (i.e. pure functions, no side effects), they can be speculated. Furthermore, tools that rely on dependencies that are speculated will wait on the dependencies to be computed first, and are then executed even if the LLM is still streaming.</p>
+
+<div class="sptc-py"><pre>
+a = llm_query("Triage: " + doc)  # parses then executes
+c = llm_query("Summarize: " + str(a))  # parses, waits on a, then executes
+print(c)
+
+if len(doc) &gt; 10_000:  # will evaluate and speculate if safe
+    extra = llm_query("Also outline it: " + doc)
+</pre></div>
+
+<p><strong>Case 3: Peekable and non-peekable dependencies.</strong> During streaming at any step, we have a working namespace of the shadow REPL. When a complete tool is parsed, there are cases when we can speculate the inputs, even if the dependencies are variables in memory and not literals.</p>
+
+<div class="sptc-py"><pre>
+def gist(t):
+    return llm_query("One-line gist: " + t)  # non-peekable
+
+parts = [gist(c) for c in chunks]
+
+side = llm_query("Give me a random title for:", chunks[0])  # peekable
+print(side, parts)
+</pre></div>
+
+<p><strong>Case 4: Blocked speculation calls.</strong> While trying to speculate, there is an allowlist of keywords and function calls that can be used to compute dependencies for inputs. We also can specify new tools that we do want to specify are not pure functions. Any speculatable tools that have dependencies that are blocked will not be speculated.</p>
+
+<div class="sptc-py"><pre>
+a = llm_query("Triage: " + doc)  # speculated
+notes = open("/tmp/scratch.txt").read()  # blocked
+b = llm_query("Annotate with notes: " + notes)  # blocked
+c = llm_query("Summarize: " + a)  # speculated after a
+</pre></div>
+
+<p>There are many more cases, and ideally we’d write a whole pseudo-compiler for this kind of thing. I suspect also various trade-offs will pop up for different harness designs, but so far this has not been heavily optimized.</p>
+
+<h3 id="speculation-overhead-for-ptc">Speculation Overhead for PTC</h3>
+
+<p>Like with other parts of this trick, the extra overhead of speculative PTC is somewhat dependent on both the exact implementation and the setup of your inference engine. For this implementation, on runtime, the overhead is somewhat negligible because the speculator cheaply parses and checks whether it believes it can speculate over the partially generated REPL. On memory, we create a deepcopy of the harness code REPL, which generally is cheap relative to the allocated memory of the actual REPL variables because we tend to have few large mutable objects.</p>
+
+<p>The worst case happens when the serving engine for the tool is clogged with many concurrent and potentially extra speculated requests, which can be controlled with how aggressive speculation is and how these tools are queued.</p>
+
+<h2 id="related-ideas">Related Ideas</h2>
+
+<p>Speculative algorithms at the level of LLM decoding (i.e. the streamed outputs) have been explored a little bit for the older tool-calling designs, although not extensively. The likely case is that for standard tool-calling, these techniques were not that useful or the overhead was not worth the marginal latency improvements.</p>
+
+<p><a href="https://arxiv.org/abs/2406.00059">Conveyor (Xu et al., 2024)</a><d-cite key="xu2024conveyorefficienttoolawarellm"></d-cite> allows users to define partial execution opportunities such as a line of code, which are parsed during decoding. In <a href="https://arxiv.org/abs/2605.13360">Speculative Interaction Agents (Hooper et al., 2026)</a><d-cite key="hooper2026speculativeinteractionagentsbuilding"></d-cite>, they formally define the system proposed in Conveyor as <em>speculative tool calling</em>, which mainly reduces time-to-first-token (TTFT) by overlapping long thinking chains of more modern models with an invoked tool call. <a href="https://arxiv.org/abs/2605.15077">AsyncFC (Feng et al., 2026)</a><d-cite key="feng2026concurrencymodelchangesfuturebased"></d-cite> instead argues that tool calls are often implemented in a blocking way, and define a contract for future-based async wrappers around function calls; this however, has the risk of not being 1:1 with the original harness trajectory.</p>
+
+<p>In the case of sPTC, the reason I’d argue that adding speculation to tools in a more complex program is significantly more useful is because of the unknown runtime of the program itself. For standard tool calling, by the time the LLM has finished generating enough tokens to fully specify the tool call, there likely is not many more tokens left to generate. There are a lot more considerations in the PTC case over what you actually speculate and how, because code execution makes the actual tool call patterns significantly more complicated, leaving more room for overlap.</p>
+
+<h2 id="ending-note">Ending Note</h2>
+
+<p>Speculative programmatic tool calling is a natural trick that arises from programmatic tool calling itself having more potential for overlap than traditional tool calling itself. I want to clarify that beyond overlapping with streamed token generations of the root LLM in a harness, the real value in the long run will come from more clever JIT compilation tricks to overlap tool calls in the PTC setting with the actual REPL execution itself, which may become more expensive as harnesses generate more complex programs.</p>
+
+<p>There are likely many ways to implement speculative PTC to be much faster or more aggressive, while also utilizing less overhead. We’d ideally also want it to be language and harness-agnostic, which for now is mainly just {Python, bash, Bun} x {Coding harness, RLM, game agent}. The current implementation is already quite useful though, especially for locally running models and agent harnesses.</p>
+
+<p>I’ve provided a simple implementation that slots directly into my RLM implementation, but it should be quite easy to build on top of and add as a plugin to your own coding agents.</p>
+
+<p><strong>Acknowledgements.</strong> I thank Laude for generously providing compute to run these experiments. I thank my advisor Omar Khattab for proofreading the idea.</p>
+
+<p>If you need to cite this:</p>
+
+<div class="sptc-py" data-lang="bibtex"><pre>
+@article{zhang2026sptc,
+  title   = "Speculative Programmatic Tool Calling",
+  author  = "Zhang, Alex",
+  year    = "2026",
+  month   = "August",
+  url     = "https://alexzhang13.github.io/blog/2026/spec-ptc/"
+}
+</pre></div>]]></content><author><name>Alex Zhang</name></author><category term="harnesses" /><category term="speculation" /><category term="RLM" /><category term="tool-calling" /><summary type="html"><![CDATA[Speculative programmatic tool calling is a class of techniques for overlapping tool call computation with the code being generated by a harness.]]></summary></entry><entry><title type="html">Language model harnesses are compositional generalizers</title><link href="https://alexzhang13.github.io/blog/2026/harness/" rel="alternate" type="text/html" title="Language model harnesses are compositional generalizers" /><published>2026-07-20T00:00:00+00:00</published><updated>2026-07-20T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2026/harness</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2026/harness/"><![CDATA[<p><strong>Modern post-training has become a brute-force paradigm of curating ever more environments and ever longer training horizons.</strong> In large part, this is because frontier Transformers are still poor at <em>compositional generalization</em>, the ability to solve unseen problems by composing familiar ones. Unless our models compose the individual lessons they learn, scaling will have slower returns than it should, as every new domain will demand its own investment in the form of training data.</p>
 
 <p>Training data is not the only lever, of course. For the past few years, we’ve attacked harder tasks by <em>scaffolding</em> the Transformer, first with chain-of-thought reasoning, then with tool use, and so on. Yet across all of this, <em>generalization</em> itself has been left to the underlying neural network and to its <a href="https://arxiv.org/abs/1706.03762">2017 token-level inductive biases</a>. We argue that better generalization is largely the job of what today is called a <em>harness</em>. A harness is the program that sits between the external world and the neural network: it decides how to encode the current state of the environment, which can be arbitrarily long and complex, into one or more inputs to the LLM and how to determine the next action. <strong>The primary job of the harness should be to carry a higher-level inductive bias that can reduce unfamiliar and complex problems to compositions of simpler ones for the underlying neural network.</strong></p>
 
@@ -252,14 +524,16 @@ $$
 
 <h2 id="citation">Citation</h2>
 <p>You can cite this blog here:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{zhang2026harnesses,
+
+<div class="sptc-py" data-lang="bibtex"><pre>
+@article{zhang2026harnesses,
   title   = "Language model harnesses are compositional generalizers",
   author  = "Zhang, Alex and Khattab, Omar",
   year    = "2026",
   month   = "July",
   url     = "https://alexzhang13.github.io/blog/2026/harness/"
 }
-</code></pre></div></div>]]></content><author><name>Alex Zhang</name></author><category term="harnesses" /><category term="compositional" /><category term="locally" /><category term="in-distribution" /><summary type="html"><![CDATA[Harnesses can lead to compositional generalization: we observe a property in training RLMs, in which similarly structured tasks are viewed as isomorphic and all individual LM calls in the harness become in-distribution.]]></summary></entry><entry><title type="html">A Mini Exercise on the Mismanaged Geniuses Hypothesis (RLMs on LongCoT)</title><link href="https://alexzhang13.github.io/blog/2026/longcot-rlm/" rel="alternate" type="text/html" title="A Mini Exercise on the Mismanaged Geniuses Hypothesis (RLMs on LongCoT)" /><published>2026-04-26T00:00:00+00:00</published><updated>2026-04-26T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2026/longcot-rlm</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2026/longcot-rlm/"><![CDATA[<p>Alex Zhang, Omar Khattab</p>
+</pre></div>]]></content><author><name>Alex Zhang</name></author><category term="harnesses" /><category term="compositional" /><category term="locally" /><category term="in-distribution" /><summary type="html"><![CDATA[Harnesses can lead to compositional generalization: we observe a property in training RLMs, in which similarly structured tasks are viewed as isomorphic and all individual LM calls in the harness become in-distribution.]]></summary></entry><entry><title type="html">A Mini Exercise on the Mismanaged Geniuses Hypothesis (RLMs on LongCoT)</title><link href="https://alexzhang13.github.io/blog/2026/longcot-rlm/" rel="alternate" type="text/html" title="A Mini Exercise on the Mismanaged Geniuses Hypothesis (RLMs on LongCoT)" /><published>2026-04-26T00:00:00+00:00</published><updated>2026-04-26T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2026/longcot-rlm</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2026/longcot-rlm/"><![CDATA[<p>Alex Zhang, Omar Khattab</p>
 
 <p>I believe it’s worth discussing an example of the <a href="https://alexzhang13.github.io/blog/2026/mgh/">Mismanaged Geniuses Hypothesis</a> at play: <strong>we underestimate how good language models actually are, and they are inhibited by how we use them.</strong></p>
 
@@ -389,7 +663,20 @@ $$
   <li>Recursive Language Models (RLM) paper: <a href="https://www.alphaxiv.org/abs/2512.24601">https://www.alphaxiv.org/abs/2512.24601</a></li>
   <li>My RLM implementation: <a href="https://github.com/alexzhang13/rlm">https://github.com/alexzhang13/rlm</a></li>
   <li>Prime Intellect’s RLM implementation in verifiers: <a href="https://github.com/PrimeIntellect-ai/verifiers/blob/main/verifiers/envs/experimental/rlm_env.py">https://github.com/PrimeIntellect-ai/verifiers/blob/main/verifiers/envs/experimental/rlm_env.py</a></li>
-</ul>]]></content><author><name></name></author><category term="mismanaged" /><category term="longcot" /><summary type="html"><![CDATA[We study an example of the Mismanaged Geniuses Hypothesis at play on the LongCoT benchmark]]></summary></entry><entry><title type="html">The Mismanaged Geniuses Hypothesis</title><link href="https://alexzhang13.github.io/blog/2026/mgh/" rel="alternate" type="text/html" title="The Mismanaged Geniuses Hypothesis" /><published>2026-04-09T00:00:00+00:00</published><updated>2026-04-09T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2026/mgh</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2026/mgh/"><![CDATA[<p><strong>Alex Zhang, <a href="https://people.csail.mit.edu/zli11010/" style="color: inherit !important; text-decoration: none !important;">Zhening (Zed) Li</a>, and <a href="https://omarkhattab.com" style="color: inherit !important; text-decoration: none !important;">Omar Khattab</a>.</strong></p>
+</ul>
+
+<h2 id="citation">Citation</h2>
+<p>You can cite this blog here:</p>
+
+<div class="sptc-py" data-lang="bibtex"><pre>
+@article{zhang2026longcot,
+  title   = "A Mini Exercise on the Mismanaged Geniuses Hypothesis (RLMs on LongCoT)",
+  author  = "Zhang, Alex and Khattab, Omar",
+  year    = "2026",
+  month   = "April",
+  url     = "https://alexzhang13.github.io/blog/2026/longcot-rlm/"
+}
+</pre></div>]]></content><author><name></name></author><category term="mismanaged" /><category term="longcot" /><summary type="html"><![CDATA[We study an example of the Mismanaged Geniuses Hypothesis at play on the LongCoT benchmark]]></summary></entry><entry><title type="html">The Mismanaged Geniuses Hypothesis</title><link href="https://alexzhang13.github.io/blog/2026/mgh/" rel="alternate" type="text/html" title="The Mismanaged Geniuses Hypothesis" /><published>2026-04-09T00:00:00+00:00</published><updated>2026-04-09T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2026/mgh</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2026/mgh/"><![CDATA[<p><strong>Alex Zhang, <a href="https://people.csail.mit.edu/zli11010/" style="color: inherit !important; text-decoration: none !important;">Zhening (Zed) Li</a>, and <a href="https://omarkhattab.com" style="color: inherit !important; text-decoration: none !important;">Omar Khattab</a>.</strong></p>
 
 <p><span style="color: #2C81CB;"><strong>tldr;</strong> AI models are already <span style="color: #2C81CB; font-style: italic;">good enough</span> for the next leap in capabilities.</span></p>
 
@@ -455,7 +742,20 @@ $$
 
 <p>Language models have gotten to the point where they’re ridiculously powerful, and the bottlenecks to creating fancy things like long-horizon solvers or self-improving systems seem sort of silly (i.e. is length generalization <em>really</em> a concern). Should the MGH be true, the problem that remains is managing the geniuses (<span style="color:#d46a6a;"><i>with guardrails, of course</i></span>).</p>
 
-<p><strong>Acknowledgements.</strong> We thank Armando Solar-Lezama and Matthew Ho for helpful feedback.</p>]]></content><author><name></name></author><category term="mismanaged" /><category term="scaffolds" /><summary type="html"><![CDATA[We propose the mismanaged geniuses hypothesis, which posits that existing frontier language models are severely underutilized due to sub-optimal use of individual language model calls.]]></summary></entry><entry><title type="html">Language Models will be Scaffolds</title><link href="https://alexzhang13.github.io/blog/2026/scaffold/" rel="alternate" type="text/html" title="Language Models will be Scaffolds" /><published>2026-02-25T00:00:00+00:00</published><updated>2026-02-25T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2026/scaffold</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2026/scaffold/"><![CDATA[<p><strong>Alex Zhang, Feb 25, 2026.</strong></p>
+<p><strong>Acknowledgements.</strong> We thank Armando Solar-Lezama and Matthew Ho for helpful feedback.</p>
+
+<h2 id="citation">Citation</h2>
+<p>You can cite this blog here:</p>
+
+<div class="sptc-py" data-lang="bibtex"><pre>
+@article{zhang2026mgh,
+  title   = "The Mismanaged Geniuses Hypothesis",
+  author  = "Zhang, Alex and Li, Zhening and Khattab, Omar",
+  year    = "2026",
+  month   = "April",
+  url     = "https://alexzhang13.github.io/blog/2026/mgh/"
+}
+</pre></div>]]></content><author><name></name></author><category term="mismanaged" /><category term="scaffolds" /><summary type="html"><![CDATA[We propose the mismanaged geniuses hypothesis, which posits that existing frontier language models are severely underutilized due to sub-optimal use of individual language model calls.]]></summary></entry><entry><title type="html">Language Models will be Scaffolds</title><link href="https://alexzhang13.github.io/blog/2026/scaffold/" rel="alternate" type="text/html" title="Language Models will be Scaffolds" /><published>2026-02-25T00:00:00+00:00</published><updated>2026-02-25T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2026/scaffold</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2026/scaffold/"><![CDATA[<p><strong>Alex Zhang, Feb 25, 2026.</strong></p>
 
 <p>I have been somewhat convinced since before I started my PhD that the <em>language models we interact with in the (near) future <strong>will be what we call scaffolds today</strong></em>. For the earlier half of this decade, it was generally believed that any work other than improving the base “neural” language model (i.e. an end-to-end neural network model like Opus 4.6 or Qwen3-8B) was a contrarian take on Sutton’s <em>Bitter Lesson</em> that would ultimately fall victim to scale. And this belief was genuinely a good bet since the invention of the Transformer in 2017: religiously following this bet is how companies like OpenAI and Anthropic have exploded in valuation since. The inability to follow this bet is also what has led to academia’s weakening presence in AI, and the growing pull of industry labs for ambitious, young researchers.</p>
 
@@ -463,7 +763,20 @@ $$
 
 <p>Another consequence of the “language model purist” view is the conflation of the term “language model” to mean neural network. A language model, as we defined it pre-“Attention is All You Need”, is merely a probabilistic function from text to text. As an example, at the very end of 2025, I released a preprint called “Recursive Language Models”. A common point of confusion is in two-thirds of the title being “Language Model”, when the main proposal of the paper is about a task-agnostic scaffold. The argument presented in that paper is a formalized implementation of the theme of this essay, which is that a powerful class of <strong><em>language models</em></strong> with near-infinite input, output, and reasoning context are scaffolds around neural language models that can call themselves recursively inside of a REPL. To be blunt, what I am suggesting is that the line between a language model and a scaffold is blurring, and the field is once again open to novel ideas on what these scaffolds should look like.</p>
 
-<p>As a researcher in AI, this should be <em>very</em> exciting. The field is generally resistant to “out-there” ideas, but the ability to produce novel, state-of-the-art systems without expensive training is at a peak. What’s even more exciting is that there isn’t “low-hanging fruit” per se (I strongly dislike this term because it implies you should pursue lazy incremental ideas), it’s more that we have once again hit a ripe period where innovative, clever ideas can make a huge impact on the direction of the field. Of course, I will continue to bet that training Recursive Language Models (RLMs) are the way to go to achieve near infinite-context LMs and produce a breakthrough in reasoning capabilities for models, but I also firmly believe that there are a plethora of other refinements or alternatives that may prove to be better. Only time will tell if <code class="language-plaintext highlighter-rouge">GPT-9-super-high-genius-think</code> ends up being a scaffold, but for now, I’m hopeful for the ideas to come.</p>]]></content><author><name></name></author><category term="scaffolds" /><category term="language" /><category term="models" /><summary type="html"><![CDATA[The language models we interact with in the near future will be what we call scaffolds today.]]></summary></entry><entry><title type="html">Recursive Language Models</title><link href="https://alexzhang13.github.io/blog/2025/rlm/" rel="alternate" type="text/html" title="Recursive Language Models" /><published>2025-10-15T00:00:00+00:00</published><updated>2025-10-15T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2025/rlm</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2025/rlm/"><![CDATA[<p><em>The full paper is now available here: <a href="https://www.alphaxiv.org/abs/2512.24601">https://www.alphaxiv.org/abs/2512.24601</a>.</em></p>
+<p>As a researcher in AI, this should be <em>very</em> exciting. The field is generally resistant to “out-there” ideas, but the ability to produce novel, state-of-the-art systems without expensive training is at a peak. What’s even more exciting is that there isn’t “low-hanging fruit” per se (I strongly dislike this term because it implies you should pursue lazy incremental ideas), it’s more that we have once again hit a ripe period where innovative, clever ideas can make a huge impact on the direction of the field. Of course, I will continue to bet that training Recursive Language Models (RLMs) are the way to go to achieve near infinite-context LMs and produce a breakthrough in reasoning capabilities for models, but I also firmly believe that there are a plethora of other refinements or alternatives that may prove to be better. Only time will tell if <code class="language-plaintext highlighter-rouge">GPT-9-super-high-genius-think</code> ends up being a scaffold, but for now, I’m hopeful for the ideas to come.</p>
+
+<h2 id="citation">Citation</h2>
+<p>You can cite this blog here:</p>
+
+<div class="sptc-py" data-lang="bibtex"><pre>
+@article{zhang2026scaffold,
+  title   = "Language Models will be Scaffolds",
+  author  = "Zhang, Alex",
+  year    = "2026",
+  month   = "February",
+  url     = "https://alexzhang13.github.io/blog/2026/scaffold/"
+}
+</pre></div>]]></content><author><name></name></author><category term="scaffolds" /><category term="language" /><category term="models" /><summary type="html"><![CDATA[The language models we interact with in the near future will be what we call scaffolds today.]]></summary></entry><entry><title type="html">Recursive Language Models</title><link href="https://alexzhang13.github.io/blog/2025/rlm/" rel="alternate" type="text/html" title="Recursive Language Models" /><published>2025-10-15T00:00:00+00:00</published><updated>2025-10-15T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2025/rlm</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2025/rlm/"><![CDATA[<p><em>The full paper is now available here: <a href="https://www.alphaxiv.org/abs/2512.24601">https://www.alphaxiv.org/abs/2512.24601</a>.</em></p>
 
 <p>You can find the official codebase for Recursive Language Models (RLMs) here: <a href="https://github.com/alexzhang13/rlm">https://github.com/alexzhang13/rlm</a></p>
 
@@ -784,14 +1097,16 @@ index 868d98c..7c335bb 100644
 
 <h2 id="citation">Citation</h2>
 <p>You can cite this blog (before the full paper is released) here:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{zhang2025rlm,
+
+<div class="sptc-py" data-lang="bibtex"><pre>
+@article{zhang2025rlm,
   title   = "Recursive Language Models",
   author  = "Zhang, Alex and Khattab, Omar",
   year    = "2025",
   month   = "October",
   url     = "https://alexzhang13.github.io/blog/2025/rlm/"
 }
-</code></pre></div></div>]]></content><author><name>Alex Zhang</name></author><category term="recursive" /><category term="language" /><category term="models" /><summary type="html"><![CDATA[We propose Recursive Language Models (RLMs), an inference strategy where language models can decompose and recursively interact with input context of unbounded length through REPL environments.]]></summary></entry><entry><title type="html">A Meticulous Guide to Advances in Deep Learning Efficiency over the Years</title><link href="https://alexzhang13.github.io/blog/2024/efficient-dl/" rel="alternate" type="text/html" title="A Meticulous Guide to Advances in Deep Learning Efficiency over the Years" /><published>2024-10-30T00:00:00+00:00</published><updated>2024-10-30T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2024/efficient-dl</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2024/efficient-dl/"><![CDATA[<p><em>This post offers a comprehensive and chronological guide to advances in deep learning from the perspective of efficiency: things like clusters, individual hardware, deep learning libraries, compilers — even architectural changes. This post is not a survey paper, and is intended to provide the reader with broader intuition about this field —  it would be impossible to include every little detail that has emerged throughout the last 40 years. The posted X thread <a href="https://x.com/a1zhang/status/1851963904491950132">https://x.com/a1zhang/status/1851963904491950132</a> also has a very high-level summary of what to expect!</em></p>
+</pre></div>]]></content><author><name>Alex Zhang</name></author><category term="recursive" /><category term="language" /><category term="models" /><summary type="html"><![CDATA[We propose Recursive Language Models (RLMs), an inference strategy where language models can decompose and recursively interact with input context of unbounded length through REPL environments.]]></summary></entry><entry><title type="html">A Meticulous Guide to Advances in Deep Learning Efficiency over the Years</title><link href="https://alexzhang13.github.io/blog/2024/efficient-dl/" rel="alternate" type="text/html" title="A Meticulous Guide to Advances in Deep Learning Efficiency over the Years" /><published>2024-10-30T00:00:00+00:00</published><updated>2024-10-30T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2024/efficient-dl</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2024/efficient-dl/"><![CDATA[<p><em>This post offers a comprehensive and chronological guide to advances in deep learning from the perspective of efficiency: things like clusters, individual hardware, deep learning libraries, compilers — even architectural changes. This post is not a survey paper, and is intended to provide the reader with broader intuition about this field —  it would be impossible to include every little detail that has emerged throughout the last 40 years. The posted X thread <a href="https://x.com/a1zhang/status/1851963904491950132">https://x.com/a1zhang/status/1851963904491950132</a> also has a very high-level summary of what to expect!</em></p>
 
 <p><strong>Preface.</strong> The field of deep learning has flourished in the past decade to the point where it is hard as both a researcher and a student to keep track of what is going on. Sometimes, I even find it hard to keep track of the <strong>actual</strong> direction of the field. In a field that often feels hand-wavy and where many methods and results feel lackluster in practice, I wanted to at least get a sense for progress in how we got to where we are now.</p>
 
@@ -2296,14 +2611,15 @@ Andrej Karpathy’s super efficient implementation of GPT-2 (124M parameters) ca
 <h2 id="citation">Citation</h2>
 <p>Just as a formality, if you want to cite this for whatever reason, use the BibTeX below.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{zhang2024efficientdl,
+<div class="sptc-py" data-lang="bibtex"><pre>
+@article{zhang2024efficientdl,
   title   = "A Meticulous Guide to Advances in Deep Learning Efficiency over the Years",
   author  = "Zhang, Alex",
   year    = "2024",
   month   = "October",
   url     = "https://alexzhang13.github.io/blog/2024/efficient-dl/"
 }
-</code></pre></div></div>]]></content><author><name>Alex Zhang</name></author><category term="efficient" /><summary type="html"><![CDATA[A very long and thorough guide how deep learning algorithms, hardware, libraries, compilers, and more have become more efficient.]]></summary></entry><entry><title type="html">The Annotated Kolmogorov-Arnold Network (KAN)</title><link href="https://alexzhang13.github.io/blog/2024/annotated-kan/" rel="alternate" type="text/html" title="The Annotated Kolmogorov-Arnold Network (KAN)" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2024/annotated-kan</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2024/annotated-kan/"><![CDATA[<p><strong><em>if the LaTeX is not loading, refresh the page.</em></strong></p>
+</pre></div>]]></content><author><name>Alex Zhang</name></author><category term="efficient" /><summary type="html"><![CDATA[A very long and thorough guide how deep learning algorithms, hardware, libraries, compilers, and more have become more efficient.]]></summary></entry><entry><title type="html">The Annotated Kolmogorov-Arnold Network (KAN)</title><link href="https://alexzhang13.github.io/blog/2024/annotated-kan/" rel="alternate" type="text/html" title="The Annotated Kolmogorov-Arnold Network (KAN)" /><published>2024-07-01T00:00:00+00:00</published><updated>2024-07-01T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2024/annotated-kan</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2024/annotated-kan/"><![CDATA[<p><strong><em>if the LaTeX is not loading, refresh the page.</em></strong></p>
 
 <p>This post is analogous to and heavily inspired by the <a href="https://nlp.seas.harvard.edu/annotated-transformer/">Annotated Transformer</a> but for KANs. It is fully functional as a standalone notebook, and provides intuition along with the code. Most of the code was written to be easy to follow and to mimic the structure of a standard deep learning model in PyTorch, but some parts like training loops and visualization code were adapted from the <a href="https://github.com/KindXiaoming/pykan">original codebase</a>. We decided to remove some sections from the original paper that were deemed unimportant, and also includes some extra works to motivate future research on these models.</p>
 
@@ -3764,14 +4080,15 @@ plot_results(results)
 <h2 id="citation">Citation</h2>
 <p>Just as a formality, if you want to cite this for whatever reason, use the BibTeX below.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{zhang2024annotatedkan,
+<div class="sptc-py" data-lang="bibtex"><pre>
+@article{zhang2024annotatedkan,
   title   = "Annotated KAN",
   author  = "Zhang, Alex",
   year    = "2024",
   month   = "June",
   url     = "https://alexzhang13.github.io/blog/2024/annotated-kan/"
 }
-</code></pre></div></div>]]></content><author><name>Alex Zhang</name></author><category term="annotated" /><category term="kolmogorov" /><summary type="html"><![CDATA[An annotated guide to the Kolmogorov-Arnold Network]]></summary></entry><entry><title type="html">Highlights of NeurIPS 2023 from Reading All 3584 Abstracts</title><link href="https://alexzhang13.github.io/blog/2024/neurips2023/" rel="alternate" type="text/html" title="Highlights of NeurIPS 2023 from Reading All 3584 Abstracts" /><published>2024-01-09T00:00:00+00:00</published><updated>2024-01-09T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2024/neurips2023</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2024/neurips2023/"><![CDATA[<h1 id="introduction">Introduction</h1>
+</pre></div>]]></content><author><name>Alex Zhang</name></author><category term="annotated" /><category term="kolmogorov" /><summary type="html"><![CDATA[An annotated guide to the Kolmogorov-Arnold Network]]></summary></entry><entry><title type="html">Highlights of NeurIPS 2023 from Reading All 3584 Abstracts</title><link href="https://alexzhang13.github.io/blog/2024/neurips2023/" rel="alternate" type="text/html" title="Highlights of NeurIPS 2023 from Reading All 3584 Abstracts" /><published>2024-01-09T00:00:00+00:00</published><updated>2024-01-09T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2024/neurips2023</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2024/neurips2023/"><![CDATA[<h1 id="introduction">Introduction</h1>
 
 <p>To celebrate the end of my graduate school application deadlines and finals week disaster, I decided
 to spend my winter break <b>going through and reading every single abstract of the accepted papers
@@ -4276,7 +4593,9 @@ also ended up looking into more and forgot to put them in this list, but in case
 
 <h2 id="citation">Citation</h2>
 <p>Just as a formality, if you want to cite this for whatever reason, use the BibTeX below.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{zhang2024neuripshighlights,
+
+<div class="sptc-py" data-lang="bibtex"><pre>
+@article{zhang2024neuripshighlights,
   title   = "Highlights of NeurIPS 2023 from Abstracts",
   author  = "Zhang, Alex",
   journal = "Alex's Writing",
@@ -4284,4 +4603,4 @@ also ended up looking into more and forgot to put them in this list, but in case
   month   = "Jan",
   url     = "https://alexzhang13.github.io/blog/2024/neurips2023/"
 }
-</code></pre></div></div>]]></content><author><name>Alex Zhang</name></author><category term="blog" /><category term="summary" /><category term="generative" /><category term="ai" /><summary type="html"><![CDATA[Just me reading through every paper abstract...]]></summary></entry></feed>
+</pre></div>]]></content><author><name>Alex Zhang</name></author><category term="blog" /><category term="summary" /><category term="generative" /><category term="ai" /><summary type="html"><![CDATA[Just me reading through every paper abstract...]]></summary></entry></feed>
