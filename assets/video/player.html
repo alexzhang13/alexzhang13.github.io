@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    html, body { margin: 0; height: 100%; background: #0b0f14; }
+    video { display: block; width: 100%; height: 100%; object-fit: contain; }
+  </style>
+</head>
+<body>
+  <video id="player" autoplay muted loop playsinline controls></video>
+  <script>
+    (function () {
+      var params = new URLSearchParams(location.search);
+      var name = params.get("src") || "";
+      if (!/^[A-Za-z0-9._-]+\.mp4$/.test(name)) return;
+      var video = document.getElementById("player");
+      video.src = name;
+      video.addEventListener("canplay", function () {
+        video.play().catch(function () {});
+      });
+      video.play().catch(function () {});
+    })();
+  </script>
+</body>
+</html>

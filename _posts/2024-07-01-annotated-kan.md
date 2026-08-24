@@ -1567,9 +1567,9 @@ It is known that these models currently do not scale well due to both memory and
 A natural question is whether we have to fix the knot points to be uniformly spaced, or if we can use the data to adjust our knot points. The original paper does not detail this optimization, but their codebase actually includes this feature. If time permits, I may later include a section on this -- I think it may be important for performance of KANs with B-splines, but for general KANs maybe not.
 
 ## Citation
-Just as a formality, if you want to cite this for whatever reason, use the BibTeX below. 
+Just as a formality, if you want to cite this for whatever reason, use the BibTeX below.
 
-```
+<div class="sptc-py" data-lang="bibtex" markdown="0"><pre>
 @article{zhang2024annotatedkan,
   title   = "Annotated KAN",
   author  = "Zhang, Alex",
@@ -1577,4 +1577,4 @@ Just as a formality, if you want to cite this for whatever reason, use the BibTe
   month   = "June",
   url     = "https://alexzhang13.github.io/blog/2024/annotated-kan/"
 }
-```
+</pre></div>
