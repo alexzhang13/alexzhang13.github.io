@@ -331,18 +331,26 @@
     return lines;
   }
 
+  // Full class names (not `'tok-' + cls`) so PurgeCSS keeps the token colors.
+  var TOK_CLASS = {
+    kw: 'tok-kw', fn: 'tok-fn', str: 'tok-str', num: 'tok-num',
+    bool: 'tok-bool', cmt: 'tok-cmt', dec: 'tok-dec', type: 'tok-type',
+    attr: 'tok-attr', op: 'tok-op', punct: 'tok-punct', interp: 'tok-interp'
+  };
+
   function htmlLines(lines, showLn) {
     return lines.map(function (line, idx) {
       var inner = line.length
         ? line.map(function (tok) {
             var body = esc(tok.text);
-            return tok.cls ? '<span class="tok-' + tok.cls + '">' + body + '</span>' : body;
+            var cls = TOK_CLASS[tok.cls];
+            return cls ? '<span class="' + cls + '">' + body + '</span>' : body;
           }).join('')
         : '&nbsp;';
       var ln = showLn
         ? '<span class="sptc-py-ln" aria-hidden="true">' + (idx + 1) + '</span>'
         : '';
-      return '<div class="sptc-py-line" style="--i:' + idx + '">' +
+      return '<div class="sptc-py-line">' +
         ln + '<code class="sptc-py-src">' + inner + '</code></div>';
     }).join('');
   }

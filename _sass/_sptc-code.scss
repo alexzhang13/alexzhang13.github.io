@@ -45,8 +45,23 @@ d-article .sptc-py {
   grid-column-end: -3 !important;
 }
 
-.sptc-py * {
-  grid-column: unset !important;
+/* Distill sets `d-article div/code { grid-column-start: 3 }` as longhands.
+   `grid-column: unset` does not reliably clear those, so each line's <code>
+   gets pulled onto the article grid and the snippet looks broken. */
+d-article .sptc-py div,
+d-article .sptc-py span,
+d-article .sptc-py pre,
+d-article .sptc-py code,
+d-article .sptc-py button,
+.sptc-py div,
+.sptc-py span,
+.sptc-py pre,
+.sptc-py code,
+.sptc-py button {
+  grid-column: auto !important;
+  grid-column-start: auto !important;
+  grid-column-end: auto !important;
+  grid-row: auto !important;
 }
 
 .sptc-py pre {
@@ -159,29 +174,15 @@ d-article .sptc-py {
   white-space: pre;
 }
 
-.sptc-py .tok-kw { color: var(--sp-spec); font-weight: 500; }
-.sptc-py .tok-fn { color: var(--sp-run); }
-.sptc-py .tok-str { color: var(--sp-ok); }
-.sptc-py .tok-num { color: var(--sp-amber); }
-.sptc-py .tok-bool { color: var(--sp-amber); font-weight: 500; }
-.sptc-py .tok-cmt { color: var(--sp-faint); font-style: italic; }
-.sptc-py .tok-dec { color: var(--sp-spec); }
-.sptc-py .tok-type { color: var(--sp-run); }
-.sptc-py .tok-attr { color: var(--sp-text); }
+.sptc-py .tok-kw { color: var(--sp-spec) !important; font-weight: 500; }
+.sptc-py .tok-fn { color: var(--sp-run) !important; }
+.sptc-py .tok-str { color: var(--sp-ok) !important; }
+.sptc-py .tok-num { color: var(--sp-amber) !important; }
+.sptc-py .tok-bool { color: var(--sp-amber) !important; font-weight: 500; }
+.sptc-py .tok-cmt { color: var(--sp-faint) !important; font-style: italic; }
+.sptc-py .tok-dec { color: var(--sp-spec) !important; }
+.sptc-py .tok-type { color: var(--sp-run) !important; }
+.sptc-py .tok-attr { color: var(--sp-text) !important; }
 .sptc-py .tok-op,
-.sptc-py .tok-punct { color: var(--sp-dim); }
-.sptc-py .tok-interp { color: var(--sp-spec); }
-
-.sptc-py.is-ready .sptc-py-line {
-  animation: sptc-py-in 0.22s ease both;
-  animation-delay: calc(var(--i, 0) * 16ms);
-}
-
-@keyframes sptc-py-in {
-  from { opacity: 0; transform: translateY(2px); }
-  to { opacity: 1; transform: none; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .sptc-py.is-ready .sptc-py-line { animation: none; }
-}
+.sptc-py .tok-punct { color: var(--sp-dim) !important; }
+.sptc-py .tok-interp { color: var(--sp-spec) !important; }
