@@ -1550,9 +1550,9 @@ I am open to suggestions and edits, even those that are critical. I want to log 
 
 
 ## Citation
-Just as a formality, if you want to cite this for whatever reason, use the BibTeX below. 
+Just as a formality, if you want to cite this for whatever reason, use the BibTeX below.
 
-```
+<div class="sptc-py" data-lang="bibtex" markdown="0"><pre>
 @article{zhang2024efficientdl,
   title   = "A Meticulous Guide to Advances in Deep Learning Efficiency over the Years",
   author  = "Zhang, Alex",
@@ -1560,4 +1560,4 @@ Just as a formality, if you want to cite this for whatever reason, use the BibTe
   month   = "October",
   url     = "https://alexzhang13.github.io/blog/2024/efficient-dl/"
 }
-```
+</pre></div>

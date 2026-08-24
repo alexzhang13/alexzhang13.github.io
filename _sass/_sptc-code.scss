@@ -1,0 +1,187 @@
+/*******************************************************************************
+ * Shared code / BibTeX chrome used by blog citations and spec-ptc snippets.
+ ******************************************************************************/
+
+.sptc-py {
+  --sp-bg: #ffffff;
+  --sp-panel: #f1f3f6;
+  --sp-line: #d5dae2;
+  --sp-text: #1c232b;
+  --sp-dim: #5a6570;
+  --sp-faint: #8a939e;
+  --sp-spec: #7c3aed;
+  --sp-run: #2563eb;
+  --sp-ok: #15803d;
+  --sp-amber: #b45309;
+  --sp-run-soft: rgba(37, 99, 235, 0.06);
+  --sp-ok-soft: rgba(21, 128, 61, 0.10);
+  --sp-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  margin: 1.15rem 0 1.4rem;
+  border: 1px solid var(--sp-line);
+  border-radius: 10px;
+  background: var(--sp-bg);
+  overflow: hidden;
+  color: var(--sp-text);
+  max-width: 100%;
+}
+
+html[data-theme="dark"] .sptc-py {
+  --sp-bg: #0b0f14;
+  --sp-panel: #11161d;
+  --sp-line: #2a313a;
+  --sp-text: #e8edf3;
+  --sp-dim: #77808c;
+  --sp-faint: #4d5661;
+  --sp-spec: #c39bff;
+  --sp-run: #6cb0ff;
+  --sp-ok: #46c364;
+  --sp-amber: #d29922;
+  --sp-run-soft: rgba(108, 176, 255, 0.07);
+  --sp-ok-soft: rgba(70, 195, 100, 0.12);
+}
+
+d-article .sptc-py {
+  grid-column-start: 3 !important;
+  grid-column-end: -3 !important;
+}
+
+.sptc-py * {
+  grid-column: unset !important;
+}
+
+.sptc-py pre {
+  margin: 0;
+  padding: 12px 14px;
+  background: transparent !important;
+  color: var(--sp-text) !important;
+  border-radius: 0;
+  font: 400 12.5px/1.7 var(--sp-mono);
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.sptc-py-chrome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  background: var(--sp-panel);
+  border-bottom: 1px solid var(--sp-line);
+}
+
+.sptc-py-dots {
+  display: flex;
+  gap: 5px;
+}
+
+.sptc-py-dots i {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--sp-line);
+}
+
+.sptc-py-lang {
+  font: 500 10.5px/1 var(--sp-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sp-dim);
+}
+
+.sptc-py-copy {
+  margin-left: auto;
+  font: 600 10.5px/1 var(--sp-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sp-dim);
+  background: transparent;
+  border: 1px solid var(--sp-line);
+  border-radius: 6px;
+  padding: 5px 9px;
+  cursor: pointer;
+}
+
+.sptc-py-copy:hover {
+  color: var(--sp-text);
+  border-color: var(--sp-dim);
+}
+
+.sptc-py-copy.ok {
+  color: var(--sp-ok);
+  border-color: var(--sp-ok);
+  background: var(--sp-ok-soft);
+}
+
+.sptc-py-copy:focus-visible {
+  outline: 2px solid var(--sp-run);
+  outline-offset: 2px;
+}
+
+.sptc-py-body {
+  padding: 8px 0 10px;
+  overflow-x: auto;
+}
+
+.sptc-py-line {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  padding: 0 14px 0 0;
+  font: 400 12.5px/1.7 var(--sp-mono);
+  white-space: pre;
+}
+
+.sptc-py.no-ln .sptc-py-line {
+  grid-template-columns: minmax(0, 1fr);
+  padding: 0 14px;
+}
+
+.sptc-py-line:hover {
+  background: var(--sp-run-soft);
+}
+
+.sptc-py-ln {
+  user-select: none;
+  text-align: right;
+  padding-right: 14px;
+  color: var(--sp-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.sptc-py-src {
+  display: block;
+  min-width: 0;
+  background: transparent !important;
+  color: var(--sp-text) !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font: inherit;
+  white-space: pre;
+}
+
+.sptc-py .tok-kw { color: var(--sp-spec); font-weight: 500; }
+.sptc-py .tok-fn { color: var(--sp-run); }
+.sptc-py .tok-str { color: var(--sp-ok); }
+.sptc-py .tok-num { color: var(--sp-amber); }
+.sptc-py .tok-bool { color: var(--sp-amber); font-weight: 500; }
+.sptc-py .tok-cmt { color: var(--sp-faint); font-style: italic; }
+.sptc-py .tok-dec { color: var(--sp-spec); }
+.sptc-py .tok-type { color: var(--sp-run); }
+.sptc-py .tok-attr { color: var(--sp-text); }
+.sptc-py .tok-op,
+.sptc-py .tok-punct { color: var(--sp-dim); }
+.sptc-py .tok-interp { color: var(--sp-spec); }
+
+.sptc-py.is-ready .sptc-py-line {
+  animation: sptc-py-in 0.22s ease both;
+  animation-delay: calc(var(--i, 0) * 16ms);
+}
+
+@keyframes sptc-py-in {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sptc-py.is-ready .sptc-py-line { animation: none; }
+}

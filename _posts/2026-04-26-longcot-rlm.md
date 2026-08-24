@@ -99,3 +99,16 @@ In general, our intuition about how an RLM *should* behave is likely sub-optimal
 - Recursive Language Models (RLM) paper: [https://www.alphaxiv.org/abs/2512.24601](https://www.alphaxiv.org/abs/2512.24601)
 - My RLM implementation: [https://github.com/alexzhang13/rlm](https://github.com/alexzhang13/rlm)
 - Prime Intellect’s RLM implementation in verifiers: [https://github.com/PrimeIntellect-ai/verifiers/blob/main/verifiers/envs/experimental/rlm_env.py](https://github.com/PrimeIntellect-ai/verifiers/blob/main/verifiers/envs/experimental/rlm_env.py)
+
+## Citation
+You can cite this blog here:
+
+<div class="sptc-py" data-lang="bibtex" markdown="0"><pre>
+@article{zhang2026longcot,
+  title   = "A Mini Exercise on the Mismanaged Geniuses Hypothesis (RLMs on LongCoT)",
+  author  = "Zhang, Alex and Khattab, Omar",
+  year    = "2026",
+  month   = "April",
+  url     = "https://alexzhang13.github.io/blog/2026/longcot-rlm/"
+}
+</pre></div>
