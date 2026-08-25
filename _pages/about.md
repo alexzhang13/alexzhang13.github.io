@@ -37,6 +37,7 @@ Hi! I broadly work on areas where language models are underutilized or inefficie
   <li>I used to make a lot of benchmarks: <a href="http://www.vgbench.com">VideoGameBench</a>, <a href="https://www.alphaxiv.org/abs/2502.10517">KernelBench</a>, <a href="https://www.swebench.com/multimodal.html">SWE-bench Multimodal</a> <img src="assets/img/swellamamm.png" alt="emoji" width="20" style="vertical-align: middle;">.</li>
   <li>I am part of the core team running the <a href="https://www.gpumode.com/v2/home">GPU MODE</a> <a href="/projects/">competitions</a> and <a href="https://www.youtube.com/channel/UCJgIbYl6C5no72a0NUAPcTA">community</a>.</li>
   <li>I graduated as the <a href="https://www.cs.princeton.edu/news/class-day-department-celebrates-accomplishments-graduates">top student of the Princeton CS department</a>.</li>
+  <li>I was named one of [SciAm](https://en.wikipedia.org/wiki/Scientific_American)'s [Young American Scientists](https://www.scientificamerican.com/report/young-american-scientists-2026/) of 2026.
 </ul>
 
 I've had brief but pleasant stints at a variety of companies: <a href="https://sakana.ai">Sakana AI</a>, <a href="https://www.vant.ai">VantAI</a>, <a href="https://research.snap.com">Snap Research</a>, <a href="https://machinelearning.apple.com">Apple</a>, and <a href="https://www.claryo.co">Claryo</a>.
