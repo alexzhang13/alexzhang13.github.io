@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alexzhang13.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alexzhang13.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-09-24T18:32:54+00:00</updated><id>https://alexzhang13.github.io/feed.xml</id><title type="html">blank</title><subtitle>Alex Zhang&apos;s Website.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://alexzhang13.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alexzhang13.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-09-24T18:39:16+00:00</updated><id>https://alexzhang13.github.io/feed.xml</id><title type="html">blank</title><subtitle>Alex Zhang&apos;s Website.
 </subtitle><entry><title type="html">Speculative Programmatic Tool Calling</title><link href="https://alexzhang13.github.io/blog/2026/spec-ptc/" rel="alternate" type="text/html" title="Speculative Programmatic Tool Calling" /><published>2026-08-24T00:00:00+00:00</published><updated>2026-08-24T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2026/spec-ptc</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2026/spec-ptc/"><![CDATA[<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" />
 
 <figure id="sptc-teaser">
@@ -778,7 +778,7 @@ $$
   month   = "February",
   url     = "https://alexzhang13.github.io/blog/2026/scaffold/"
 }
-</pre></div>]]></content><author><name></name></author><category term="scaffolds" /><category term="language" /><category term="models" /><summary type="html"><![CDATA[The language models we interact with in the near future will be what we call scaffolds today.]]></summary></entry><entry><title type="html">Recursive Language Models</title><link href="https://alexzhang13.github.io/blog/2025/rlm/" rel="alternate" type="text/html" title="Recursive Language Models" /><published>2025-10-15T00:00:00+00:00</published><updated>2025-10-15T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2025/rlm</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2025/rlm/"><![CDATA[<p><em>The full paper is now available here: <a href="https://www.alphaxiv.org/abs/2512.24601">https://www.alphaxiv.org/abs/2512.24601</a>.</em></p>
+</pre></div>]]></content><author><name></name></author><category term="scaffolds" /><category term="language" /><category term="models" /><summary type="html"><![CDATA[The language models we interact with in the near future will be what we call scaffolds today.]]></summary></entry><entry><title type="html">Recursive Language Models</title><link href="https://alexzhang13.github.io/blog/2025/rlm/" rel="alternate" type="text/html" title="Recursive Language Models" /><published>2025-10-15T00:00:00+00:00</published><updated>2025-10-15T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2025/rlm</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2025/rlm/"><![CDATA[<p><em>The full paper has been accepted to NeurIPS 2026. Read here: <a href="https://www.alphaxiv.org/abs/2512.24601">https://www.alphaxiv.org/abs/2512.24601</a>.</em></p>
 
 <p>You can find the official codebase for Recursive Language Models (RLMs) here: <a href="https://github.com/alexzhang13/rlm">https://github.com/alexzhang13/rlm</a></p>
 
@@ -1098,15 +1098,15 @@ index 868d98c..7c335bb 100644
 <p>Finally, we thank Jack Cook and the other first year MIT EECS students for their support during the first year of my PhD!</p>
 
 <h2 id="citation">Citation</h2>
-<p>You can cite this blog (before the full paper is released) here:</p>
+<p>You can cite this blog / paper with the following:</p>
 
 <div class="sptc-py" data-lang="bibtex"><pre>
-@article{zhang2025rlm,
-  title   = "Recursive Language Models",
-  author  = "Zhang, Alex and Khattab, Omar",
-  year    = "2025",
-  month   = "October",
-  url     = "https://alexzhang13.github.io/blog/2025/rlm/"
+@inproceedings{zhang2026recursive,
+  title     = {Recursive Language Models},
+  author    = {Zhang, Alex and Khattab, Omar and Kraska, Tim},
+  booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=ColZtoh6As}
 }
 </pre></div>]]></content><author><name>Alex Zhang</name></author><category term="recursive" /><category term="language" /><category term="models" /><summary type="html"><![CDATA[We propose Recursive Language Models (RLMs), an inference strategy where language models can decompose and recursively interact with input context of unbounded length through REPL environments.]]></summary></entry><entry><title type="html">A Meticulous Guide to Advances in Deep Learning Efficiency over the Years</title><link href="https://alexzhang13.github.io/blog/2024/efficient-dl/" rel="alternate" type="text/html" title="A Meticulous Guide to Advances in Deep Learning Efficiency over the Years" /><published>2024-10-30T00:00:00+00:00</published><updated>2024-10-30T00:00:00+00:00</updated><id>https://alexzhang13.github.io/blog/2024/efficient-dl</id><content type="html" xml:base="https://alexzhang13.github.io/blog/2024/efficient-dl/"><![CDATA[<p><em>This post offers a comprehensive and chronological guide to advances in deep learning from the perspective of efficiency: things like clusters, individual hardware, deep learning libraries, compilers — even architectural changes. This post is not a survey paper, and is intended to provide the reader with broader intuition about this field —  it would be impossible to include every little detail that has emerged throughout the last 40 years. The posted X thread <a href="https://x.com/a1zhang/status/1851963904491950132">https://x.com/a1zhang/status/1851963904491950132</a> also has a very high-level summary of what to expect!</em></p>
 
