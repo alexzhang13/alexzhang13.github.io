@@ -347,24 +347,10 @@
 
 
 
-
 <div class="post has-sidenotes">
   <header class="post-header">
     <h1 class="post-title">Language Model "Shape"</h1>
-    <p class="post-meta">
-      Created in September 26, 2026
-      
-      
-      
-    </p>
-    <p class="post-tags">
-      
-        <a href="/blog/2026"> <i class="fa-solid fa-calendar fa-sm"></i> 2026 </a>
-      
-      
-
-      
-    </p>
+    
   </header>
 
   <article class="post-content">
@@ -372,7 +358,9 @@
     <div id="markdown-content">
       <p><strong>Alex Zhang, Sep 26, 2026.</strong></p>
 
-<p>Since the release of ChatGPT, I’ve observed that the input / output <em>shape</em> of language models has roughly remained static. A reasonable guess is that users would always prefer to use the best models available, and frontier model labs would rather not deviate from the model shape that has proven to work, because it is very expensive to bet on alternatives. As a result, all work on designing language <strong><em>agents</em></strong> has been around designing a <em>harness</em><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> to fit the autoregressive shape of the language model. This thought may appear silly to most people, but a natural question I’m interested in is whether it’s worth considering changing the shape of the language model to fit the harness.</p>
+<p class="post-lede">Some short musings on the <span class="red-highlight">shape</span> of language models, e.g. what it means to design a language model around a harness, and not the other way around.</p>
+
+<p>Since the release of ChatGPT, I’ve observed that the input / output <em>shape</em> of language models has roughly remained static. A reasonable guess is that users would always prefer to use the best models available, and frontier model labs would rather not deviate from the model shape that has proven to work, because it is very expensive to bet on alternatives. As a result, all work on designing language <strong><em>agents</em></strong> has been around designing a <em>harness</em><sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> to fit the autoregressive shape of the language model. <span class="blue-highlight">This thought may appear silly to most people, but a natural question I’m interested in is whether it’s worth considering changing the shape of the language model to fit the harness.</span></p>
 
 <figure>
 <center>
