@@ -30,6 +30,7 @@ Hi! I broadly work on areas where language models are underutilized or inefficie
   <li>Empirical evidence of <a href="https://alexzhang13.github.io/blog/2026/harness/">harnesses inducing locally in-distribution trajectories</a>.</li>
   <li><a href="https://github.com/PrimeIntellect-ai/prime-agent">Prime Agent</a>, a production RLM harness.</li>
   <li><a href="https://alexzhang13.github.io/blog/2026/spec-ptc/">Speculative programmatic tool calling (PTC)</a>.</li>
+  <li>The input / output <a href="https://alexzhang13.github.io/blog/2026/shape/">"shape"</a> of language models.</li>
 </ul>
 
 <b>Some other notable things worth mentioning:</b>
