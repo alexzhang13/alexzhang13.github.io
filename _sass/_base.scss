@@ -186,6 +186,63 @@ ul.task-list input[type="checkbox"] {
   color: var(--global-theme-color);
 }
 
+.cite-drop {
+  margin-top: 2.25rem;
+
+  > summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 700;
+    color: var(--global-text-color);
+    user-select: none;
+
+    &::-webkit-details-marker,
+    &::marker {
+      display: none;
+      content: "";
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--global-theme-color);
+    }
+
+    .cite-drop-arrow {
+      color: inherit;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+  }
+
+  .cite-drop-arrow {
+    display: inline-block;
+    width: 0.38em;
+    height: 0.38em;
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    transform: translateY(-0.12em) rotate(45deg);
+    transition: transform 0.15s ease;
+  }
+
+  &[open] > summary .cite-drop-arrow {
+    transform: translateY(0.12em) rotate(-135deg);
+  }
+
+  .sptc-py {
+    margin-top: 0.85rem;
+  }
+}
+
 // Profile
 
 .profile {

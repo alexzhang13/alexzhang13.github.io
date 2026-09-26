@@ -1,0 +1,113 @@
+// Margin notes for posts with `sidenotes: true`.
+// Placement is done in assets/js/sidenotes.js.
+
+.has-sidenotes {
+  overflow: visible;
+
+  #markdown-content {
+    position: relative;
+    overflow: visible;
+  }
+
+  .footnotes {
+    display: none;
+  }
+
+  sup {
+    line-height: 0;
+    scroll-margin-top: 5.5rem;
+
+    a.footnote {
+      color: var(--global-theme-color);
+      font-size: 0.75em;
+      font-weight: 650;
+      text-decoration: none;
+      padding: 0 0.12em;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration: underline;
+      }
+    }
+
+    &.is-active a.footnote {
+      background: color-mix(in srgb, var(--global-theme-color) 18%, transparent);
+      border-radius: 2px;
+    }
+  }
+
+  .sidenote {
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    padding: 0.15rem 0.35rem 0.2rem 1.45rem;
+    border-left: 2px solid transparent;
+    border-radius: 2px;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    color: var(--global-text-color-light);
+    scroll-margin-top: 5.5rem;
+
+    p,
+    em,
+    strong,
+    span,
+    li {
+      margin: 0;
+      color: var(--global-text-color-light);
+    }
+
+    .sidenote-num {
+      position: absolute;
+      top: 0.15rem;
+      left: 0.4rem;
+      margin: 0;
+      color: var(--global-text-color-light);
+      font-weight: 650;
+      font-size: 0.85em;
+      line-height: calc(1.45 / 0.85);
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration: underline;
+      }
+    }
+
+    .reversefootnote {
+      display: none;
+    }
+
+    &.is-active {
+      border-left-color: var(--global-text-color-light);
+      background: color-mix(in srgb, var(--global-text-color-light) 16%, transparent);
+      animation: sidenote-highlight 0.45s ease;
+    }
+  }
+
+  &.sidenotes-fallback {
+    #markdown-content {
+      padding-right: 0 !important;
+    }
+
+    .sidenote-list {
+      margin-top: 2.25rem;
+    }
+
+    .sidenote {
+      position: static;
+      width: auto !important;
+      margin: 0 0 0.85rem;
+    }
+  }
+}
+
+@keyframes sidenote-highlight {
+  from {
+    background: color-mix(in srgb, var(--global-text-color-light) 32%, transparent);
+  }
+
+  to {
+    background: color-mix(in srgb, var(--global-text-color-light) 16%, transparent);
+  }
+}
