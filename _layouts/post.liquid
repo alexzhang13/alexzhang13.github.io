@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-{% assign year = page.date | date: '%Y' %}
 {% assign tags = page.tags | join: '' %}
 {% assign categories = page.categories | join: '' %}
 
@@ -17,20 +16,9 @@ layout: default
 <div class="post{% if page.sidenotes %} has-sidenotes{% endif %}">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">
-      Created in {{ page.date | date: '%B %d, %Y' }}
-      {% if page.author %}by {{ page.author }}{% endif %}
-      {% if page.last_updated %}, last updated in {{ page.last_updated | date: '%B %d, %Y' }}{% endif %}
-      {% if page.meta %}• {{ page.meta }}{% endif %}
-    </p>
+    {% if tags != '' or categories != '' %}
     <p class="post-tags">
-      {% if url_beginning == '/blog/' %}
-        <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}"> <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
-      {% else %}
-        <i class="fa-solid fa-calendar fa-sm"></i> {{ year }}
-      {% endif %}
       {% if tags != '' %}
-        &nbsp; &middot; &nbsp;
         {% for tag in page.tags %}
           {% if url_beginning == '/blog/' %}
             <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl}}"> <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
@@ -44,7 +32,7 @@ layout: default
       {% endif %}
 
       {% if categories != '' %}
-        &nbsp; &middot; &nbsp;
+        {% if tags != '' %}&nbsp; &middot; &nbsp;{% endif %}
         {% for category in page.categories %}
           {% if url_beginning == '/blog/' %}
             <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">
@@ -59,6 +47,7 @@ layout: default
         {% endfor %}
       {% endif %}
     </p>
+    {% endif %}
   </header>
 
   <article class="post-content">
