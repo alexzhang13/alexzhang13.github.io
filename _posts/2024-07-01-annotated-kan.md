@@ -2,12 +2,13 @@
 layout: distill
 title: The Annotated Kolmogorov-Arnold Network (KAN)
 date: 2024-07-01
-og_image: https://alexzhang13.github.io/assets/img/preview/annotated-kan.png
 nav: true
 tags: annotated kolmogorov
 giscus_comments: false
 related_posts: false
 description: An annotated guide to the Kolmogorov-Arnold Network
+preview: An annotated guide to Kolmogorov-Arnold Networks, in the spirit of the Annotated Transformer. KANs put learned functions on the edges of a network instead of learned weights.
+preview_image: /assets/img/kan2024.jpg
 authors:
   - name: Alex Zhang
     affiliations:

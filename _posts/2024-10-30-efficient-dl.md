@@ -7,6 +7,7 @@ tags: efficient
 giscus_comments: false
 related_posts: false
 description: A very long and thorough guide how deep learning algorithms, hardware, libraries, compilers, and more have become more efficient.
+preview: A chronological guide to advances in deep learning from the perspective of efficiency — clusters, hardware, libraries, compilers, and architectural changes. Not a survey, a narrative of why the field moved the way it did.
 authors:
   - name: Alex Zhang
     affiliations:

@@ -79,6 +79,16 @@ jobs:
           valueFile: "_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - name: Link preview images 🖼️
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+          node bin/generate-og-images.mjs
       - name: Install and Build 🔧
         run: |
           pip3 install --upgrade jupyter

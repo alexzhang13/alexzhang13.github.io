@@ -60,7 +60,9 @@ max_width: 900px
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
-og_image: https://alexzhang13.github.io/assets/img/preview/default.png # The site-wide (default for all links) Open Graph preview image
+# Homepage card for non-post links. Blog posts use a generated card
+# (title, `preview` text, optional `preview_image`) at /assets/og/blog/<year>/<slug>.png.
+og_image: https://alexzhang13.github.io/assets/og/home.png
 
 # -----------------------------------------------------------------------------
 # Social integration
@@ -233,6 +235,7 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
+  - node_modules/
   - _pages/about_einstein.md
   - purgecss.config.js
   - README.md

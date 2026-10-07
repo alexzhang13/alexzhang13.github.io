@@ -6,6 +6,9 @@ giscus_comments: false
 related_posts: false
 tags: mismanaged longcot
 description: We study an example of the Mismanaged Geniuses Hypothesis at play on the LongCoT benchmark
+preview: We underestimate how good language models actually are, and they are inhibited by how we use them. On LongCoT, frontier models fall short of compositional reasoning tasks whose pieces they can already solve in isolation.
+preview_image: /assets/img/mgh_longcot/longcot_fig1.png
+preview_byline: Alex Zhang and Omar Khattab
 ---
 Alex Zhang, Omar Khattab
 

@@ -39,36 +39,67 @@
   {% endif %}
 </title>
 <meta name="author" content="{{ author_name }}">
-<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="description" content="{% if page.preview %}{{ page.preview | xml_escape }}{% elsif page.description %}{{ page.description | xml_escape }}{% else %}{{ site.description | strip_newlines | xml_escape }}{% endif %}">
 {% if page.keywords or site.keywords %}
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
 {% endif %}
 
 {% assign is_blog_post = false %}
-{% if page.url != '/blog/index.html' and page.url contains '/blog/' %}
-  {% unless page.url contains '/tag/' or page.url contains '/category/' %}
-    {% assign is_blog_post = true %}
-  {% endunless %}
+{% if page.collection == 'posts' %}
+  {% assign is_blog_post = true %}
+{% endif %}
+
+{% capture desc_raw %}{% if page.preview %}{{ page.preview }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+{% assign desc_raw = desc_raw | strip | strip_newlines %}
+{% capture headline_raw %}{% if page.title and page.title != 'blank' %}{{ page.title }}{% else %}{{ title }}{% endif %}{% endcapture %}
+{% assign headline_raw = headline_raw | strip %}
+{% if is_blog_post %}
+  {% assign og_title_raw = headline_raw %}
+{% elsif page.title %}
+  {% capture og_title_raw %}{{ title }} | {{ page.title }}{% endcapture %}
+{% else %}
+  {% assign og_title_raw = title %}
+{% endif %}
+{% assign og_title_raw = og_title_raw | strip %}
+
+{% assign og_image = '' %}
+{% assign og_image_generated = false %}
+{% if page.og_image %}
+  {% assign og_image = page.og_image %}
+{% elsif is_blog_post %}
+  {% capture og_image_path %}/assets/og/blog/{{ page.date | date: '%Y' }}/{{ page.slug }}.png{% endcapture %}
+  {% assign og_image = og_image_path | absolute_url %}
+  {% assign og_image_generated = true %}
+{% elsif site.og_image %}
+  {% assign og_image = site.og_image %}
+  {% assign og_image_generated = true %}
 {% endif %}
 
 {% if site.serve_og_meta %}
   <!-- OpenGraph -->
-  <meta property="og:site_name" content="{{ title }}">
+  <meta property="og:site_name" content="{{ title | xml_escape }}">
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{% if page.title %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}">
+  <meta property="og:title" content="{{ og_title_raw | xml_escape }}">
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  {% if page.og_image or site.og_image %}
-    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
+  <meta property="og:description" content="{{ desc_raw | xml_escape }}">
+  {% if og_image != '' %}
+    <meta property="og:image" content="{{ og_image }}">
+    <meta property="og:image:alt" content="{{ og_title_raw | xml_escape }}">
+    {% if og_image_generated %}
+      <meta property="og:image:type" content="image/png">
+      <meta property="og:image:width" content="2400">
+      <meta property="og:image:height" content="1260">
+    {% endif %}
   {% endif %}
   <meta property="og:locale" content="{{ site.lang }}">
 
   <!-- Twitter card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  {% if page.og_image or site.og_image %}
-    <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
+  <meta name="twitter:card" content="{% if og_image != '' %}summary_large_image{% else %}summary{% endif %}">
+  <meta name="twitter:title" content="{{ og_title_raw | xml_escape }}">
+  <meta name="twitter:description" content="{{ desc_raw | xml_escape }}">
+  {% if og_image != '' %}
+    <meta name="twitter:image" content="{{ og_image }}">
+    <meta name="twitter:image:alt" content="{{ og_title_raw | xml_escape }}">
   {% endif %}
   {% if site.x_username %}
     <meta name="twitter:site" content="@{{ site.x_username }}">
@@ -229,8 +260,8 @@
         },
         "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
         "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
-        "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
-        "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
+        "description": {{ desc_raw | jsonify }},
+        "headline": {{ headline_raw | jsonify }},
         {% if sameaslinks != blank %}
         "sameAs": {{ sameaslinks }},
         {% endif %}
