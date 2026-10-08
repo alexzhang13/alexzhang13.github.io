@@ -130,16 +130,6 @@ div#notebook {
   background-color: #1e1e1e;
 }
 
-#header .header-bar {
-  background: #1e1e1e;
-  background-color: #1e1e1e;
-}
-
-body > #header .header-bar {
-  width: 100%;
-  background: #1e1e1e;
-}
-
 .navbar {
   border: none;
 }
