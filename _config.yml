@@ -131,7 +131,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: the kitchen 🍜 # blog_name will be displayed in your blog page
-blog_description: these posts serve as technical resources for learning and research
+blog_description: notes on my research, some with fuller experiments than others. not all blogs have an associated paper.
 permalink: /blog/:year/:title/
 # Publish posts with future dates (needed when local TZ lags UTC / publish-day posts).
 future: true

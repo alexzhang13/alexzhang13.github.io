@@ -59,7 +59,7 @@
 
           {%- else -%}
             {
-              {%- assign title = p.title | escape -%}
+              {%- assign title = p.nav_title | default: p.title | escape -%}
               {%- if p.permalink contains "/blog/" -%}{%- assign url = "/blog/" -%} {%- else -%}{%- assign url = p.url -%}{%- endif -%}
               id: "nav-{{ title | slugify }}",
               title: "{{ title }}",

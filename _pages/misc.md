@@ -1,8 +1,9 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: Some research and other related projects I've been working on. Everything here is either a personal project or a research project unrelated to my lab.
+title: miscellaneous
+nav_title: misc
+permalink: /misc/
+description: Some other related projects and things I've worked on in the past. Everything here is either a personal project or involvement unrelated to my research.
 nav: true
 nav_order: 3
 display_categories: [work, fun]
