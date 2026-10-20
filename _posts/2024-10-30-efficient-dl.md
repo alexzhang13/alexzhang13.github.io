@@ -8,6 +8,9 @@ giscus_comments: false
 related_posts: false
 description: A very long and thorough guide how deep learning algorithms, hardware, libraries, compilers, and more have become more efficient.
 preview: A chronological guide to advances in deep learning from the perspective of efficiency — clusters, hardware, libraries, compilers, and architectural changes. Not a survey, a narrative of why the field moved the way it did.
+card_links:
+  - kind: x
+    url: https://x.com/a1zhang/status/1851963904491950132
 authors:
   - name: Alex Zhang
     affiliations:

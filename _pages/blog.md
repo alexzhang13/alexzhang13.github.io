@@ -19,26 +19,10 @@ pagination:
 
 <div class="post kitchen">
 
-{% assign blog_name_size = site.blog_name | size %}
 {% assign blog_description_size = site.blog_description | size %}
-{% assign kitchen_title = site.blog_name | replace: "🍜", "" | strip %}
-{% assign newest_post = site.posts.first %}
-{% assign oldest_post = site.posts.last %}
 
-{% if blog_name_size > 0 or blog_description_size > 0 %}
-  <header class="kitchen-masthead">
-    <div class="kitchen-masthead-top">
-      <p class="kitchen-kicker">working notes</p>
-      {% if site.posts.size > 0 %}
-        <p class="kitchen-count">{{ site.posts.size }} essays · {{ oldest_post.date | date: "%Y" }}–{{ newest_post.date | date: "%Y" }}</p>
-      {% endif %}
-    </div>
-    <h1>{{ kitchen_title }} <span class="kitchen-mark" aria-hidden="true">🍜</span></h1>
-    <div class="kitchen-rule" aria-hidden="true"></div>
-    {% if blog_description_size > 0 %}
-      <p class="kitchen-blurb">{{ site.blog_description }}</p>
-    {% endif %}
-  </header>
+{% if blog_description_size > 0 %}
+  <p class="kitchen-blurb"><strong>working notes.</strong> {{ site.blog_description }}</p>
 {% endif %}
 
 <!-- {% if site.display_tags or site.display_categories %}
@@ -77,7 +61,6 @@ pagination:
 {% assign on_first_page = true %}
 {% if paginator.page and paginator.page > 1 %}
   {% assign on_first_page = false %}
-  <p class="kitchen-page-note">older notes</p>
 {% endif %}
 
 <ul class="kitchen-plates">
@@ -103,22 +86,13 @@ pagination:
     {% endif %}
 
     <li class="plate{% if figure %} plate-has-figure{% else %} plate-text{% endif %}">
-      <a
-        class="plate-hit"
-        href="{{ post_href }}"
-        {% if post.redirect contains "://" %}
-          target="_blank" rel="noopener"
-        {% endif %}
-      >
-        {% if figure %}
-          <div class="plate-figure">
-            <img src="{{ figure | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
-          </div>
-        {% endif %}
-        <div class="plate-copy">
-          {% if post.featured %}
-            <p class="plate-kicker">pinned</p>
-          {% endif %}
+      {% if figure %}
+        <div class="plate-figure">
+          <img src="{{ figure | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
+        </div>
+      {% endif %}
+      <div class="plate-copy">
+        <div class="plate-top">
           <p class="plate-meta">
             {{ post.date | date: "%B %d, %Y" }}
             &nbsp;·&nbsp;
@@ -127,19 +101,25 @@ pagination:
               &nbsp;·&nbsp; {{ post.external_source }}
             {% endif %}
           </p>
-          <h3 class="plate-title">{{ post.title }}</h3>
-          {% if teaser %}
-            <p class="plate-teaser">{{ teaser | escape }}</p>
-          {% endif %}
-          {% if post.tags.size > 0 %}
-            <div class="plate-tags">
-              {% for tag in post.tags %}
-                <span class="plate-tag">{{ tag }}</span>
-              {% endfor %}
-            </div>
+          {% if post.card_links %}
+            {% include plate_card_links.liquid links=post.card_links %}
           {% endif %}
         </div>
-      </a>
+        <h3 class="plate-title">
+          <a
+            href="{{ post_href }}"
+            {% if post.redirect contains "://" %}
+              target="_blank" rel="noopener"
+            {% endif %}
+          >{{ post.title }}</a>
+        </h3>
+        {% if teaser %}
+          <p class="plate-teaser">{{ teaser | escape }}</p>
+        {% endif %}
+        {% if post.tags.size > 0 %}
+          <p class="plate-tags">{{ post.tags | join: ", " }}</p>
+        {% endif %}
+      </div>
     </li>
   {% endfor %}
 </ul>
