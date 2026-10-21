@@ -44,9 +44,12 @@
       if (i < word.length) await wait(130);
     }
     await wait(1600);
-    for (let end = 0; end < word.length; end += 1) {
-      paint(word, "visual", end, [0, end]);
-      await wait(75);
+    const last = word.length - 1;
+    paint(word, "normal", last, null);
+    await wait(260);
+    for (let at = last; at >= 0; at -= 1) {
+      paint(word, "visual", at, [at, last]);
+      await wait(at === last ? 180 : 70);
     }
     await wait(700);
     paint("", "normal", 0, null);
