@@ -1,0 +1,15 @@
+{% assign count = include.count | plus: 0 %}
+{% if count > 0 %}
+  {% if count >= 1000 %}
+    {% assign thou = count | divided_by: 1000 %}
+    {% assign rest = count | modulo: 1000 %}
+    {% assign rest_padded = rest | prepend: "000" %}
+    {% assign rest_len = rest_padded | size %}
+    {% assign rest_start = rest_len | minus: 3 %}
+    {% assign rest_s = rest_padded | slice: rest_start, 3 %}
+    <span class="tweet-action-count">{{ thou }},{{ rest_s }}</span>
+  {% else %}
+    <span class="tweet-action-count">{{ count }}</span>
+  {% endif %}
+  <span class="sr-only"> {{ include.label }}</span>
+{% endif %}

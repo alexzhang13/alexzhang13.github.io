@@ -11,6 +11,11 @@ preview: A chronological guide to advances in deep learning from the perspective
 card_links:
   - kind: x
     url: https://x.com/a1zhang/status/1851963904491950132
+engagement:
+  replies: 14
+  retweets: 88
+  likes: 672
+  shares: 19
 authors:
   - name: Alex Zhang
     affiliations:

@@ -1,0 +1,46 @@
+<aside class="timeline-rail timeline-rail-left">
+  <nav class="rail-card rail-nav" aria-label="Feed">
+    <a class="rail-link is-current" href="{{ '/blog/fun/' | relative_url }}" aria-current="page">
+      <span>Timeline</span>
+      <svg class="rail-chevron" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </a>
+    <a class="rail-link" href="{{ '/blog/' | relative_url }}">
+      <span>Old feed</span>
+      <svg class="rail-chevron" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </a>
+  </nav>
+
+  {% assign tag_blob = "" %}
+  {% for post in site.posts %}
+    {% for tag in post.tags %}
+      {% assign tag_blob = tag_blob | append: "||" | append: tag %}
+    {% endfor %}
+  {% endfor %}
+
+  {% if tag_blob != "" %}
+    {% assign tag_list = tag_blob | remove_first: "||" | split: "||" | uniq %}
+    {% capture trend_rows %}{% for tag in tag_list %}{% if tag != blank %}{% assign count = 0 %}{% for post in site.posts %}{% if post.tags contains tag %}{% assign count = count | plus: 1 %}{% endif %}{% endfor %}{% assign inverted = 1000 | minus: count %}{% assign padded = inverted | prepend: "0000" %}{% assign plen = padded | size %}{% assign pstart = plen | minus: 4 %}{% assign sort_key = padded | slice: pstart, 4 %}||{{ sort_key }}~{{ count }}~{{ tag }}{% endif %}{% endfor %}{% endcapture %}
+    {% assign trend_lines = trend_rows | remove_first: "||" | split: "||" | sort %}
+    <section class="rail-card rail-trends" aria-label="Trends">
+      <h2 class="rail-heading">Trends</h2>
+      {% assign shown = 0 %}
+      {% for line in trend_lines %}
+        {% if shown >= 8 %}{% break %}{% endif %}
+        {% assign parts = line | split: "~" %}
+        {% assign trend_count = parts[1] %}
+        {% assign trend_tag = parts[2] %}
+        {% if trend_tag != blank %}
+          <a class="trend" href="{{ trend_tag | slugify | prepend: '/blog/tag/' | append: '/' | relative_url }}">
+            <span class="trend-tag">#{{ trend_tag }}</span>
+            <span class="trend-count">{{ trend_count }} {% if trend_count == "1" %}blog{% else %}blogs{% endif %}</span>
+          </a>
+          {% assign shown = shown | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+    </section>
+  {% endif %}
+</aside>

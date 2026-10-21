@@ -15,6 +15,11 @@ card_links:
     url: https://github.com/alexzhang13/Annotated-KAN
   - kind: x
     url: https://x.com/a1zhang/status/1808053285053780431
+engagement:
+  replies: 1
+  retweets: 0
+  likes: 10
+  shares: 1
 authors:
   - name: Alex Zhang
     affiliations:

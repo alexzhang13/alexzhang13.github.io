@@ -11,6 +11,11 @@ preview_image: /assets/img/mgh_longcot/longcot_fig1.png
 card_links:
   - kind: x
     url: https://x.com/a1zhang/status/2048381699013083243
+engagement:
+  replies: 18
+  retweets: 64
+  likes: 482
+  shares: 16
 preview_byline: Alex Zhang and Omar Khattab
 ---
 Alex Zhang, Omar Khattab

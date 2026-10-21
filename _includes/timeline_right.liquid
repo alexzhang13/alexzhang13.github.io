@@ -1,0 +1,53 @@
+<aside class="timeline-rail timeline-rail-right">
+  <section class="rail-card profile-card" aria-label="Profile">
+    <img
+      class="profile-avatar"
+      src="{{ '/assets/img/az.png' | relative_url }}"
+      alt=""
+      width="48"
+      height="48"
+    >
+    <div class="profile-id">
+      <span class="profile-name">{{ site.first_name }} {{ site.last_name }}</span>
+      {% if site.x_username %}
+        <span class="profile-handle">@{{ site.x_username }}</span>
+      {% endif %}
+    </div>
+    {% assign blog_description_size = site.blog_description | size %}
+    {% if blog_description_size > 0 %}
+      <p class="profile-bio">{{ site.blog_description }}</p>
+    {% endif %}
+    <p class="profile-stat">
+      <span class="profile-stat-label">blogs</span>
+      <span class="profile-stat-value">{{ site.posts | size }}</span>
+    </p>
+  </section>
+
+  <nav class="rail-card" aria-label="Elsewhere">
+    <h2 class="rail-heading">Elsewhere</h2>
+    {% if site.github_username %}
+      <a class="rail-link" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">
+        <span>GitHub</span>
+        <svg class="rail-chevron" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    {% endif %}
+    {% if site.scholar_userid %}
+      <a class="rail-link" href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener">
+        <span>Google Scholar</span>
+        <svg class="rail-chevron" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    {% endif %}
+    {% if site.x_username %}
+      <a class="rail-link" href="https://x.com/{{ site.x_username }}" target="_blank" rel="noopener">
+        <span>X</span>
+        <svg class="rail-chevron" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    {% endif %}
+  </nav>
+</aside>
