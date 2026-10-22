@@ -49,13 +49,6 @@ timeline: true
             {% if teaser and teaser != post.title %}
               <p class="tweet-text">{{ teaser }}</p>
             {% endif %}
-            {% if post.tags.size > 0 %}
-              <p class="tweet-tags">
-                {% for tag in post.tags %}
-                  <a href="{{ tag | slugify | prepend: '/blog/tag/' | append: '/' | relative_url }}">#{{ tag }}</a>
-                {% endfor %}
-              </p>
-            {% endif %}
             {% if figure %}
               <div class="tweet-media">
                 <img

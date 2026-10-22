@@ -3,7 +3,7 @@ layout: distill
 title: A Meticulous Guide to Advances in Deep Learning Efficiency over the Years
 date: 2024-10-30
 nav: true
-tags: efficient
+tags: efficiency
 giscus_comments: false
 related_posts: false
 description: A very long and thorough guide how deep learning algorithms, hardware, libraries, compilers, and more have become more efficient.

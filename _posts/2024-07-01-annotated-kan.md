@@ -3,7 +3,7 @@ layout: distill
 title: The Annotated Kolmogorov-Arnold Network (KAN)
 date: 2024-07-01
 nav: true
-tags: annotated kolmogorov
+tags: kan
 giscus_comments: false
 related_posts: false
 description: An annotated guide to the Kolmogorov-Arnold Network

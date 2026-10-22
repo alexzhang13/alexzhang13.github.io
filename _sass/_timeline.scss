@@ -302,23 +302,6 @@ html[data-theme="dark"] body.timeline-page {
   margin-top: 4px;
 }
 
-.tweet-tags {
-  position: relative;
-  z-index: 2;
-  margin: 6px 0 0;
-  font-size: 14px;
-  line-height: 1.45;
-
-  a {
-    margin-right: 0.4rem;
-
-    &:hover,
-    &:focus-visible {
-      text-decoration: underline;
-    }
-  }
-}
-
 .tweet-media {
   margin-top: 8px;
   overflow: hidden;

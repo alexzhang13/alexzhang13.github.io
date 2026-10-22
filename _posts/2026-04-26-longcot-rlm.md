@@ -4,7 +4,7 @@ title: A Mini Exercise on the Mismanaged Geniuses Hypothesis (RLMs on LongCoT)
 date: 2026-04-26
 giscus_comments: false
 related_posts: false
-tags: mismanaged longcot
+tags: rlm mgh
 description: We study an example of the Mismanaged Geniuses Hypothesis at play on the LongCoT benchmark
 preview: We underestimate how good language models actually are, and they are inhibited by how we use them. On LongCoT, frontier models fall short of compositional reasoning tasks whose pieces they can already solve in isolation.
 preview_image: /assets/img/mgh_longcot/longcot_fig1.png
