@@ -30,6 +30,20 @@
 
 
 
+  <meta name="citation_title" content="Recursive Language Models">
+  
+    <meta name="citation_author" content="Alex Zhang">
+  
+    <meta name="citation_author" content="Omar Khattab">
+  
+  <meta name="citation_publication_date" content="2025/10/15">
+  <meta name="citation_fulltext_html_url" content="https://alexzhang13.github.io/blog/2025/rlm/">
+  <meta name="citation_language" content="en">
+
+
+
+
+
 
 
 
@@ -113,11 +127,18 @@
 
   <script type="application/ld+json">
     {
-        "author":
-        {
-            "@type": "Person",
-            "name": "Alex L. Zhang"
-        },
+        
+        "author": [
+          
+          {"@type": "Person", "name": "Alex Zhang"},
+          
+          {"@type": "Person", "name": "Omar Khattab"}
+          
+        ],
+        "datePublished": "2025-10-15T00:00:00+00:00",
+        "dateModified": "2025-10-15T00:00:00+00:00",
+        "mainEntityOfPage": "https://alexzhang13.github.io/blog/2025/rlm/",
+        
         "url": "https://alexzhang13.github.io/blog/2025/rlm/",
         "@type": "BlogPosting",
         "description": "We explore language models that recursively call themselves or other LLMs before providing a final answer. The aim is essentially unbounded context, and a way through context rot.",
@@ -434,7 +455,25 @@
         <p>We propose Recursive Language Models (RLMs), an inference strategy where language models can decompose and recursively interact with input context of unbounded length through REPL environments.</p>
       </d-title>
       
-        <d-byline></d-byline>
+        <d-byline>
+          <div class="byline grid">
+            <div class="authors-affiliations grid">
+              <h3>Authors</h3>
+              <h3>Affiliations</h3>
+              
+                <p class="author"><span class="name">Alex Zhang</span></p>
+                <p class="affiliation">MIT CSAIL</p>
+              
+                <p class="author"><span class="name">Omar Khattab</span></p>
+                <p class="affiliation">MIT CSAIL</p>
+              
+            </div>
+            <div>
+              <h3>Published</h3>
+              <p><time datetime="2025-10-15T00:00:00+00:00">October 15, 2025</time></p>
+            </div>
+          </div>
+        </d-byline>
       
 
       <d-article>
@@ -786,7 +825,41 @@ index 868d98c..7c335bb 100644
 
       <d-appendix>
         <d-footnote-list></d-footnote-list>
-        <d-citation-list></d-citation-list>
+        <d-citation-list distill-prerendered>
+          <h3 id="references">References</h3>
+<ol class="references" id="references-list">
+<li>
+<span id="bertsch2026oolong">Bertsch, A., Pratapa, A., Mitamura, T., Neubig, G., &amp; Gormley, M. R. (2026). Oolong: Evaluating Long Context Reasoning and Aggregation Capabilities. <i>Third Conference on Language Modeling</i>. https://openreview.net/forum?id=HmhG2Hl8G8</span>
+</li>
+<li>
+<span id="chen2025browsecompplusfairtransparentevaluation">Chen, Z., Ma, X., Zhuang, S., Nie, P., Zou, K., Liu, A., Green, J., Patel, K., Meng, R., Su, M., Sharifymoghaddam, S., Li, Y., Hong, H., Shi, X., Liu, X., Thakur, N., Zhang, C., Gao, L., Chen, W., &amp; Lin, J. (2025). <i>BrowseComp-Plus: A More Fair and Transparent Evaluation Benchmark of Deep-Research Agent</i>. https://arxiv.org/abs/2508.06600</span>
+</li>
+<li>
+<span id="wang2024executable">Wang, X., Chen, Y., Yuan, L., Zhang, Y., Li, Y., Peng, H., &amp; Ji, H. (2024). Executable Code Actions Elicit Better LLM Agents. <i>Forty-First International Conference on Machine Learning</i>. https://openreview.net/forum?id=jJ9BoXAfFa</span>
+</li>
+<li>
+<span id="wei2025browsecompsimplechallengingbenchmark">Wei, J., Sun, Z., Papay, S., McKinney, S., Han, J., Fulford, I., Chung, H. W., Passos, A. T., Fedus, W., &amp; Glaese, A. (2025). <i>BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents</i>. https://arxiv.org/abs/2504.12516</span>
+</li>
+<li>
+<span id="LoCoDiffBench2025">MentatAI, &amp; AbanteAI. (2025). <i>LoCoDiff Benchmark</i>. https://abanteai.github.io/LoCoDiff-bench/</span>
+</li>
+<li>
+<span id="packer2024memgptllmsoperatingsystems">Packer, C., Wooders, S., Lin, K., Fang, V., Patil, S. G., Stoica, I., &amp; Gonzalez, J. E. (2024). <i>MemGPT: Towards LLMs as Operating Systems</i>. https://arxiv.org/abs/2310.08560</span>
+</li>
+<li>
+<span id="chen2023walkingmemorymazecontext">Chen, H., Pasunuru, R., Weston, J., &amp; Celikyilmaz, A. (2023). <i>Walking Down the Memory Maze: Beyond Context Limit through Interactive Reading</i>. https://arxiv.org/abs/2310.05029</span>
+</li>
+<li>
+<span id="simonds2025ladderselfimprovingllmsrecursive">Simonds, T., &amp; Yoshiyama, A. (2025). <i>LADDER: Self-Improving LLMs Through Recursive Problem Decomposition</i>. https://arxiv.org/abs/2503.00735</span>
+</li>
+<li>
+<span id="schroeder-etal-2025-thread">Schroeder, P., Morgan, N. W., Luo, H., &amp; Glass, J. R. (2025). THREAD: Thinking Deeper with Recursive Spawning. In L. Chiruzzo, A. Ritter, &amp; L. Wang (Eds.), <i>Proceedings of the 2025 Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)</i> (pp. 8418–8442). Association for Computational Linguistics. https://doi.org/10.18653/v1/2025.naacl-long.427</span>
+</li>
+<li>
+<span id="jolicoeurmartineau2025morerecursivereasoningtiny">Jolicoeur-Martineau, A. (2025). <i>Less is More: Recursive Reasoning with Tiny Networks</i>. https://arxiv.org/abs/2510.04871</span>
+</li>
+</ol>
+        </d-citation-list>
       </d-appendix>
 
       <d-bibliography src="/assets/bibliography/rlms.bib"></d-bibliography>

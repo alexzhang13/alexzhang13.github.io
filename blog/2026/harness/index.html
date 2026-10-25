@@ -30,6 +30,20 @@
 
 
 
+  <meta name="citation_title" content="Language model harnesses are compositional generalizers">
+  
+    <meta name="citation_author" content="Alex Zhang">
+  
+    <meta name="citation_author" content="Omar Khattab">
+  
+  <meta name="citation_publication_date" content="2026/07/20">
+  <meta name="citation_fulltext_html_url" content="https://alexzhang13.github.io/blog/2026/harness/">
+  <meta name="citation_language" content="en">
+
+
+
+
+
 
 
 
@@ -113,11 +127,18 @@
 
   <script type="application/ld+json">
     {
-        "author":
-        {
-            "@type": "Person",
-            "name": "Alex L. Zhang"
-        },
+        
+        "author": [
+          
+          {"@type": "Person", "name": "Alex Zhang"},
+          
+          {"@type": "Person", "name": "Omar Khattab"}
+          
+        ],
+        "datePublished": "2026-07-20T00:00:00+00:00",
+        "dateModified": "2026-07-20T00:00:00+00:00",
+        "mainEntityOfPage": "https://alexzhang13.github.io/blog/2026/harness/",
+        
         "url": "https://alexzhang13.github.io/blog/2026/harness/",
         "@type": "BlogPosting",
         "description": "Modern post-training brute-forces ever more environments and ever longer horizons, because frontier Transformers are still poor at compositional generalization. A good harness makes every model call locally in-distribution, so what it learns carries across lengths and domains.",
@@ -449,7 +470,25 @@
         <p>Harnesses can lead to compositional generalization: we observe a property in training RLMs, in which similarly structured tasks are viewed as isomorphic and all individual LM calls in the harness become in-distribution.</p>
       </d-title>
       
-        <d-byline></d-byline>
+        <d-byline>
+          <div class="byline grid">
+            <div class="authors-affiliations grid">
+              <h3>Authors</h3>
+              <h3>Affiliations</h3>
+              
+                <p class="author"><span class="name">Alex Zhang</span></p>
+                <p class="affiliation">MIT CSAIL</p>
+              
+                <p class="author"><span class="name">Omar Khattab</span></p>
+                <p class="affiliation">MIT CSAIL</p>
+              
+            </div>
+            <div>
+              <h3>Published</h3>
+              <p><time datetime="2026-07-20T00:00:00+00:00">July 20, 2026</time></p>
+            </div>
+          </div>
+        </d-byline>
       
 
       <d-article>
@@ -731,7 +770,26 @@ $$
 
       <d-appendix>
         <d-footnote-list></d-footnote-list>
-        <d-citation-list></d-citation-list>
+        <d-citation-list distill-prerendered>
+          <h3 id="references">References</h3>
+<ol class="references" id="references-list">
+<li>
+<span id="zhang2026mgh">Zhang, A., Li, Z., &amp; Khattab, O. (2026). <i>The Mismanaged Geniuses Hypothesis</i>. Blog post. https://alexzhang13.github.io/blog/2026/mgh/</span>
+</li>
+<li>
+<span id="anil2022length">Anil, C., Wu, Y., Andreassen, A., Lewkowycz, A., Misra, V., Ramasesh, V., Slone, A., Gur-Ari, G., Dyer, E., &amp; Neyshabur, B. (2022). <i>Exploring Length Generalization in Large Language Models</i>. https://arxiv.org/abs/2207.04901</span>
+</li>
+<li>
+<span id="yao2023react">Yao, S., Zhao, J., Yu, D., Du, N., Shafran, I., Narasimhan, K., &amp; Cao, Y. (2023). ReAct: Synergizing Reasoning and Acting in Language Models. <i>International Conference on Learning Representations</i>. https://arxiv.org/abs/2210.03629</span>
+</li>
+<li>
+<span id="wang2024codeact">Wang, X., Chen, Y., Yuan, L., Zhang, Y., Li, Y., Peng, H., &amp; Ji, H. (2024). Executable Code Actions Elicit Better LLM Agents. <i>International Conference on Machine Learning</i>. https://arxiv.org/abs/2402.01030</span>
+</li>
+<li>
+<span id="hilton2022batch">Hilton, J., Cobbe, K., &amp; Schulman, J. (2022). Batch size-invariance for policy optimization. <i>Advances in Neural Information Processing Systems</i>. https://arxiv.org/abs/2110.00641</span>
+</li>
+</ol>
+        </d-citation-list>
       </d-appendix>
 
       <d-bibliography src="/assets/bibliography/locally_in_distribution.bib"></d-bibliography>
