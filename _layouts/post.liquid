@@ -16,6 +16,12 @@ layout: default
 <div class="post{% if page.sidenotes %} has-sidenotes{% endif %}">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.collection == 'posts' %}
+      <p class="post-meta">
+        {% for author in page.authors %}{{ author.name | default: author | escape }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+        &middot; <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time>
+      </p>
+    {% endif %}
     {% if tags != '' or categories != '' %}
     <p class="post-tags">
       {% if tags != '' %}

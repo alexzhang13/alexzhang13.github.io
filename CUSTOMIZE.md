@@ -139,6 +139,41 @@ There are several custom bibtex keywords that you can use to affect how the entr
 
 You can implement your own buttons by editing the [\_layouts/bib.liquid](_layouts/bib.liquid) file.
 
+## Blog citations and Google Scholar
+
+Local blog posts automatically include Google Scholar's `citation_title`, one
+`citation_author` per author, and `citation_publication_date` in their HTML head.
+They also expose their full-text URL and language. Both blog layouts render an
+author byline and publication date without requiring JavaScript. Existing post
+URLs and manually written BibTeX citations stay stable.
+
+Posts default to Alex Zhang as the author. For a coauthored post, list **all** blog
+authors in front matter, in citation order (the same format used by Distill):
+
+```yaml
+authors:
+  - name: Alex Zhang
+  - name: Omar Khattab
+```
+
+Use `date` for the original blog publication date; a later conference paper can
+have its own date and author list. Keep any handwritten BibTeX citation consistent
+with the work it cites. Set `scholar: false` to omit Scholar metadata for an
+individual post. External redirect posts and non-post pages do not get these tags.
+
+After deploying, view a post's page source to check its `citation_*` tags. The
+blog listing links to posts with ordinary HTML links, and `robots.txt` permits
+crawling and points to the generated sitemap. Search Google Scholar by a post's
+exact title to check inclusion; Scholar says `site:` counts are unreliable.
+
+These tags improve bibliographic extraction; they do not guarantee indexing.
+Google Scholar selects scholarly content, and crawling and updates take time.
+For research posts, keep a clearly labeled References section with formal
+citations. Distill posts render their cited bibliography entries into the initial
+HTML using Jekyll Scholar, and retain their interactive citations. A text-based PDF research report with
+a title, authors, and references is another route recommended for individual
+authors. See the [official inclusion guidelines](https://scholar.google.com/intl/en/scholar/inclusion.html).
+
 ## Changing theme color
 
 A variety of beautiful theme colors have been selected for you to choose from. The default is purple, but you can quickly change it by editing the `--global-theme-color` variable in the [\_sass/\_themes.scss](_sass/_themes.scss) file. Other color variables are listed there as well. The stock theme color options available can be found at [\_sass/\_variables.scss](_sass/_variables.scss). You can also add your own colors to this file assigning each a name for ease of use across the template.

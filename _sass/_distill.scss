@@ -24,6 +24,15 @@ d-byline h3 {
   color: var(--global-text-color) !important;
 }
 
+// The reference list is present before Distill's JavaScript initializes.
+d-citation-list .references {
+  grid-column: text;
+}
+
+d-citation-list .references .title {
+  font-weight: 500;
+}
+
 d-byline a,
 d-article d-byline a {
   color: var(--global-text-color) !important;

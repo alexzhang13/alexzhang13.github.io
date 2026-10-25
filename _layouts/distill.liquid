@@ -79,7 +79,22 @@
         <p>{{ page.description }}</p>
       </d-title>
       {% if page.authors %}
-        <d-byline></d-byline>
+        <d-byline>
+          <div class="byline grid">
+            <div class="authors-affiliations grid">
+              <h3>Authors</h3>
+              <h3>Affiliations</h3>
+              {% for author in page.authors %}
+                <p class="author"><span class="name">{{ author.name | escape }}</span></p>
+                <p class="affiliation">{{ author.affiliations.name | escape }}</p>
+              {% endfor %}
+            </div>
+            <div>
+              <h3>Published</h3>
+              <p><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %d, %Y' }}</time></p>
+            </div>
+          </div>
+        </d-byline>
       {% endif %}
 
       <d-article>
@@ -109,7 +124,9 @@
 
       <d-appendix>
         <d-footnote-list></d-footnote-list>
-        <d-citation-list></d-citation-list>
+        <d-citation-list distill-prerendered>
+          {% if page.bibliography %}{% distill_bibliography %}{% endif %}
+        </d-citation-list>
       </d-appendix>
 
       <d-bibliography src="{{ page.bibliography | prepend: '/assets/bibliography/' | relative_url }}"></d-bibliography>

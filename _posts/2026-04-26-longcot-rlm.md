@@ -17,6 +17,9 @@ engagement:
   likes: 482
   shares: 16
 preview_byline: Alex Zhang and Omar Khattab
+authors:
+  - name: Alex Zhang
+  - name: Omar Khattab
 ---
 Alex Zhang, Omar Khattab
 

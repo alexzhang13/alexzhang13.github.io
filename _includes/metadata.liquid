@@ -49,6 +49,8 @@
   {% assign is_blog_post = true %}
 {% endif %}
 
+{% include scholar_metadata.liquid %}
+
 {% capture desc_raw %}{% if page.preview %}{{ page.preview }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
 {% assign desc_raw = desc_raw | strip | strip_newlines %}
 {% capture headline_raw %}{% if page.title and page.title != 'blank' %}{{ page.title }}{% else %}{{ title }}{% endif %}{% endcapture %}
@@ -253,11 +255,22 @@
 
   <script type="application/ld+json">
     {
+        {% if is_blog_post and page.authors %}
+        "author": [
+          {% for author in page.authors %}
+          {"@type": "Person", "name": {{ author.name | default: author | jsonify }}}{% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        ],
+        "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+        "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+        "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+        {% else %}
         "author":
         {
             "@type": "Person",
             "name": "{{ author_name }}"
         },
+        {% endif %}
         "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
         "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
         "description": {{ desc_raw | jsonify }},

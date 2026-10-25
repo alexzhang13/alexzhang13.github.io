@@ -1,0 +1,15 @@
+{% comment %}
+  Google Scholar reads citation metadata from the original HTML, without JavaScript.
+  Keep this limited to locally hosted posts, with one tag per actual author.
+{% endcomment %}
+{% if page.collection == 'posts' and page.redirect == blank and page.scholar != false %}
+  <meta name="citation_title" content="{{ page.title | strip_html | xml_escape }}">
+  {% for author in page.authors %}
+    <meta name="citation_author" content="{{ author.name | default: author | xml_escape }}">
+  {% else %}
+    <meta name="citation_author" content="{{ page.author | default: author_name | strip | xml_escape }}">
+  {% endfor %}
+  <meta name="citation_publication_date" content="{{ page.date | date: '%Y/%m/%d' }}">
+  <meta name="citation_fulltext_html_url" content="{{ page.url | replace: 'index.html', '' | absolute_url | xml_escape }}">
+  <meta name="citation_language" content="{{ page.lang | default: site.lang | xml_escape }}">
+{% endif %}
