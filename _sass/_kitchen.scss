@@ -2,10 +2,72 @@
 
 .kitchen {
   .kitchen-blurb {
-    margin: 0 0 1.6rem;
+    margin: 0 0 0.65rem;
     font-size: 1.05rem;
     line-height: 1.5;
     color: var(--global-text-color);
+  }
+
+  .external-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0 0 1.35rem;
+    color: var(--global-text-color);
+    font-size: 0.92rem;
+    line-height: 1.2;
+    cursor: pointer;
+    user-select: none;
+
+    input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    input:focus-visible + .external-switch {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 2px;
+    }
+
+    input:checked + .external-switch {
+      background: var(--global-theme-color);
+
+      &::after {
+        transform: translateX(0.85rem);
+      }
+    }
+  }
+
+  .external-switch {
+    position: relative;
+    flex: 0 0 auto;
+    width: 2rem;
+    height: 1.15rem;
+    border-radius: 999px;
+    background: #c5c9ce;
+    transition: background 0.15s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: calc(1.15rem - 4px);
+      height: calc(1.15rem - 4px);
+      border-radius: 50%;
+      background: #fff;
+      transition: transform 0.15s ease;
+    }
+  }
+
+  &.is-hiding-external .plate-external {
+    display: none;
   }
 
   .kitchen-plates {
@@ -309,6 +371,65 @@
   .plate-tags {
     margin: 0.7rem 0 0;
     font-size: 0.8rem;
+  }
+
+  .plate-external {
+    border-color: #1da1f2;
+    box-shadow:
+      0 0 0 1px rgba(29, 161, 242, 0.45),
+      0 0 18px rgba(29, 161, 242, 0.45);
+
+    &:hover {
+      box-shadow:
+        0 0 0 1px rgba(29, 161, 242, 0.7),
+        0 0 26px rgba(29, 161, 242, 0.62);
+    }
+  }
+
+  .plate-external-tag {
+    position: relative;
+    z-index: 2;
+    color: #1da1f2;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  .plate-authors {
+    margin: 0 0 0.4rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--global-text-color);
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  .plate-external .plate-copy {
+    padding-bottom: 2.4rem;
+  }
+
+  .plate-external-mark {
+    position: absolute;
+    right: 0.85rem;
+    bottom: 0.7rem;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+
+  .plate-link-icon {
+    display: flex;
+    color: #1da1f2;
+
+    svg {
+      display: block;
+      width: 1.05rem;
+      height: 1.05rem;
+    }
   }
 
   .vim-twitter {

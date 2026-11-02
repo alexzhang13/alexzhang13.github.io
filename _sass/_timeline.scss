@@ -358,6 +358,79 @@ html[data-theme="dark"] body.timeline-page {
   font-variant-numeric: tabular-nums;
 }
 
+.retweet-context {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  column-gap: 10px;
+  align-items: center;
+  margin: 0 0 2px;
+  color: var(--tl-muted);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.retweet-icon {
+  justify-self: end;
+  width: 14px;
+  height: 14px;
+}
+
+.tweet-authors {
+  margin: 2px 0 4px;
+  color: var(--tl-text);
+  font-size: 13px;
+  line-height: 1.35;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.tweet-retweet .tweet-main {
+  position: relative;
+}
+
+.tweet-retweet .tweet-meta {
+  padding-right: 22px;
+}
+
+.tweet-card-links {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  .plate-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a.plate-link-x {
+    display: flex;
+    color: #000;
+
+    i {
+      width: 1.25rem;
+      height: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: #333;
+    }
+  }
+}
+
+html[data-theme="dark"] .tweet-card-links a.plate-link-x,
+html[data-theme="dark"] .tweet-card-links a.plate-link-x i {
+  color: #fff;
+}
+
 @media (min-width: 761px) {
   .timeline-rail {
     position: sticky;

@@ -17,7 +17,14 @@ pagination:
     after: 3 # The number of links after the current page
 ---
 
-<div class="post kitchen">
+<div class="post kitchen" id="kitchen">
+<script>
+  try {
+    if (localStorage.getItem("hide-external-posts") === "1") {
+      document.getElementById("kitchen").classList.add("is-hiding-external");
+    }
+  } catch (e) {}
+</script>
 
 {% assign blog_description_size = site.blog_description | size %}
 
@@ -26,6 +33,12 @@ pagination:
     <strong>working notes.</strong> {{ site.blog_description }} a blast to the past <a class="vim-twitter" href="{{ '/blog/fun/' | relative_url }}">twitter</a> view
   </p>
 {% endif %}
+
+<label class="external-toggle">
+  <input type="checkbox" id="hide-external-posts">
+  <span class="external-switch" aria-hidden="true"></span>
+  Hide External Posts
+</label>
 
 <script src="{{ '/assets/js/vim-twitter.js' | relative_url }}"></script>
 
@@ -75,7 +88,9 @@ pagination:
       {% assign read_time = post.feed_content | strip_html | number_of_words | divided_by: 180 | plus: 1 %}
     {% endif %}
     {% assign teaser = post.preview | default: post.description %}
-    {% if on_first_page %}
+    {% if post.external %}
+      {% assign figure = nil %}
+    {% elsif on_first_page %}
       {% assign figure = post.preview_image | default: post.thumbnail %}
     {% else %}
       {% assign figure = nil %}
@@ -89,7 +104,7 @@ pagination:
       {% assign post_href = post.redirect | relative_url %}
     {% endif %}
 
-    <li class="plate{% if figure %} plate-has-figure{% else %} plate-text{% endif %}">
+    <li class="plate{% if post.external %} plate-text plate-external{% elsif figure %} plate-has-figure{% else %} plate-text{% endif %}">
       {% if figure %}
         <div class="plate-figure">
           <img src="{{ figure | relative_url }}" alt="{{ post.title | escape }}" loading="lazy">
@@ -99,8 +114,10 @@ pagination:
         <div class="plate-top">
           <p class="plate-meta">
             {{ post.date | date: "%B %d, %Y" }}
-            &nbsp;·&nbsp;
-            {{ read_time }} min read
+            {% unless post.external %}
+              &nbsp;·&nbsp;
+              {{ read_time }} min read
+            {% endunless %}
             {% if post.external_source %}
               &nbsp;·&nbsp; {{ post.external_source }}
             {% endif %}
@@ -117,11 +134,30 @@ pagination:
             {% endif %}
           >{{ post.title }}</a>
         </h3>
+        {% if post.external and post.coauthors %}
+          <p class="plate-authors">
+            {% for name in post.coauthors %}
+              {% if name contains "Alex" %}<strong>{{ name }}</strong>{% else %}{{ name }}{% endif %}{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          </p>
+        {% endif %}
         {% if teaser %}
           <p class="plate-teaser">{{ teaser | escape }}</p>
         {% endif %}
         {% if post.tags.size > 0 %}
           <p class="plate-tags">{{ post.tags | join: ", " }}</p>
+        {% endif %}
+        {% if post.external %}
+          <div class="plate-external-mark">
+            <span class="plate-external-tag">[external]</span>
+            <span class="plate-link-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 5h5v5"></path>
+                <path d="M19 5l-9 9"></path>
+                <path d="M17 13.5V19a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h5.5"></path>
+              </svg>
+            </span>
+          </div>
         {% endif %}
       </div>
     </li>
@@ -131,5 +167,26 @@ pagination:
 {% if page.pagination.enabled %}
 {% include pagination.liquid %}
 {% endif %}
+
+<script>
+  (function () {
+    var kitchen = document.getElementById("kitchen");
+    var input = document.getElementById("hide-external-posts");
+    if (!kitchen || !input) return;
+
+    function apply(hide) {
+      kitchen.classList.toggle("is-hiding-external", hide);
+      try {
+        localStorage.setItem("hide-external-posts", hide ? "1" : "0");
+      } catch (e) {}
+    }
+
+    var hide = kitchen.classList.contains("is-hiding-external");
+    input.checked = hide;
+    input.addEventListener("change", function () {
+      apply(input.checked);
+    });
+  })();
+</script>
 
 </div>
