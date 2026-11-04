@@ -342,7 +342,14 @@
     <!-- Content -->
     <div class="container mt-5" role="main">
       
-        <div class="post kitchen">
+        <div class="post kitchen" id="kitchen">
+<script>
+  try {
+    if (localStorage.getItem("hide-external-posts") === "1") {
+      document.getElementById("kitchen").classList.add("is-hiding-external");
+    }
+  } catch (e) {}
+</script>
 
 
 
@@ -351,6 +358,12 @@
     <strong>working notes.</strong> notes on my research, some with fuller experiments than others. not all blogs have an associated paper. a blast to the past <a class="vim-twitter" href="/blog/fun/">twitter</a> view
   </p>
 
+
+<label class="external-toggle">
+  <input type="checkbox" id="hide-external-posts">
+  <span class="external-switch" aria-hidden="true"></span>
+  Hide External Posts
+</label>
 
 <script src="/assets/js/vim-twitter.js"></script>
 
@@ -431,8 +444,10 @@
         <div class="plate-top">
           <p class="plate-meta">
             February 25, 2026
-             · 
-            4 min read
+            
+               · 
+              4 min read
+            
             
           </p>
           
@@ -454,10 +469,50 @@
           <a href="/blog/2026/scaffold/">Language Models will be Scaffolds</a>
         </h3>
         
-          <p class="plate-teaser">The language models we interact with in the near future will be what we call scaffolds today. Neural models are now so good that they are severely underutilized, and the line between a language model and a scaffold is blurring.</p>
+          
+            <p class="plate-teaser">The language models we interact with in the near future will be what we call scaffolds today. Neural models are now so good that they are severely underutilized, and the line between a language model and a scaffold is blurring.</p>
+          
         
         
           <p class="plate-tags">harness</p>
+        
+        
+      </div>
+    </li>
+  
+    
+    
+    
+
+    
+
+    <li class="plate plate-text plate-external">
+      
+      <div class="plate-copy">
+        <div class="plate-top">
+          <p class="plate-meta">
+            October 24, 2025
+            
+            
+          </p>
+          
+        </div>
+        <h3 class="plate-title">
+          <a href="https://simonguo.tech/blog/2025-10-automated-gpu-kernels.html" target="_blank" rel="noopener">Towards Automated GPU Kernel Generation</a>
+        </h3>
+        
+        
+        
+          <div class="plate-external-mark">
+            <span class="plate-external-tag">[external]</span>
+            <span class="plate-link-icon" aria-hidden="true">
+              <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 5h5v5"></path>
+                <path d="M19 5l-9 9"></path>
+                <path d="M17 13.5V19a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h5.5"></path>
+              </svg>
+            </span>
+          </div>
         
       </div>
     </li>
@@ -474,8 +529,10 @@
         <div class="plate-top">
           <p class="plate-meta">
             October 15, 2025
-             · 
-            35 min read
+            
+               · 
+              35 min read
+            
             
           </p>
           
@@ -532,10 +589,50 @@
           <a href="/blog/2025/rlm/">Recursive Language Models</a>
         </h3>
         
-          <p class="plate-teaser">We explore language models that recursively call themselves or other LLMs before providing a final answer. The aim is essentially unbounded context, and a way through context rot.</p>
+          
+            <p class="plate-teaser">We explore language models that recursively call themselves or other LLMs before providing a final answer. The aim is essentially unbounded context, and a way through context rot.</p>
+          
         
         
           <p class="plate-tags">rlm</p>
+        
+        
+      </div>
+    </li>
+  
+    
+    
+    
+
+    
+
+    <li class="plate plate-text plate-external">
+      
+      <div class="plate-copy">
+        <div class="plate-top">
+          <p class="plate-meta">
+            October 07, 2025
+            
+            
+          </p>
+          
+        </div>
+        <h3 class="plate-title">
+          <a href="https://www.gpumode.com/news/triangle-multiplication-success" target="_blank" rel="noopener">An Introspective on GPU MODE’s TriMul Competition</a>
+        </h3>
+        
+        
+        
+          <div class="plate-external-mark">
+            <span class="plate-external-tag">[external]</span>
+            <span class="plate-link-icon" aria-hidden="true">
+              <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 5h5v5"></path>
+                <path d="M19 5l-9 9"></path>
+                <path d="M17 13.5V19a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h5.5"></path>
+              </svg>
+            </span>
+          </div>
         
       </div>
     </li>
@@ -552,8 +649,10 @@
         <div class="plate-top">
           <p class="plate-meta">
             October 30, 2024
-             · 
-            149 min read
+            
+               · 
+              149 min read
+            
             
           </p>
           
@@ -575,10 +674,13 @@
           <a href="/blog/2024/efficient-dl/">A Meticulous Guide to Advances in Deep Learning Efficiency over the Years</a>
         </h3>
         
-          <p class="plate-teaser">A chronological guide to advances in deep learning from the perspective of efficiency — clusters, hardware, libraries, compilers, and architectural changes. Not a survey, a narrative of why the field moved the way it did.</p>
+          
+            <p class="plate-teaser">A chronological guide to advances in deep learning from the perspective of efficiency — clusters, hardware, libraries, compilers, and architectural changes. Not a survey, a narrative of why the field moved the way it did.</p>
+          
         
         
           <p class="plate-tags">efficiency</p>
+        
         
       </div>
     </li>
@@ -595,8 +697,10 @@
         <div class="plate-top">
           <p class="plate-meta">
             July 01, 2024
-             · 
-            56 min read
+            
+               · 
+              56 min read
+            
             
           </p>
           
@@ -629,10 +733,13 @@
           <a href="/blog/2024/annotated-kan/">The Annotated Kolmogorov-Arnold Network (KAN)</a>
         </h3>
         
-          <p class="plate-teaser">An annotated guide to Kolmogorov-Arnold Networks, in the spirit of the Annotated Transformer. KANs put learned functions on the edges of a network instead of learned weights.</p>
+          
+            <p class="plate-teaser">An annotated guide to Kolmogorov-Arnold Networks, in the spirit of the Annotated Transformer. KANs put learned functions on the edges of a network instead of learned weights.</p>
+          
         
         
           <p class="plate-tags">kan</p>
+        
         
       </div>
     </li>
@@ -649,8 +756,10 @@
         <div class="plate-top">
           <p class="plate-meta">
             January 09, 2024
-             · 
-            96 min read
+            
+               · 
+              96 min read
+            
             
           </p>
           
@@ -672,10 +781,13 @@
           <a href="/blog/2024/neurips2023/">Highlights of NeurIPS 2023 from Reading All 3584 Abstracts</a>
         </h3>
         
-          <p class="plate-teaser">I spent winter break reading every accepted NeurIPS 2023 abstract. These are the highlights — the overall vibes, and the papers that stuck with me, topic by topic.</p>
+          
+            <p class="plate-teaser">I spent winter break reading every accepted NeurIPS 2023 abstract. These are the highlights — the overall vibes, and the papers that stuck with me, topic by topic.</p>
+          
         
         
           <p class="plate-tags">neurips</p>
+        
         
       </div>
     </li>
@@ -708,6 +820,27 @@
 
 
 
+
+<script>
+  (function () {
+    var kitchen = document.getElementById("kitchen");
+    var input = document.getElementById("hide-external-posts");
+    if (!kitchen || !input) return;
+
+    function apply(hide) {
+      kitchen.classList.toggle("is-hiding-external", hide);
+      try {
+        localStorage.setItem("hide-external-posts", hide ? "1" : "0");
+      } catch (e) {}
+    }
+
+    var hide = kitchen.classList.contains("is-hiding-external");
+    input.checked = hide;
+    input.addEventListener("change", function () {
+      apply(input.checked);
+    });
+  })();
+</script>
 
 </div>
 
@@ -977,7 +1110,19 @@
               handler: () => {
                 window.location.href = "/academics/";
               },
-            },{id: "post-language-model-quot-shape-quot",
+            },{id: "post-sparks-of-weight-space-programming-llms-can-natively-read-amp-write-neural-network-weights",
+          
+            // TODO: fix the svg icon position for external posts
+            title: 'Sparks of Weight-Space Programming: LLMs can natively read &amp; write neural network weights <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          
+          description: "Frontier LLMs can natively read and write neural network weights, past what we would expect from humans or conventional optimizers.",
+          section: "Posts",
+          handler: () => {
+            
+              window.open("https://rikiyat.github.io/blog/weight-space-programming/", "_blank");
+            
+          },
+        },{id: "post-language-model-quot-shape-quot",
           
             title: "Language Model &quot;Shape&quot;",
           
@@ -1043,6 +1188,18 @@
               window.location.href = "/blog/2026/scaffold/";
             
           },
+        },{id: "post-towards-automated-gpu-kernel-generation",
+          
+            // TODO: fix the svg icon position for external posts
+            title: 'Towards Automated GPU Kernel Generation <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          
+          description: "A one-year retrospective on KernelBench and progress toward automated GPU kernel generation.",
+          section: "Posts",
+          handler: () => {
+            
+              window.open("https://simonguo.tech/blog/2025-10-automated-gpu-kernels.html", "_blank");
+            
+          },
         },{id: "post-recursive-language-models",
           
             title: "Recursive Language Models",
@@ -1052,6 +1209,18 @@
           handler: () => {
             
               window.location.href = "/blog/2025/rlm/";
+            
+          },
+        },{id: "post-an-introspective-on-gpu-mode-s-trimul-competition",
+          
+            // TODO: fix the svg icon position for external posts
+            title: 'An Introspective on GPU MODE’s TriMul Competition <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          
+          description: "A short look at GPU MODE’s Triangle Multiplicative Update competition, why the kernel is hard, and what the winning submissions did.",
+          section: "Posts",
+          handler: () => {
+            
+              window.open("https://www.gpumode.com/news/triangle-multiplication-success", "_blank");
             
           },
         },{id: "post-a-meticulous-guide-to-advances-in-deep-learning-efficiency-over-the-years",

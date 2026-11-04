@@ -342,7 +342,14 @@
     <!-- Content -->
     <div class="container mt-5" role="main">
       
-        <div class="post kitchen">
+        <div class="post kitchen" id="kitchen">
+<script>
+  try {
+    if (localStorage.getItem("hide-external-posts") === "1") {
+      document.getElementById("kitchen").classList.add("is-hiding-external");
+    }
+  } catch (e) {}
+</script>
 
 
 
@@ -351,6 +358,12 @@
     <strong>working notes.</strong> notes on my research, some with fuller experiments than others. not all blogs have an associated paper. a blast to the past <a class="vim-twitter" href="/blog/fun/">twitter</a> view
   </p>
 
+
+<label class="external-toggle">
+  <input type="checkbox" id="hide-external-posts">
+  <span class="external-switch" aria-hidden="true"></span>
+  Hide External Posts
+</label>
 
 <script src="/assets/js/vim-twitter.js"></script>
 
@@ -425,6 +438,56 @@
 
     
 
+    <li class="plate plate-text plate-external">
+      
+      <div class="plate-copy">
+        <div class="plate-top">
+          <p class="plate-meta">
+            November 02, 2026
+            
+            
+          </p>
+          
+            <ul class="plate-links">
+  
+    <li>
+      <a class="plate-link plate-link-x" href="https://x.com/rikiyatakehi/status/2117313742891327994" target="_blank" rel="noopener" aria-label="X announcement">
+        
+          <i class="fa-brands fa-square-x-twitter" aria-hidden="true"></i>
+        
+      </a>
+    </li>
+  
+</ul>
+
+          
+        </div>
+        <h3 class="plate-title">
+          <a href="https://rikiyat.github.io/blog/weight-space-programming/" target="_blank" rel="noopener">Sparks of Weight-Space Programming: LLMs can natively read &amp; write neural network weights</a>
+        </h3>
+        
+        
+        
+          <div class="plate-external-mark">
+            <span class="plate-external-tag">[external]</span>
+            <span class="plate-link-icon" aria-hidden="true">
+              <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 5h5v5"></path>
+                <path d="M19 5l-9 9"></path>
+                <path d="M17 13.5V19a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h5.5"></path>
+              </svg>
+            </span>
+          </div>
+        
+      </div>
+    </li>
+  
+    
+    
+    
+
+    
+
     <li class="plate plate-has-figure">
       
         <div class="plate-figure">
@@ -435,8 +498,10 @@
         <div class="plate-top">
           <p class="plate-meta">
             September 26, 2026
-             · 
-            12 min read
+            
+               · 
+              12 min read
+            
             
           </p>
           
@@ -458,10 +523,13 @@
           <a href="/blog/2026/shape/">Language Model "Shape"</a>
         </h3>
         
-          <p class="plate-teaser">Some short musings on the shape of language models, e.g. what it means to design a language model around a harness, and not the other way around.</p>
+          
+            <p class="plate-teaser">Some short musings on the shape of language models, e.g. what it means to design a language model around a harness, and not the other way around.</p>
+          
         
         
           <p class="plate-tags">harness</p>
+        
         
       </div>
     </li>
@@ -482,8 +550,10 @@
         <div class="plate-top">
           <p class="plate-meta">
             August 24, 2026
-             · 
-            19 min read
+            
+               · 
+              19 min read
+            
             
           </p>
           
@@ -516,10 +586,13 @@
           <a href="/blog/2026/spec-ptc/">Speculative Programmatic Tool Calling</a>
         </h3>
         
-          <p class="plate-teaser">Speculative programmatic tool calling pre-launches tool calls from a partially generated REPL program, while the harness is still producing tokens, instead of waiting for the whole generation to finish.</p>
+          
+            <p class="plate-teaser">Speculative programmatic tool calling pre-launches tool calls from a partially generated REPL program, while the harness is still producing tokens, instead of waiting for the whole generation to finish.</p>
+          
         
         
           <p class="plate-tags">harness, rlm</p>
+        
         
       </div>
     </li>
@@ -540,8 +613,10 @@
         <div class="plate-top">
           <p class="plate-meta">
             July 20, 2026
-             · 
-            30 min read
+            
+               · 
+              30 min read
+            
             
           </p>
           
@@ -563,10 +638,13 @@
           <a href="/blog/2026/harness/">Language model harnesses are compositional generalizers</a>
         </h3>
         
-          <p class="plate-teaser">Modern post-training brute-forces ever more environments and ever longer horizons, because frontier Transformers are still poor at compositional generalization. A good harness makes every model call locally in-distribution, so what it learns carries across lengths and domains.</p>
+          
+            <p class="plate-teaser">Modern post-training brute-forces ever more environments and ever longer horizons, because frontier Transformers are still poor at compositional generalization. A good harness makes every model call locally in-distribution, so what it learns carries across lengths and domains.</p>
+          
         
         
           <p class="plate-tags">harness, rlm</p>
+        
         
       </div>
     </li>
@@ -587,8 +665,10 @@
         <div class="plate-top">
           <p class="plate-meta">
             April 26, 2026
-             · 
-            10 min read
+            
+               · 
+              10 min read
+            
             
           </p>
           
@@ -610,10 +690,13 @@
           <a href="/blog/2026/longcot-rlm/">A Mini Exercise on the Mismanaged Geniuses Hypothesis (RLMs on LongCoT)</a>
         </h3>
         
-          <p class="plate-teaser">We underestimate how good language models actually are, and they are inhibited by how we use them. On LongCoT, frontier models fall short of compositional reasoning tasks whose pieces they can already solve in isolation.</p>
+          
+            <p class="plate-teaser">We underestimate how good language models actually are, and they are inhibited by how we use them. On LongCoT, frontier models fall short of compositional reasoning tasks whose pieces they can already solve in isolation.</p>
+          
         
         
           <p class="plate-tags">rlm, mgh</p>
+        
         
       </div>
     </li>
@@ -634,8 +717,10 @@
         <div class="plate-top">
           <p class="plate-meta">
             April 09, 2026
-             · 
-            10 min read
+            
+               · 
+              10 min read
+            
             
           </p>
           
@@ -657,10 +742,13 @@
           <a href="/blog/2026/mgh/">The Mismanaged Geniuses Hypothesis</a>
         </h3>
         
-          <p class="plate-teaser">AI models are already good enough for the next leap in capabilities. The mismanaged geniuses hypothesis says frontier language models are severely underutilized, because each individual call is used poorly.</p>
+          
+            <p class="plate-teaser">AI models are already good enough for the next leap in capabilities. The mismanaged geniuses hypothesis says frontier language models are severely underutilized, because each individual call is used poorly.</p>
+          
         
         
           <p class="plate-tags">mgh, harness</p>
+        
         
       </div>
     </li>
@@ -693,6 +781,27 @@
 
 
 
+
+<script>
+  (function () {
+    var kitchen = document.getElementById("kitchen");
+    var input = document.getElementById("hide-external-posts");
+    if (!kitchen || !input) return;
+
+    function apply(hide) {
+      kitchen.classList.toggle("is-hiding-external", hide);
+      try {
+        localStorage.setItem("hide-external-posts", hide ? "1" : "0");
+      } catch (e) {}
+    }
+
+    var hide = kitchen.classList.contains("is-hiding-external");
+    input.checked = hide;
+    input.addEventListener("change", function () {
+      apply(input.checked);
+    });
+  })();
+</script>
 
 </div>
 
@@ -962,7 +1071,19 @@
               handler: () => {
                 window.location.href = "/academics/";
               },
-            },{id: "post-language-model-quot-shape-quot",
+            },{id: "post-sparks-of-weight-space-programming-llms-can-natively-read-amp-write-neural-network-weights",
+          
+            // TODO: fix the svg icon position for external posts
+            title: 'Sparks of Weight-Space Programming: LLMs can natively read &amp; write neural network weights <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          
+          description: "Frontier LLMs can natively read and write neural network weights, past what we would expect from humans or conventional optimizers.",
+          section: "Posts",
+          handler: () => {
+            
+              window.open("https://rikiyat.github.io/blog/weight-space-programming/", "_blank");
+            
+          },
+        },{id: "post-language-model-quot-shape-quot",
           
             title: "Language Model &quot;Shape&quot;",
           
@@ -1028,6 +1149,18 @@
               window.location.href = "/blog/2026/scaffold/";
             
           },
+        },{id: "post-towards-automated-gpu-kernel-generation",
+          
+            // TODO: fix the svg icon position for external posts
+            title: 'Towards Automated GPU Kernel Generation <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          
+          description: "A one-year retrospective on KernelBench and progress toward automated GPU kernel generation.",
+          section: "Posts",
+          handler: () => {
+            
+              window.open("https://simonguo.tech/blog/2025-10-automated-gpu-kernels.html", "_blank");
+            
+          },
         },{id: "post-recursive-language-models",
           
             title: "Recursive Language Models",
@@ -1037,6 +1170,18 @@
           handler: () => {
             
               window.location.href = "/blog/2025/rlm/";
+            
+          },
+        },{id: "post-an-introspective-on-gpu-mode-s-trimul-competition",
+          
+            // TODO: fix the svg icon position for external posts
+            title: 'An Introspective on GPU MODE’s TriMul Competition <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+          
+          description: "A short look at GPU MODE’s Triangle Multiplicative Update competition, why the kernel is hard, and what the winning submissions did.",
+          section: "Posts",
+          handler: () => {
+            
+              window.open("https://www.gpumode.com/news/triangle-multiplication-success", "_blank");
             
           },
         },{id: "post-a-meticulous-guide-to-advances-in-deep-learning-efficiency-over-the-years",
