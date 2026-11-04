@@ -69,16 +69,11 @@ timeline: true
               <time class="tweet-time" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}</time>
             </p>
             <p class="tweet-text tweet-title">{{ post.title }}</p>
-            {% if post.external and post.coauthors %}
-              <p class="tweet-authors">
-                {% for name in post.coauthors %}
-                  {% if name contains "Alex" %}<strong>{{ name }}</strong>{% else %}{{ name }}{% endif %}{% unless forloop.last %}, {% endunless %}
-                {% endfor %}
-              </p>
-            {% endif %}
-            {% if teaser and teaser != post.title %}
-              <p class="tweet-text">{{ teaser }}</p>
-            {% endif %}
+            {% unless post.external %}
+              {% if teaser and teaser != post.title %}
+                <p class="tweet-text">{{ teaser }}</p>
+              {% endif %}
+            {% endunless %}
             {% if figure %}
               <div class="tweet-media">
                 <img
@@ -92,7 +87,9 @@ timeline: true
                 >
               </div>
             {% endif %}
-            {% include tweet_actions.liquid %}
+            {% unless post.external %}
+              {% include tweet_actions.liquid %}
+            {% endunless %}
           </div>
         </article>
       {% endfor %}

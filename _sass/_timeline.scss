@@ -388,12 +388,41 @@ html[data-theme="dark"] body.timeline-page {
   }
 }
 
+.tweet-retweet {
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 8px;
+  padding: 5px 12px 4px;
+
+  .tweet-avatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .tweet-title {
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .retweet-context {
+    grid-template-columns: 28px minmax(0, 1fr);
+    column-gap: 8px;
+    margin-bottom: 1px;
+    font-size: 12px;
+  }
+}
+
 .tweet-retweet .tweet-main {
   position: relative;
 }
 
 .tweet-retweet .tweet-meta {
+  margin-bottom: 0;
   padding-right: 22px;
+  font-size: 12px;
 }
 
 .tweet-card-links {

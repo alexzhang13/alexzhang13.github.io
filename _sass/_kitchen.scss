@@ -374,22 +374,62 @@
   }
 
   .plate-external {
-    border-color: #1da1f2;
-    box-shadow:
-      0 0 0 1px rgba(29, 161, 242, 0.45),
-      0 0 18px rgba(29, 161, 242, 0.45);
+    border-color: var(--global-text-color-light);
 
     &:hover {
-      box-shadow:
-        0 0 0 1px rgba(29, 161, 242, 0.7),
-        0 0 26px rgba(29, 161, 242, 0.62);
+      box-shadow: none;
+    }
+
+    .plate-copy {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.28rem 0.65rem;
+    }
+
+    .plate-top {
+      display: contents;
+    }
+
+    .plate-meta {
+      order: 1;
+      flex: none;
+      margin: 0;
+      font-size: 0.72rem;
+      white-space: nowrap;
+    }
+
+    .plate-title {
+      order: 2;
+      flex: 1 1 auto;
+      min-width: 0;
+      margin: 0;
+      font-size: 0.86rem;
+      font-weight: 500;
+      line-height: 1.2;
+
+      a {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .plate-links {
+      order: 3;
+      flex: none;
+    }
+
+    .plate-external-mark {
+      order: 4;
     }
   }
 
   .plate-external-tag {
     position: relative;
     z-index: 2;
-    color: #1da1f2;
+    color: var(--global-text-color-light);
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -407,23 +447,18 @@
     }
   }
 
-  .plate-external .plate-copy {
-    padding-bottom: 2.4rem;
-  }
-
   .plate-external-mark {
-    position: absolute;
-    right: 0.85rem;
-    bottom: 0.7rem;
+    position: static;
     z-index: 2;
     display: flex;
+    flex: none;
     align-items: center;
-    gap: 0.55rem;
+    gap: 0.4rem;
   }
 
   .plate-link-icon {
     display: flex;
-    color: #1da1f2;
+    color: var(--global-text-color-light);
 
     svg {
       display: block;

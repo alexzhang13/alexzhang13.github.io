@@ -4,6 +4,7 @@ title: Towards Automated GPU Kernel Generation
 date: 2025-10-24
 redirect: https://simonguo.tech/blog/2025-10-automated-gpu-kernels.html
 external: true
+hidden: true
 sitemap: false
 giscus_comments: false
 related_posts: false

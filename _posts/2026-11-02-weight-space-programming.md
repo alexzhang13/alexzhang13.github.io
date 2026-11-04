@@ -4,6 +4,7 @@ title: "Sparks of Weight-Space Programming: LLMs can natively read & write neura
 date: 2026-11-02
 redirect: https://rikiyat.github.io/blog/weight-space-programming/
 external: true
+hidden: true
 sitemap: false
 giscus_comments: false
 related_posts: false

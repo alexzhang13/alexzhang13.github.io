@@ -70,7 +70,44 @@ pagination:
   {% endif %} -->
 
 {% if page.pagination.enabled %}
-  {% assign postlist = paginator.posts %}
+  {% assign regulars = site.posts | where_exp: "item", "item.external != true" %}
+  {% assign page_num = paginator.page | default: 1 %}
+  {% assign per_page = page.pagination.per_page | default: 5 %}
+  {% assign start = page_num | minus: 1 | times: per_page %}
+  {% assign next_start = start | plus: per_page %}
+  {% assign this_newest = nil %}
+  {% assign next_newest = nil %}
+  {% for item in regulars %}
+    {% if forloop.index0 == start %}
+      {% assign this_newest = item %}
+    {% endif %}
+    {% if forloop.index0 == next_start %}
+      {% assign next_newest = item %}
+    {% endif %}
+  {% endfor %}
+  {% comment %}
+    External posts are thin, so they do not consume a page slot.
+    They appear on the page whose regular posts surround their date.
+  {% endcomment %}
+  {% assign postlist = "" | split: "" %}
+  {% for item in paginator.posts %}
+    {% assign postlist = postlist | push: item %}
+  {% endfor %}
+  {% for item in site.posts %}
+    {% if item.external %}
+      {% assign show_external = true %}
+      {% if page_num > 1 and this_newest and item.date > this_newest.date %}
+        {% assign show_external = false %}
+      {% endif %}
+      {% if next_newest and item.date <= next_newest.date %}
+        {% assign show_external = false %}
+      {% endif %}
+      {% if show_external %}
+        {% assign postlist = postlist | push: item %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  {% assign postlist = postlist | sort: "date" | reverse %}
 {% else %}
   {% assign postlist = site.posts %}
 {% endif %}
@@ -134,16 +171,11 @@ pagination:
             {% endif %}
           >{{ post.title }}</a>
         </h3>
-        {% if post.external and post.coauthors %}
-          <p class="plate-authors">
-            {% for name in post.coauthors %}
-              {% if name contains "Alex" %}<strong>{{ name }}</strong>{% else %}{{ name }}{% endif %}{% unless forloop.last %}, {% endunless %}
-            {% endfor %}
-          </p>
-        {% endif %}
-        {% if teaser %}
-          <p class="plate-teaser">{{ teaser | escape }}</p>
-        {% endif %}
+        {% unless post.external %}
+          {% if teaser %}
+            <p class="plate-teaser">{{ teaser | escape }}</p>
+          {% endif %}
+        {% endunless %}
         {% if post.tags.size > 0 %}
           <p class="plate-tags">{{ post.tags | join: ", " }}</p>
         {% endif %}
