@@ -1,6 +1,14 @@
 <div class="news">
-  {% if site.latest_posts != blank %}
-    {% assign latest_posts_size = site.posts | size %}
+  {% comment %}
+    Only the site's own posts belong here. Skip posts marked `external: true`
+    and ones generated from `external_sources` by the external-posts plugin.
+  {% endcomment %}
+  {% assign latest_posts = site.posts
+    | where_exp: 'item', 'item.external != true'
+    | where_exp: 'item', 'item.external_source == nil'
+  %}
+  {% assign latest_posts_size = latest_posts | size %}
+  {% if site.latest_posts != blank and latest_posts_size > 0 %}
     <div
       class="table-responsive"
       {% if site.latest_posts.scrollable and latest_posts_size > 3 %}
@@ -8,7 +16,6 @@
       {% endif %}
     >
       <table class="table table-sm table-borderless">
-        {% assign latest_posts = site.posts %}
         {% if site.latest_posts.limit %}
           {% assign latest_posts_limit = site.latest_posts.limit %}
         {% else %}

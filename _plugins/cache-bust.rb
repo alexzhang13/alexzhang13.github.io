@@ -42,9 +42,12 @@ module Jekyll
       CacheDigester.new(file_name: file_name, directory: nil).digest!
     end
 
-    def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
-    end
+      def bust_css_cache(file_name)
+        # Styles live in `_sass`, not `assets/_sass`. The old path matched
+        # nothing, so every build hashed an empty string and the CSS URL
+        # never changed.
+        CacheDigester.new(file_name: file_name, directory: '_sass').digest!
+      end
   end
 end
 
