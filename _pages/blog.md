@@ -35,6 +35,7 @@ timeline: true
           <a class="tweet-hit" href="{{ post_href }}"{% if post_external %} target="_blank" rel="noopener"{% endif %}><span class="sr-only">{{ post.title }}</span></a>
           {% if post.external %}
             {% assign retweet_author = post.coauthors | first | replace: "*", "" | strip %}
+            {% assign retweet_author = post.retweet_author | default: retweet_author %}
             <p class="retweet-context">
               <svg class="retweet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M17 2l4 4-4 4"></path>

@@ -2,9 +2,10 @@
   {% comment %}
     Only the site's own posts belong here. Skip posts marked `external: true`
     and ones generated from `external_sources` by the external-posts plugin.
+    An external post can opt in with `show_in_latest_posts: true`.
   {% endcomment %}
   {% assign latest_posts = site.posts
-    | where_exp: 'item', 'item.external != true'
+    | where_exp: 'item', 'item.external != true or item.show_in_latest_posts == true'
     | where_exp: 'item', 'item.external_source == nil'
   %}
   {% assign latest_posts_size = latest_posts | size %}

@@ -30,7 +30,8 @@ Hi! I broadly work on areas where language models are underutilized or inefficie
   <li><a href="https://github.com/PrimeIntellect-ai/prime-agent">Prime Agent</a>, a production RLM harness.</li>
   <li><a href="https://alexzhang13.github.io/blog/2026/spec-ptc/">Speculative programmatic tool calling (PTC)</a>.</li>
   <li>The input / output <a href="https://alexzhang13.github.io/blog/2026/shape/">"shape"</a> of language models.</li>
-  <li><a href="https://www.alphaxiv.org/abs/2611.28298">Useful LM harness abstractions yield compositional generalization!</a></li>
+  <li><a href="https://www.alphaxiv.org/abs/2611.28298">Language model harness abstractions can yield compositional generalization.</a></li>
+  <li><a href="https://csailmit.substack.com/p/can-alternate-bets-on-ai-progress">The fundamental structure of "tasks" and composition.</a></li>
 </ul>
 
 <b>Some other notable things worth mentioning:</b>
